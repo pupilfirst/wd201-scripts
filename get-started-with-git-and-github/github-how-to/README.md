@@ -1,6 +1,6 @@
 # Github: How To
 
-I'm going to quickly introduce Github, and how to use the `git` command line application to submit work in this course. You're going to be doing this quite a bit, so let's start off this course by getting comfortable with git.
+In this video, I'm going to quickly introduce Github, and how to use the `git` command line application to submit work in this course. You're going to be doing this quite a bit, so let's start off this course by getting comfortable with git.
 
 First of all, you should install git on your system if you haven't done that already. On Ubuntu Linux, you'll simply need to type in the command `sudo apt-get install git`, and that'll take care of installation.
 
@@ -22,7 +22,7 @@ Now that we have a git repo with with a commit, we can push this repository to G
 
 I'll create a repo in my account with the name `wd-github-demo`.
 
-Now we can clone the repository using two methods: HTTPS or SSH. In this demo, I'm going to use HTTPS, simply because it's faster to demonstrate. But it's also possible to use SSH. The main difference between these two methods is how you'll authenticate with Github. HTTPS will need you to create a personal access token, whereas SSH will require you to register your SSH keys with Github.
+Now we can push and pull code to and from the repository using two methods: HTTPS or SSH. In this demo, I'm going to use HTTPS, simply because it's faster to demonstrate. But it's also possible to use SSH. The main difference between these two methods is how you'll authenticate with Github. HTTPS will need you to create a personal access token, whereas SSH will require you to register your SSH keys with Github.
 
 For this course, we suggest using HTTPS _or_ SSH, but both are valid choices, so there will be links below this video that contain instructions for setting up Github authentication for both HTTPS _and_ SSH.
 
