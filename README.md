@@ -1,4 +1,4 @@
-# Script for WD201
+# Scripts for WD201 videos
 
 This repository contains the scripts for videos used in [the WD201 course, hosted at Pupilfirst School](https://www.pupilfirst.school/courses/123/curriculum).
 
