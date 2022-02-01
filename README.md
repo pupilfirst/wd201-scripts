@@ -21,4 +21,11 @@ This work is licensed under a
 
 ## L1. Get started with git and Github
 
-1. [Github: How To](./get-started-with-git-and-github/github-how-to)
+### Intro to git and Github
+
+- [Github: How To](./get-started-with-git-and-github/github-how-to)
+
+### Orientation
+
+- [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
+- [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
