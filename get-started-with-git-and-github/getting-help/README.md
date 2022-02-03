@@ -28,7 +28,7 @@ Snippets of code associated with your problem (don't share full files). If your 
 If there are any error logs, please share relevant/important portions of it. If you're unable to tell which portion might be useful, save everything into a text file, and upload the log file.
 
 **Screenshots (optional)**
-If there's visual issues that you're discussing, share screenshots - please try to avoid sharing any personal information in your screenshots - remember that community posts are visible to all students.
+If there's visual issues that you're discussing, share screenshots or videos. You can insert take screenshots and insert them directly into the Markdown editor, so that they're easy to see. You can also record videos of your screen and talk us through the problem you're facing. There will be [a separate video](./video_recording.md) that details how best you can do this. With both of these options, please try to avoid sharing any personal information - remember that community posts are visible to all students.
 
 As you can probably tell, the basic idea here is to share as much useful information as possible at the _beginning_ of your interaction - this helps save time in back and forth messages collecting required info.
 

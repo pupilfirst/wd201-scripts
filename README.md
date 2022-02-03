@@ -28,4 +28,5 @@ This work is licensed under a
 ### Orientation
 
 - [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
+  - [Screen recording tool](./get-started-with-git-and-github/getting-help/screen-recording.md)
 - [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
