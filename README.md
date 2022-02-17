@@ -30,3 +30,10 @@ This work is licensed under a
 - [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
   - [Screen recording tool](./get-started-with-git-and-github/getting-help/screen-recording.md)
 - [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
+
+## L3. Object-oriented programming
+
+### Getting classy with objects!
+
+- [CamelCase and snake_case](./object-oriented-programming/camel-case-and-snake-case)
+- [Inconstant Constants](./object-oriented-programming/inconstant-constants)
