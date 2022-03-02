@@ -10,24 +10,24 @@ The web development community is the place to ask those questions. The coaches a
 
 Before getting into examples, let me quickly list the information we'd like you to share:
 
-**Describe the issue**
+**Describe the issue**\
 A clear and concise description of what the issue is.
 
-**What I expected would happen**
+**What I expected would happen**\
 Details about what you were doing when you encountered the issue, and what you expected would happen.
 
-**The things I've done to try and fix the issue**
+**The things I've done to try and fix the issue**\
 Steps you've already taken to try and avoid or solve the issue.
 
 This will tell us what _not_ to suggest.
 
-**Code snippets (optional)**
+**Code snippets (optional)**\
 Snippets of code associated with your problem (don't share full files). If your problem is associated with a submission, let us know which one, and we can take a look at it.
 
-**Logs (optional)**
+**Logs (optional)**\
 If there are any error logs, please share relevant/important portions of it. If you're unable to tell which portion might be useful, save everything into a text file, and upload the log file.
 
-**Screenshots (optional)**
+**Screenshots (optional)**\
 If there's visual issues that you're discussing, share screenshots or videos. You can insert take screenshots and insert them directly into the Markdown editor, so that they're easy to see. You can also record videos of your screen and talk us through the problem you're facing. There will be [a separate video](./video_recording.md) that details how best you can do this. With both of these options, please try to avoid sharing any personal information - remember that community posts are visible to all students.
 
 As you can probably tell, the basic idea here is to share as much useful information as possible at the _beginning_ of your interaction - this helps save time in back and forth messages collecting required info.
