@@ -1,5 +1,7 @@
 # Orientation: Plagiarism
 
+> Slideshow: https://docs.google.com/presentation/d/1PbWZ0Qrok8YNEndGgSy7E6f7auvPPVmZlivQccqSbBQ/edit?usp=sharing
+
 In this level, you're going to be submitting code for review, for the first time, as a part of the course. Before you start writing code for your submission, there's a topic that we want to discuss up-front - plagiarism.
 
 If you're unaware of what plagiarism is, there will be links below this video that will help you learn. In the context of this course, where you'll be submitting code that you write for review, plagiarism will mean submitting someone else's prior work.
