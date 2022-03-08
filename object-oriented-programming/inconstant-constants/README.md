@@ -10,22 +10,9 @@ If I check `PI.class` it tells me that the constant `PI` is an object of the cla
 
 In Ruby, constants are created by capitalizing the first letter of the name of a thing... but that _constant_ part is more of a guideline. It's not a hard rule that the Ruby interpreter enforces. Ruby will show warnings to try an inform us that something that _should_ not be happening _is_ happening, but it won't block the constant from being changed.
 
-Now this doesn't mean that you can or should name things improperly. Stick to the naming scheme we've discussed so far. That means:
+Now this doesn't mean that you can or should name things improperly. Stick to the naming scheme we've discussed so far. That means using the naming style we discussed in the previous video.
 
-```ruby
-# A constant value.
-STUDENT_COUNT = 10
-
-# A class.
-class StudentReport
-  # A method.
-  def generate_report
-  end
-end
-
-# A variable.
-generated_reported = StudentReport.new.generate_report
-```
+> Show code from the _CamelCase vs snake_case_ video.
 
 If you break these rules, things will probably still work, but it's also likely that you'll run into curious errors.
 
@@ -43,7 +30,7 @@ end
 
 There's only one difference between these two - that the second method starts with a capitalized letter. If I call the first method by writing `fourty_two`, Ruby correctly executes it and returns the value `42`.
 
-If I try to do the same thing with `Fourty_two`, it causes an _error_ - Ruby says that it tried to find a constant with the name `Fourty_two`, but couldn't find anything like that. This is because Fourty_two we've defined is a method, but the starting capital letter is a source of confusion for Ruby - it's searching for a constant value, not a method. We can still access the method by writing `Fourty_two()` - the empty brackets lets Ruby know that we're looking for a method, and not a constant value.
+If I try to do the same thing with `Fourty_two`, it causes an _error_ - Ruby says that it tried to find a constant with the name `Fourty_two`, but couldn't find anything like that. This is because Fourty_two we've defined is a method, but the starting capital letter is a source of confusion for Ruby - it's searching for a constant value, not a method. We can still access the method by writing `Fourty_two()`, making sure we put empty brackets at the end. These brackets let Ruby know that we're looking for a method, and not a constant value.
 
 While this was an interesting exercise, don't do this. Don't create methods that start with a capital letter - there's no advantage there.
 
