@@ -62,3 +62,6 @@ Here, we only tested a single function, which is how unit tests can help test ea
 Integration tests ensure that different modules or units in the system work together in harmony and produce the desired output. All modules or a few other modules are combinedly tested. Integration test is black-box testing, where the tests don't care for internal design.
 
 An example for an integration test will be to check if the todo `title` text field has been cleared on adding a new entry. Another example will be to verify if the user gets redirected to the homepage after authentication etc.
+
+
+We write the tests using a `Test Framework` and these tests are run using a special tool called `Test Runner`.
