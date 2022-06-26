@@ -40,8 +40,4 @@ git --version
 
 Secondly, signup for a new [GitHub account here](https://github.com/).
 
-After you have a GitHub account, you'll need to create an SSH key to push your code from your local machine to GitHub (this key proves to GitHub when you push code that you are "you").
-
-It's not difficult—just [follow the steps here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
-
 Great! see you in the next lesson.
