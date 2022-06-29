@@ -1,5 +1,5 @@
 # Text
-In this lesson we will create an HTTP server using Express.js.
+In this lesson, we will create an HTTP server using Express.js.
 
 Express.js is a fast and lightweight framework, used majorly for web application development. Express is built on top of Node.js. It is designed to develop websites, web apps, & API’s easily.
 With that being said, let's create our first ever Express application.
@@ -42,7 +42,7 @@ Then head on over to **localhost:3000** in your browser, and you should see **"H
 That's Great!
 
 ### Decoding the server configuration
-Now, lets understand the above snippet, line by line.
+Now, let's understand the above snippet, line by line.
 ```js
 const express = require('express');
 const app = express();
@@ -61,7 +61,7 @@ app.get('/', function (request, response) {
   response.send('Hello World')
 })
 ```
-This part is very important. Here using the app.get() method, Express creates a route handler to listen for GET requests from a client. The first argument in this function is the route path. In this case, we’re listening for GET requests on `localhost:3000/`. If we wanted to listen for a POST request, then we would use `app.post()`.
+This part is very important. Here, using the app.get() method, Express creates a route handler to listen for GET requests from a client. The first argument in this function is the route path. In this case, we’re listening for GET requests on `localhost:3000/`. If we wanted to listen for a POST request, then we would use `app.post()`.
 
 The second argument is a callback function that takes a `request` object and a `response` object. The *request* object contains information about the request that came from the client, for example: request headers, query parameters, request body, etc. The *response* object contains information that we want to send as a response back to the client.
 
