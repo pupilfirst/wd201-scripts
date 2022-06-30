@@ -100,6 +100,11 @@ We can now try to write tests for our todo application. Let's remove `first.js` 
 > TODO: Add test according to example from previous level.
 
 
+### Conclusion
+
+So, in this lesson, we have learned how to use Jest and write test cases. See you in the next lesson.
+
+
 ## Text
 
 [Jest](https://jestjs.io/) is a testing framework that supports testing of React, Node.js, Angular projects. We can add jest to our project by running the following command.
