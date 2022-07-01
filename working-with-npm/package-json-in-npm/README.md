@@ -1,8 +1,8 @@
 # Text
 
-In this lesson, we will learn about the `package.json` file and why it is the basis of any NodeJS application.
+In this lesson, we will learn about the `package.json` file and why it is the basis of any **Node.js** application.
 
-Any NodeJS project or `npm` package is built around the `package.json` file. It stores project information describing the details of the project and its dependencies. It is made up of a single object in [JSON format](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) that stores information in key-value pairs.
+Any **Node.js** project or `npm` package is built around the `package.json` file. It stores project information describing the details of the project and its dependencies. It is made up of a single object in [JSON format](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) that stores information in key-value pairs.
 
 There are only two required fields: “name” and “version”, but it's a good idea to provide additional information about your project that future users might find useful.
 
