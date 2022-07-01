@@ -1,10 +1,10 @@
 # Text
 
-In this lesson, we will learn about `npm`, the Node Package Manager and how and why it is used in NodeJS development.
+In this lesson, we will learn about `npm`, the Node Package Manager and how and why it is used in **Node.js** development.
 
 ## What is `npm`?
 
-`npm` (Node Package Manager) is a command-line tool for installing, creating and sharing packages of NodeJS JavaScript code. There are many open-source packages available on `npm`, like packages for working with dates or fetching data from a web server.
+`npm` (Node Package Manager) is a command-line tool for installing, creating and sharing packages of **Node.js** JavaScript code. There are many open-source packages available on `npm`, like packages for working with dates or fetching data from a web server.
 
 Many businesses also use `npm` to manage private development within their organizations. `npm` is made up of three distinct elements:
 
@@ -25,9 +25,9 @@ There are a lot of benefits of using `npm`. Some major ones are as listed below:
 
 ## Working with `npm`
 
-`npm` is bundled along with NodeJS while you install it. If you have followed the previous lesson to get NodeJS set up on your system, you will already have `npm` configured for you to work with.
+`npm` is bundled along with **Node.js** while you install it. If you have followed the previous lesson to get **Node.js** set up on your system, you will already have `npm` configured for you to work with.
 
-To check if you already have NodeJS and `npm` installed, run the following commands on your Terminal:
+To check if you already have **Node.js** and `npm` installed, run the following commands on your Terminal:
 
 ```js
 node --version
@@ -35,6 +35,6 @@ node --version
 npm --version
 ```
 
-The above commands will provide you with details about the NodeJS and `npm` versions installed on your system.
+The above commands will provide you with details about the **Node.js** and `npm` versions installed on your system.
 
-In the upcoming lessons, we will learn more about the ways in which we can use `npm` to configure and work with our NodeJS application.
+In the upcoming lessons, we will learn more about the ways in which we can use `npm` to configure and work with our **Node.js** application.
