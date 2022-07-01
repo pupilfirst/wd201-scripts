@@ -1,12 +1,12 @@
 # Text
 
-In the previous level, we learned about NodeJS and how to set it up. In the following level, we will learn more about the NodeJS ecosystem and how packages or libraries are used to improve the developer experience. We also will learn about how to use these packages for the Web applications we develop.
+In the previous level, we learned about **Node.js** and how to set it up. In the following level, we will learn more about the **Node.js** ecosystem and how packages or libraries are used to improve the developer experience. We also will learn about how to use these packages for the Web applications we develop.
 
 ### Package Management and Libraries
 
-To understand the NodeJS ecosystem better we need to learn about, what package managers and package repositories are, why they are required, and the fundamentals of their use.
+To understand the **Node.js** ecosystem better we need to learn about, what package managers and package repositories are, why they are required, and the fundamentals of their use.
 
-The NodeJS packages are dependencies that we use in our application to solve a certain problem.
+The **Node.js** packages are dependencies that we use in our application to solve a certain problem.
 
 A dependency is a piece of external software that was most likely written by someone else and solves a single problem for you. Our web application can have any number of dependencies, and they may include sub-dependencies that you did not explicitly install.
 
@@ -39,4 +39,4 @@ If we don't use a package manager, we might have to deal with the following scen
 3. Download them and place them in the appropriate places in your project.
 4. Removing the packages means, manually removing all the files again.
 
-In the upcoming lessons, we will learn more about the Node package manager, called `npm`. We will learn about the uses of the same, along with some packages/dependencies which we can rely on for our NodeJS development needs.
+In the upcoming lessons, we will learn more about the Node package manager, called `npm`. We will learn about the uses of the same, along with some packages/dependencies which we can rely on for our **Node.js** development needs.
