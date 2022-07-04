@@ -8,7 +8,7 @@ In this lesson, we will learn about `npm`, the Node Package Manager and how and 
 
 Many businesses also use `npm` to manage private development within their organizations. `npm` is made up of three distinct elements:
 
-1. [`npm` website](https://www.npmjs.com/) – used for finding packages, creating profiles, and managing other aspects of our `npm` usage
+1. [`npm` website](https://www.npmjs.com/) – used for finding packages, creating profiles, and managing other aspects of our `npm` usage.
 2. CLI or a Command Line Interface (CLI) – used to interact with `npm` and is run from a Terminal/Command Prompt.
 3. `npm` registry – used as the public database of JavaScript software/dependencies.
 
