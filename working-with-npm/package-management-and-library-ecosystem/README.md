@@ -1,10 +1,10 @@
 # Text
 
-In the previous level, we learned about **Node.js** and how to set it up. In the following level, we will learn more about the **Node.js** ecosystem and how packages or libraries are used to improve the developer experience. We also will learn about how to use these packages for the Web applications we develop.
+In the previous level, we've learned about **Node.js** and how to set it up. In the following level, we will learn more about the **Node.js** ecosystem and how packages or libraries are used to improve the developer experience. We also will learn about how to use these packages for the Web applications we develop.
 
 ### Package Management and Libraries
 
-To understand the **Node.js** ecosystem better we need to learn about, what package managers and package repositories are, why they are required, and the fundamentals of their use.
+To understand the **Node.js** ecosystem better, we need to learn about, what package managers and package repositories are, why they are required, and the fundamentals of their use.
 
 The **Node.js** packages are dependencies that we use in our application to solve a certain problem.
 
