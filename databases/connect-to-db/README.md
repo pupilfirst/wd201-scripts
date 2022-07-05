@@ -40,7 +40,7 @@ Once a connection is established with the server, we can then issue commands to 
 
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize('saas_db', 'postgres', 'postgres', {
+const sequelize = new Sequelize('todo_db', 'postgres', 'postgres', {
   host: 'localhost',
   dialect: 'postgres'
 });
