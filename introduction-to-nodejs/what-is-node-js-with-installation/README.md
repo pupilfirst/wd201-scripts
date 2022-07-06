@@ -19,7 +19,7 @@ A dynamic website is one where some response content is generated dynamically, o
 
 Most of the **code** to support a dynamic website must run on the server. Creating this code is known as **server-side programming** or **back-end programming**.
 
-Now imagine, what if you could use your JavaScript knowledge to write back-end or server-side logic? This is where the role of Node.Js comes in.
+Now imagine, what if you could use your JavaScript knowledge to write back-end or server-side logic? This is where the role of Node.js comes in.
 
 ## What is Node.Js?
 Node.js is a framework for writing server-side JavaScript applications. Node.js is open-source and completely free, it's used by thousands of developers around the world.
