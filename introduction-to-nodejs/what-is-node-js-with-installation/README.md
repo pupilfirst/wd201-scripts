@@ -33,7 +33,7 @@ So, let's get started with the installation.
 
 # Script: Installation of Node.Js
 
-In this video, I'll show you, how easily you can setup your computer to write Node.Js applications.
+In this video, I'll show you, how easily you can setup your computer to write Node.js applications.
 I'm assuming that you're either running macOS, or some variant of Linux, or you're probably using WSL (Ubuntu) inside of Windows.
 
 ## Install Node.Js using NVM
