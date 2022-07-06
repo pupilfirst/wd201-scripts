@@ -9,7 +9,7 @@ mkdir hello-node
 cd hello-node
 ````
 
-Then we run the `npm init` command, it is used to initialize a node project.
+Then we run the `npm init` command, which is used to initialize a node project.
 ````
 npm init
 ````
