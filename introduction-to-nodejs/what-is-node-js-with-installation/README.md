@@ -27,7 +27,7 @@ Node is often used to build back end services that communicate with client-side 
 
 Every browser has their own JavaScript engine that converts JavaScript into code that a computer can understand. For example, Microsoft Edge uses Chakra, Firefox uses SpiderMonkey, and chrome uses V8.
 
-Before Node.JS, you could only run JavaScript in the browser. In 2009, Ryan Dahl came up with the idea of executing JavaScript code on the server-side, by using Chrome's v8 engine. Node.Js is a platform which is actually built on top of **Chrome's JavaScript Runtime environment**. Which makes it blazing fast when it comes down to the performance.
+Before Node.js, you could only run JavaScript in the browser. In 2009, Ryan Dahl came up with the idea of executing JavaScript code on the server-side, by using Chrome's v8 engine. Node.js is a platform which is actually built on top of **Chrome's JavaScript Runtime environment**. Which makes it blazing fast when it comes down to the performance.
 
 So, let's get started with the installation.
 
