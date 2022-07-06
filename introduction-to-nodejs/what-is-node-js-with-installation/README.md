@@ -15,7 +15,7 @@ On the other hand, web servers wait for client request messages. It processes th
 The body of a successful response contains the requested resource (for example a new HTML page, or an image, etc...), which could then be displayed by the browser.
 
 ### Dynamic websites
-A dynamic website is one where some response content is generated dynamically, only when needed. On a dynamic website, the HTML pages are normally created by fetching data from a database, then inserting that data into certain placeholders in HTML template. 
+A dynamic website is one where some response content is generated dynamically, only when needed. On a dynamic website, the HTML pages are normally created by fetching data from a database, and then inserting that data into certain placeholders in HTML template. 
 
 Most of the **code** to support a dynamic website must run on the server. Creating this code is known as **server-side programming** or **back-end programming**.
 
