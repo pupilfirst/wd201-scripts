@@ -1,5 +1,5 @@
 # Text
-In the previous lesson, you have successfully installed **Node.Js** and **npm** in your system. Now we will use `npm` to create our first node project.
+In the previous lesson, we successfully installed **Node.js** and **npm** in our system. Now we will use `npm` to create our first node project.
 
 ### First project
 
