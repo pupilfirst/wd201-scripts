@@ -129,7 +129,7 @@ To use a specific version in a project, run:
 
 ### 6. Check npm version
 
-**npm** is a package manager for the JavaScript programming language. It consists of a command line client, also called **npm**, and an online database of public and private packages. Open source developers use npm to share and borrow packages.
+**npm** is a package manager for the JavaScript programming language. It consists of a command-line client, also called **npm**, and an online database of public and private packages. Open-source developers use npm to share and borrow packages.
 
 When you install a node.js version using nvm, npm also gets installed automatically. You can check npm version by:
 
