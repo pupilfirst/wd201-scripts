@@ -5,7 +5,7 @@ In this course, we will learn about a JavaScript framework called Node.js. I'm a
 
 To recap, JavaScript is a **Programming Language**,  that runs on the end user's browser, and allows us to calculate, manipulate and validate data. Where HTML and CSS are languages that give structure and style to web pages, JavaScript improves the user experience of the web page by converting it from a static page into an interactive one.
 
-Now, have you ever wondered, the static HTML webpages or the forms that you've designed, how to make them dynamic? How to store that form's data in a database? Or what if, you want to send an confirmation email to an user who submits the form? 
+Now, have you ever wondered, about the static HTML webpages or the forms that you've designed, and how to make them dynamic? How to store that form's data in a database? Or, what if, you want to send a confirmation email to a user who submits the form? 
 This is where the role of **server-side programming** comes in.
 
 ## What is server-side programming?
