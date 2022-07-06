@@ -9,7 +9,7 @@ Now, have you ever wondered, about the static HTML webpages or the forms that yo
 This is where the role of **server-side programming** comes in.
 
 ## What is server-side programming?
-Web browsers communicate with web servers using the HyperText Transfer Protocol (HTTP). When you click a link on a web page or submit a form, an HTTP request is sent from your browser to the target web server.
+Web browsers communicate with web servers using the Hypertext Transfer Protocol (HTTP). When you click a link on a web page or submit a form, an HTTP request is sent from your browser to the target web server.
 On the other hand, web servers wait for client request messages. It processes them when they arrive, and responds back to the browser with an HTTP response message.
 
 The body of a successful response contains the requested resource (for example a new HTML page, or an image, etc...), which could then be displayed by the browser.
