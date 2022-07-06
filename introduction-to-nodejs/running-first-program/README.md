@@ -21,7 +21,7 @@ code .
 ````
 
 #### The `package.json` file
-In the editor you would find that we’ve created a `package.json` file. 
+In the editor, you would find that we’ve created a `package.json` file. 
 ```json
 {
   "name": "hello-node",
