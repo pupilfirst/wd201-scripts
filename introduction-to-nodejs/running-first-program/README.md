@@ -41,7 +41,7 @@ This file is the heart of a Node.js application. It contains a lot of meta-infor
 Currently, the `package.json` file points to non existing index.js file and has no dependencies. 
 
 #### Let’s write some code
-Let's get started by creating a `index.js` file, with a simple `hello` function.
+Let's get started by creating an `index.js` file, with a simple `hello` function.
 ```js
 function hello() {
   console.log("Hello Node.Js! Trying it for first time");
