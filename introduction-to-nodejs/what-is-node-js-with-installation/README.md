@@ -38,7 +38,7 @@ I'm assuming that you're either running macOS, or some variant of Linux, or you'
 
 ## Install Node.Js using NVM
 
-There are a number of different ways you can install Node.Js on your system. However, one of the most popular is *nvm.* NVM stands for Node.Js Version Manager. It allows us to quickly install and use different versions of node in our computer.
+There are a number of different ways you can install Node.js on your system. However, one of the most popular is *nvm.* NVM stands for Node Version Manager. It allows us to quickly install and use different versions of Node.js in our computer.
 
 Even if you only need a single version of Node.js right now, we still recommend using **nvm**. Because in future it will give you the flexibility to switch to another versions, depending on the requirements of your project, with minimal hassle.
 
