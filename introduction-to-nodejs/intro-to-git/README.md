@@ -5,7 +5,7 @@ If you are working on a project over time, you may want to keep track of what ch
 Git is a version control system and in this lesson we will learn more about that.
 
 ### What is Version Control System?
-As we all know, any software product is developed by several engineers. A version control system helps these developers to track and manage changes done to the software code. So they can simultaneously work on the same project, without interfering with another person's work.
+As we all know, any software product is developed by several engineers. A version control system helps these developers to track and manage changes done to the software code. So they can simultaneously work on the same project without interfering with another person's work.
 
 Normally most people gets confused between Git and GitHub. They think both are same. But that's not true. Git is the Vision Control System which you can install in your computer to manage source code history. Whereas, Github is the hosting service for projects that use git.
 
