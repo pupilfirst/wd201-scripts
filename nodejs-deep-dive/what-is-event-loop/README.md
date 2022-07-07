@@ -18,7 +18,7 @@ After executing above statements, browser will print Hello 1” & Hello 3” fir
 
 # Script 
 ### The call stack
-Node.Js has a single **call stack**, which along with other parts like *heap*, *queue* constitutes the Javascript's Concurrency Behaviour.
+Node.js has a single **call stack**, which along with other parts like *heap*, *queue* constitutes the JavaScript's concurrency behaviour.
 The Call Stack is a data structure which records the function calls, basically where in the program we are. If we call a function to execute, we push something on to the stack, and when we *return* from a function, we *pop* off the top of the stack.
 
 The event loop continuously checks the call stack to see if there's any function that needs to run. Let's see a simple event loop implementation:
