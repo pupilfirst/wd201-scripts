@@ -1,5 +1,5 @@
 # Script
-In this video, I'm going to show you, how to use the `git` command line interface in any application.
+In this video, I'm going to show you, how to use the `git` command line interface.
 
 Before continuing, let me quickly mention why this course requires you to use git. I've already told you that, git is the defacto standard for version control in the coding industry. Regardless of which language you use in your work, you'll almost certainly be using git as your version control system. So it's pretty much necessary for every developers out there.
 
