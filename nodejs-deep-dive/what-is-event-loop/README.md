@@ -1,5 +1,5 @@
 # Text
-In this lesson we will learn about the concept of **event loop** and **call stack** in Node.Js.
+In this lesson we will learn about the concept of **event loop** and **call stack** in Node.js.
 
 In Node.js, JavaScript code runs on a single thread. Means it can handle one task at a time or a piece of code at a time. Thus, two statement in javascript can not be executed in parallel. Execution happens line by line, which means each line of javascript code (or statements) are synchronous.
 But there is a way to run your code asynchronously. For example, if you use `setTimeout()` function, a Web API given by browser, which makes sure that your code executes after specified time (in millisecond). Let's take a look
