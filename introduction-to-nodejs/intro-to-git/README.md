@@ -40,4 +40,4 @@ git --version
 
 Secondly, signup for a new [GitHub account here](https://github.com/).
 
-Great! see you in the next lesson.
+Great! Now you have both Git and GitHub ready. See you in the next lesson.
