@@ -1,6 +1,6 @@
 # Text
 
-In this lesson, we are going to learn about Node.Js REPL. REPL stands for *Read Evaluate Print Loop*, and that is basically what it does: It reads an input, evaluates it, prints the result and starts the process again. The REPL could be very helpful to quickly test simple JavaScript code.
+In this lesson, we are going to learn about Node.js REPL. REPL stands for *Read Evaluate Print Loop*, and that is basically what it does: It reads an input, evaluates it, prints the result and starts the process again. The REPL could be very helpful to quickly test simple JavaScript code.
 
 # Script
 ## Let's try it out
