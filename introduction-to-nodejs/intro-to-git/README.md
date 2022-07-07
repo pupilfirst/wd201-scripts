@@ -12,7 +12,7 @@ Usually, most people get confused between Git and GitHub. They think both are th
 ### What you can do with Git?
 With git you can:
 - Record changes in your project and its files
-- Revert back to previous state of a file, at different points in time
+- Revert to previous state of a file at different points in time
 - Collaborate with multiple people on one codebase
 - See changes over time
 - Develop multiple features at once
