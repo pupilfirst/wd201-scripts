@@ -1,7 +1,7 @@
 # Script
 In this video, I'm going to show you, how to use the `git` command line interface.
 
-Before continuing, let me quickly mention why this course requires you to use git. I've already told you that, git is the defacto standard for version control in the coding industry. Regardless of which language you use in your work, you'll almost certainly be using git as your version control system. So it's pretty much necessary for every developers out there.
+Before continuing, let me quickly mention why this course requires you to use git. Git is the de facto standard for version control in the software industry. Regardless of language you use in your work, you'll almost certainly be using git as your version control system. So it's pretty much necessary for every developer out there.
 
 In this lesson, we will simply play around with git, and start getting comfortable with it. 
 We will start the the simple Node.Js application we've created in the [Running our first program](http://#) lesson.
