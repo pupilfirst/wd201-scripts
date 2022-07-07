@@ -1,6 +1,6 @@
 # Text
 
-If you are working on a project over time, you may want to keep track of which changes were made, by whom, and when those changes were made. This becomes increasingly important if you end up having a bug in your code! Git can help you with this.
+If you are working on a project over time, you may want to keep track of what changes were made, by whom, and when those changes were made? This becomes increasingly important if you have a bug in your code! Git can help you with this.
 
 Git is a version control system and in this lesson we will learn more about that.
 
