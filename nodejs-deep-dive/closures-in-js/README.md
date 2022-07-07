@@ -1,7 +1,7 @@
 # Text
 In this lesson, you will learn a very key concept of JavaScript, the **Closures**. 
 
-I guess you haven't heard of this term *closure* previously, and frankly it is not very much self-explanatory as well. From today onwards, you can remember it with a fairly simple term (or synonym) - Legacy! Why, let's find out.
+You probably haven't heard of the term *closure* previously, and it is not very self-explanatory either. From today onwards, you can remember it with a reasonably simple term (or synonym) - Legacy! Why? Let's find out.
 
 ### What is a closure?
 A closure is a feature in JavaScript, where an inner function has access to the outer (enclosing) function’s variables — a scope chain.
