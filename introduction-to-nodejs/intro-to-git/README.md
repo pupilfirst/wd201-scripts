@@ -23,7 +23,7 @@ A *repository*, or a *git project* is an entire collection of files and folders 
 Using the command line, a git repository allows us to:  interact with the file's history, clone a project, create branches, commit changes to a file, compare changes with other versions of a file, and more.
 
 ### How GitHub fits in?
-GitHub is a Git hosting repository that allows us to share a project with other developers. 
+GitHub is a Git hosting service that allows us to share a project with other developers. 
 
 GitHub brings collaboration directly into the development process. Work is organised into repositories, where developers can outline requirements or direction and set expectations for team members. Then, using the GitHub flow, developers simply create a branch to work on requirements, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page.
 
