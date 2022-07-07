@@ -1,6 +1,5 @@
 # Text
 In this lesson, you will learn a very key concept of JavaScript, the **Closures**. 
-I will explain in clear terms what **closure** is, and how you can easily relate it to real-world.
 
 I guess you haven't heard of this term *closure* previously, and frankly it is not very much self-explanatory as well. From today onwards, you can remember it with a fairly simple term (or synonym) - Legacy! Why, let's find out.
 
