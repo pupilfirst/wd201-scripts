@@ -1,16 +1,14 @@
 # Text
 
-In this lesson, we will learn about the `package.json` file and why it is the basis of any **Node.js** application.
+In this lesson, you will learn about the `package.json` file and why it is the basis of any **Node.js** application.
 
 Any **Node.js** project or `npm` package is built around the `package.json` file. It stores project information describing the details of the project and its dependencies. It is made up of a single object in [JSON format](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) that stores information in key-value pairs.
 
-There are only two required fields: “name” and “version”, but it's a good idea to provide additional information about your project that future users might find useful.
+There are only two required fields: “name” and “version”, but it's a good idea to provide additional information about your project that fellow developers might find useful.
 
 ## Creating a new `package.json`
 
-Let us start by creating a new `package.json` file for our application. Follow the steps below.
-
-We will create a new folder for our application. Let us call it 'my-node-app'.
+Let us start by creating a new folder for our application. Let us call it 'my-node-app'.
 
 While in your Terminal, navigate inside your application folder.
 
@@ -18,7 +16,9 @@ While in your Terminal, navigate inside your application folder.
 cd my-node-app
 ```
 
-While inside the application, you have two ways to create a `package.json` file.
+Next, we will create a new `package.json` file for our application.
+
+We have two options to create a `package.json` file.
 
 1. Create a new file called `package.json` and manually enter the configuration.
 2. Use the `npm` CLI that we discussed earlier to generate one for us automatically.
