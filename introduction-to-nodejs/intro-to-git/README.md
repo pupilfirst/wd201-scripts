@@ -10,7 +10,7 @@ As we all know, any software product is developed by several engineers. A versio
 Usually, most people get confused between Git and GitHub. They think both are the same. But that's not true. Git is a Version Control System that you can install on your computer to manage source code. In comparison, GitHub is a hosting service for projects that use git.
 
 ### What you can do with Git?
-With git you can:
+With git, you can:
 - Record changes in your project and its files
 - Revert to previous state of a file at different points in time
 - Collaborate with multiple people on one codebase
