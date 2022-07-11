@@ -24,7 +24,7 @@ As per design, every To-Do item has a checkbox, description text, and an *overdu
 So, inside the `<l1>`, we will organise these contents using a flexbox.
 ```html
 <li>
-  <div class="flex items-center my-2 px-2 py-1">
+  <div class="flex items-center w-fit my-2 px-2 py-1">
     <input id="todo-checkbox-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300">
     <label for="todo-checkbox-1" class="ml-2 text-sm text-gray-600 cursor-pointer">Submit Saas Project</label>
   </div>              
@@ -35,7 +35,7 @@ Here, the `id` of the input type checkbox and the `for` attribute of the label m
 So let's add one more To-Do item
 ```html
 <li> 
-  <div class="flex items-center my-2 px-2 py-1">
+  <div class="flex items-center w-fit my-2 px-2 py-1">
     <input id="todo-checkbox-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300">
     <label for="todo-checkbox-2" class="ml-2 text-sm text-gray-600 cursor-pointer">Call accountant</label>
   </div>                            
@@ -45,7 +45,7 @@ So let's add one more To-Do item
 Next, we can add the `Overdue` indicator for any Todo item.
 ```html
 <li>
-  <div class="flex items-center my-2 px-2 py-1">
+  <div class="flex items-center w-fit my-2 px-2 py-1">
     <input id="todo-checkbox-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300">
     <label for="todo-checkbox-1" class="ml-2 text-sm text-gray-600 cursor-pointer">Submit Saas Project</label>
     <span class="text-xs text-red-500 px-4">Overdue</span>
@@ -56,7 +56,7 @@ Next, we can add the `Overdue` indicator for any Todo item.
 One final touch, on-hover of any To-Do item, we have to change it's background color. Let's add it.
 ```html
 <li>
-  <div class="flex items-center my-2 px-2 py-1 rounded hover:bg-purple-50">
+  <div class="flex items-center w-fit my-2 px-2 py-1 rounded hover:bg-purple-50">
     ....
   </div>
 </li>
