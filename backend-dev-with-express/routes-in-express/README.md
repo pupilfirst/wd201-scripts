@@ -1,5 +1,5 @@
 # Text
-Routing is one of the most important parts of any Web framework since it defines how our application should handle all the HTTP requests by the client. And in this lesson we are about to explore, how to define routes in Node JS.
+Routing is an important part of a Web framework. It defines how the application should handle all the incoming HTTP requests. In this lesson we are about to explore, how to define routes in an express.js application.
 
 We will work on the same express application that we've created in the **Hello world with Express.js!** lesson.
 
