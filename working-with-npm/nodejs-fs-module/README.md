@@ -4,7 +4,7 @@ In the previous lessons, we learned about **Node.js** and `npm` and how we can u
 
 In this lesson, we will learn about some major Node.js inbuilt features that you might use for your application development.
 
-Node.js provides a lot of inbuilt modules for developers to work with, and the `fs` module or the File system module is one of the most widely used modules in Node.js. We will have an overview of what the `fs` module does and how you can use it to interact with your files. We will also learn to use some of its more common functions.
+Node.js provides a lot of inbuilt modules for developers to work with. One such important module is the `fs` module or the File system module. We will have a quick overview of what the `fs` module does and how you can use it to interact with your files. We will also learn to use some of its more common functions.
 
 ## Node.js `fs` module
 
@@ -12,7 +12,7 @@ The Node.js file system module allows you to work with the file system on your c
 
 There is no need to install it separately. Being part of the Node.js core, it can be used by simply importing it using the `require` statement.
 
-Let us open the file we created previously for our first node.js application. Let us start afresh by clearing the contents of the file. Enter the following on the first line of the file to include `fs` for usage in our file.
+Let us open the file we created previously for our first node.js application. Clear the contents of the file. Enter the following code on the first line of the file to include the `fs` module.
 
 ```js
 const fs = require("fs");
@@ -30,13 +30,13 @@ The Node.js `fs` module is used for some common tasks on the file system as foll
 
 Let us learn how can we use `fs` to write a new text file.
 
-Let us start by creating a text file `sample.txt` in the sample folder as our application where we have the **index.js** and **package.json**
+We will start by creating a text file `sample.txt` in the sample folder of our application where we have the **index.js** and **package.json**
 
 Now let us try to write the content of the file using Node.js `fs`. The `fs` module provides us with two options to write files to the file system, `writeFile` and `writeFileSync`. Both perform the same operation, but in different ways.
 
 The `writeFile` is an asynchronous function, which will return immediately before the file has been written and only its callback function will be run when the write operation is completed. In the case of `writeFileSync`, it will block all other execution until the file has been written/created.
 
-Let us use the `writeFile` function to write a new file to the file system, with our content.
+Here we can use the `writeFile` function to write a new file to the file system, with our content.
 
 ```js
 fs.writeFile(
@@ -55,9 +55,9 @@ When you run this file using the `npm start` command, you can see that the new f
 
 Let us learn how can we use `fs` to read a text file and print the data.
 
-Let us try to read the content of the file we created earlier using Node.js `fs`, `readFile` or `readFileSync`.
+We will try to read the content of the file we created earlier using Node.js `fs`, `readFile` or `readFileSync`.
 
-Let us use the `readFile` function to read the above file from the file system. First, we will read the file and use the `toString()` function to convert the data received to a string to display the same in the console.
+We will now use the `readFile` function to read the above file from the file system. First, we will read the file and use the `toString()` function to convert the data received to a string to display the same in the console.
 
 ```js
 fs.readFile("sample.txt", function (err, data) {
