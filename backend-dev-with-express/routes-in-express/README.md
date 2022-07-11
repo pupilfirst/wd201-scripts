@@ -70,4 +70,4 @@ app.put('/todos/:id', function (request, response) {
 })
 ```
 
-So, in this lesson, we've learned to define routes in a Node.Js application. See you in the next one.
+So, in this lesson, we've learned to define routes in a Node.js application. See you in the next one.
