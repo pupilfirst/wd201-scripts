@@ -20,7 +20,7 @@ node index.js
 
 While this is the right way to run the **Node.js** code, when you have a huge application with many dependencies which need to be combined before execution this will become tedious.
 
-Using `npm` can solve this issue for us.
+Using `npm` scripts, we can solve this issue.
 
 Navigate to the `package.json` in your **Node.js** application folder.
 
@@ -55,7 +55,7 @@ npm run start
 
 You can notice that the above command internally executes the `node index.js` command and the result is displayed in the Terminal.
 
-You can also use the above command without the run keyword, as the `start` function is in-built into the `package.json`.
+You can also use the above command without the `run` keyword, as the `start` function is added by default in the `package.json`.
 
 ```js
 npm start
@@ -63,4 +63,4 @@ npm start
 
 The above execution also returns a similar result.
 
-You can also add custom scripts based on your project requirement to these, and we will learn more about those when we start working on the future levels.
+You can also add custom scripts based on your project requirements. We will learn more about these while working on the future levels.
