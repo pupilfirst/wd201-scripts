@@ -5,8 +5,8 @@ Express.js is a fast and lightweight framework, used majorly for web application
 With that being said, let's create our first ever Express application.
 
 ### Installing Express.js
-First, we will create a new project folder, and inside that folder we will initialize node using `npm init`.
-Then, to install the Express.js in that application, in the terminal we will run the following command:
+First, we will initialize node project using `npm init`.
+Then, to install the Express.js in that application, we will run the following command in the terminal:
 ````
 npm install express --save
 ````
