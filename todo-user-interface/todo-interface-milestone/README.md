@@ -1,7 +1,7 @@
 # Text
 
 ## Problem Description
-To complete this milestone, you have to make two changes in the To-Do manager HTML page, as per the design given.
+To complete this milestone, you have to make two changes to the To-Do manager HTML page, as per the design given.
 
 1. Show the number of Todo's for every category (Due Today, Due Tomorrow, Remaining), just after the heading.
 2. And for remaining To-dos, show the due date just after the To-Do description.
