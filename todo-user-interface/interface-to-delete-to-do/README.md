@@ -42,7 +42,7 @@ After that, we have to write some custom CSS to show/hide the delete icon based 
 </style>
 ```
 
-Now refresh the browser, Yes! the delete icon is showing and hiding as expected.
+Now refresh the browser, Yes! The delete icon is showing and hiding as expected.
 
 So, we've successfully designed the To-Do application. 
 
