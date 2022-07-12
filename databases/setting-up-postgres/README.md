@@ -25,7 +25,7 @@ sudo service postgresql start
 
 ## Installation on macOS
 
-We'll use [Homebrew](https://brew.sh) to install PostgreSQL server and client:
+We'll use [Homebrew](https://brew.sh) to install the PostgreSQL server and client:
 
 ```bash
 brew install postgresql
