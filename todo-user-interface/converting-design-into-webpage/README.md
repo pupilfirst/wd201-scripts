@@ -9,7 +9,7 @@ It can be very difficult to recreate a design by just looking at it as a picture
 Layout design is the process of arranging visual elements — like text, images, and shapes — on a given webpage. It is very important for any website, as it can determine the overall appearance and connection among different visual elements on the page.
 
 #### 2. Follow the color palette:
-Choosing and following the right colors for a website is crucial. Color plays a very inportant role in brand recognition. When used correctly, color - along with good typography, can be one of the single most important aspects of website design. So getting the palette right at the beginning of the project, is very essential.
+Choosing and following the right colors for a website is crucial. Color plays a very important role in brand recognition. When used correctly, color - along with good typography, can be one of the single most important aspects of website design. So getting the palette right at the beginning of the project, is very essential.
 
 #### 3. Follow the typography:
 Typography has a large impact on how users view your webpage. Good typography helps to create a visual hierarchy (the method of organizing elements to indicate their importance) on your website that is both memorable and aesthetically pleasing for your users.
