@@ -3,7 +3,7 @@ Take a look at the following design:
 
 > Action: Add TODO manager design snapshot here.
 
-It can be very difficult to recreate a design by just looking at it as a picture. You have to be able to closely inspect it, to see things like colors, spacings, and typography etc. In this level, we will learn about the key points which you have to keep in mind while converting a design like this one, into a webpage, using simple HTML and CSS. So, let's get started.
+It can be very difficult to recreate a design by just looking at it as a picture. You have to be able to closely inspect it, to see things like colors, spacings, typography etc. In this level, we will learn about the key points that you have to keep in mind while converting a design like this one, into a webpage, using simple HTML and CSS. So, let's get started.
 
 #### 1. First, focus on the **layout**:
 Layout design is the process of arranging visual elements — like text, images, and shapes — on a given webpage. It is very important for any website, as it can determine the overall appearance and connection among different visual elements on the page.
