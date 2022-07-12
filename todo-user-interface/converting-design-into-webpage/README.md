@@ -15,6 +15,6 @@ Choosing and following the right colors for a website is crucial. Color plays a 
 Typography has a large impact on how users view your webpage. Good typography helps to create a visual hierarchy (the method of organizing elements to indicate their importance) on your website that is both memorable and aesthetically pleasing for your users.
 
 #### 4. Design the User Experience:
-Define, how end user's are going to interact with different visual elements in your application. Iteractions has to be practical and usable.
+Define, how end users are going to interact with different visual elements in your application. Interactions have to be practical and usable.
 
 Once, these four key points are defined, let's develop the design of To-Do manager shared above, in the next lesson.
