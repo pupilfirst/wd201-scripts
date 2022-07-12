@@ -15,7 +15,7 @@ sudo apt update
 sudo apt install postgresql postgresql-contrib libpq-dev
 ```
 
-This will install the PostgreSQL database server on your computer. Let's make sure that it's server is up and running using the following command:
+This will install the PostgreSQL database server on your computer. Let's make sure that its server is up and running using the following command:
 
 ```bash
 sudo service postgresql start
