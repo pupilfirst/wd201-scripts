@@ -12,7 +12,7 @@ npm init
 The generator will ask you a few questions, it’s OK to just press [enter] for all of them.
 Then, open the project folder in your favourite editor, and check the newly generated `package.json.file`.
 
-Now, to install the express.js in this application, run the following command:
+Now, to install the Express.js in this application, run the following command:
 ````
 npm install express --save
 ````
