@@ -5,7 +5,7 @@ Sequelize is a promise-based ORM(Object-Relational Mapping) for Node.js. It save
 So, let's get started.
 
 ### Installing Sequelize
-First, we will install Sequelize in the same Express.Js application, that we've created in the previous lesson.
+First, we will install Sequelize in the same Express.js application, that we created in the previous lesson.
 ````
 npm install sequelize --save
 ````
