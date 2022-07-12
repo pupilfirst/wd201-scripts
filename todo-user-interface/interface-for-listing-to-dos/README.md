@@ -30,7 +30,7 @@ So, inside the `<l1>`, we will organise these contents using a flexbox.
   </div>              
 </li>
 ```
-Here, the `id` of the input type checkbox and the `for` attribute of the label must be same. Otherwise you wont be able to toggle check-uncheck the checkbox by clicking on the label.
+Here, the `id` of the input type checkbox and the `for` attribute of the label must be the same. Otherwise, you won't be able to toggle check-uncheck the checkbox by clicking on the label.
 
 So let's add one more To-Do item
 ```html
