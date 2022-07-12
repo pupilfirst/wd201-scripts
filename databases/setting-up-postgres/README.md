@@ -60,7 +60,7 @@ createuser -s postgres
 psql -U postgres
 ```
 
-`psql` is like Node.js console - it is an interactive console where we can execute database commands and SQL queries.
+`psql` is similar to a Node.js console - it is an interactive console where we can execute database commands and SQL queries.
 
 Once `psql` is running, type the following commands:
 
