@@ -1,7 +1,7 @@
 # Text
 In this lesson, we will learn to connect our **Express** server with **PostgreSQL** database, using **Sequelize**.
 
-As we've already introduced you to Sequelize, a promise-based ORM(Object-Relational Mapping) for Node.js. If saves a lot of time during development, as we don’t have to write or care about raw queries, as we can query the database in form of methods and functions. Plus, using Sequelize, we can define relation between two models (tables), effortlessly. 
+Sequelize is a promise-based ORM(Object-Relational Mapping) for Node.js. It saves a lot of time during development, as we don’t have to write or care about raw queries, as we can query the database in form of methods and functions. Plus, using Sequelize, we can define relation between two models (tables), effortlessly. 
 So, let's get started.
 
 ### Installing Sequelize
