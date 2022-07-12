@@ -1,5 +1,5 @@
 # Text
-In this lesson, we will create a list of To-Dos as per the design, and we will also group them in three categories: *Due Today*, *Due Tomorrow*, *Remaining*.
+In this lesson, we will create a list of To-Dos as per the design, and we will group them into three categories: *Due Today*, *Due Tomorrow* and *Remaining*.
 
 # Script
 We will start with creating a wrapper for the list of To-Dos, and inside that we will keep the three top level To-Do categories: *Due Today*, *Due Tomorrow*, *Remaining*.
