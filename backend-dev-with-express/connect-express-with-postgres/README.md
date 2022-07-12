@@ -66,7 +66,7 @@ After that,
 module.exports = sequelize;
 global.sequelize = sequelize;
 ```
-Here, we are exporting the connection instance and making it globally accessible. Which means, we can access the Sequelize instance from any module on our environment or application, without import.
+Here, we are exporting the connection instance and making it globally accessible. This means, we can access the Sequelize instance from any module on our environment or application, without import.
 
 ### Connecting to database
 Now, inside the `index.js` file, we just have to `require` the connection module to connect to the database and expose the connection instance globally.
