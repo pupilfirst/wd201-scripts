@@ -21,7 +21,7 @@ This will install the PostgreSQL database server on your computer. Let's make su
 sudo service postgresql start
 ```
 
-> **Note for WSL users:** You'll need to run the above command each time you restart Windows, and open up Ubuntu for the first time.
+> **Note for WSL users:** You'll need to run the above command each time you restart Windows and open up Ubuntu for the first time.
 
 ## Installation on macOS
 
