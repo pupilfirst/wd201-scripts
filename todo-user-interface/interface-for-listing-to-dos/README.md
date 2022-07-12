@@ -19,7 +19,7 @@ Next, for every group, we will create a list of To-Dos. And for that we will use
 </ul>
 ```
 
-As per design, every To-Do item has a checkbox, description text, and an *overdue* indicator (for To-Dos which has gone past the due date and not completed yet). The checkbox will be used in future to mark a To-Do as *complete*.
+As per the design, every To-Do item has a checkbox, description text, and an *overdue* indicator (for To-Dos which has gone past the due date and not been completed yet). The checkbox will be used in future to mark a To-Do as *complete*.
 
 So, inside the `<l1>`, we will organise these contents using a flexbox.
 ```html
