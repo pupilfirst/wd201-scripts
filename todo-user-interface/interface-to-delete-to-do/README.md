@@ -14,7 +14,7 @@ Now, in our HTML, we will add this icon. Another point is, the delete icon must 
   </svg>
 </a>
 ```
-Great! the icon is now visible. 
+Great! The icon is now visible. 
 
 But the problem is, it's always visible. A better user experience would be to show the delete icon only when user hovers over the To-Do item. For that, we have to write some custom CSS.
 
