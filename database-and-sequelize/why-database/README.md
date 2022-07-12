@@ -31,4 +31,4 @@ We can then ask the database questions like "what was the total sale in the last
 
 But we won't be learning much SQL in this course. Instead, we'll look at Sequelize, which lets us talk to the database through JavaScript and not directly write SQL ourselves.
 
-But before we go there, let's setup PostgreSQL on your machine.
+But before we go there, let's set up PostgreSQL on your machine.
