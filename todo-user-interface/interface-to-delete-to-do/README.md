@@ -33,7 +33,7 @@ Next, we'll add the `Todo-Item` classname to the outer` <li>` tag.
 </li>
 ```
 
-After that, we have to write some custom CSS to show/hide the delete icon based on `hover` event. For the time being, we will add the custom CSS in the `<head>` section of this HTML file. Later we will move it to separate file.
+After that, we have to write some custom CSS to show/hide the delete icon based on the `hover` event. For the time being, we will add the custom CSS in the `<head>` section of this HTML file. Later we will move it to a separate file.
 ```html
 <style>
   .Todo-Item:hover .trash-icon{
