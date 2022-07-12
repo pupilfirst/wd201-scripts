@@ -17,7 +17,7 @@ However, this is a very crude way of going about things. It is because:
 1. How will you read back this to-do? Where does one to-do begin and another end?
 2. How will you update a single to-do without rewriting the entire file every time?
 3. How can multiple users work on the same file without overwriting each other's changes?
-4. How can you get quick reports even as the file grow to many gigabytes?
+4. How can you get quick reports even as the file grows to many gigabytes?
 
 These questions are not trivial, even though they may appear so at first blush. There is a huge body of computer science literature around data storage and manipulation, and it has spawned large commercial offerings from companies like Oracle and Microsoft.
 
