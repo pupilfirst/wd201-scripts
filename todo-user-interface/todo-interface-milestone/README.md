@@ -12,7 +12,7 @@ To complete this milestone, you have to make two changes to the To-Do manager HT
 2. Deploy the project on [Glitch](https://glitch.com/).
    
 #### Try to make the HTML and CSS look as close to the design as possible.
-But don't worry if it is not identical. Don't spend more than 3 hours on this target. Just do your best and submit. It takes a long time to truly master front-end development, so don't fret this one :)
+But don't worry if it is not identical. Don't spend more than 3 hours on this target. Just do your best and submit. It takes a long time to truly master front-end development, so don't fret about this :)
 
 #### Well-formatted code is a must.
 Remember to format the code - both the HTML and CSS. This one is non-negotiable as always.
