@@ -8,7 +8,7 @@ To complete this milestone, you have to make two changes to the To-Do manager HT
 3. Move the custom CSS to a separate file.
    
 ## Submission Requirements
-1. Initialize a git repository in the project folder and push the code to GiutHub.
+1. Initialize a git repository in the project folder and push the code to GitHub.
 2. Deploy the project on [Glitch](https://glitch.com/).
    
 #### Try to make the HTML and CSS look as close to the design as possible.
