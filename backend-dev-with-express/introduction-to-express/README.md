@@ -21,7 +21,7 @@ npm install express --save
 Node.js has a built-in `http` module as well as `https` module, to create an HTTP/HTTPS server. But the implementation process is kind of difficult.
 Whereas, Express wraps the built-in `http` module and provides a cleaner interface to create an HTTP web server.
 
-First create a new file called `index.js`, there we will create and configure our Express.JS server.
+First, create a new file called `index.js`, there we will create and configure our Express.js server.
 ```js
 const express = require('express')
 const app = express()
