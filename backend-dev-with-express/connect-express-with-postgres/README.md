@@ -49,7 +49,7 @@ const sequelize = new Sequelize("todo-app", "db-username", "db-password", {
   dialect: "postgres"
 });
 ```
-In these lines, we are providing few key information to Sequelize about the Postgresql database. Which includes, **database name** (*todo-app* in this case), *database username* and *password*, *host* and *dialect*. In dialect, we are providing the `postgres` as we are working with PostgreSQL. Remember, using Sequelize we can connect with other database services as well, like MySQL, SQLite etc.
+In these lines, we are providing a few key information to Sequelize about the PostgreSQL database. This includes, **database name** (*todo-app* in this case), *database username* and *password*, *host* and *dialect*. In dialect, we are providing `postgres` as we are working with PostgreSQL. Remember, using Sequelize we can connect with other database services as well, like MySQL, SQLite etc.
 
 Next,
 ```js
