@@ -48,7 +48,7 @@ As per the design image, the Todo-Manager is positioned at the center of the pag
   </div>
 <body>
 ```
-Here, `grid-cols-6` divides the whole screen into six columns, and `col-start-3` defines that our primary container will start from **third** column. `col-span-2` says the browser that the container will be 2 column wide. Let's see the output in browser.
+Here, `grid-cols-6` divides the whole screen into six columns, and `col-start-3` defines that our primary container will start from **third** column. `col-span-2` says the browser that the container will be 2 columns wide. Let's see the output in the browser.
 
 > Action: Also show using the inspect element.
 
