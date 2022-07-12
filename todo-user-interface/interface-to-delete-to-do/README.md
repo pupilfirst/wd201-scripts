@@ -6,7 +6,7 @@ In this lesson, we will add a **delete** icon for every To-Do item, and it shoul
 For icons, we will use [heroicons](https://heroicons.com/), which has hundreds of simple and beautiful SVG icons. Also, it comes from the makers of **Tailwind CSS**.
 Let's search for the delete icon, and from the results simply copy the **SVG** code.
 
-Now, in our HTML we will add this icon. Another point is, the delete icon must be wrapped by an ancohr (`<a>`) tag as it has to be actionable.
+Now, in our HTML, we will add this icon. Another point is, the delete icon must be wrapped by an anchor (`<a>`) tag as it has to be actionable.
 ```html
 <a href="#!">
   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
