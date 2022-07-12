@@ -10,7 +10,7 @@ We will start with creating a wrapper for the list of To-Dos, and inside that we
   <h5>Remaining</h5>
 </div>
 ```
-Next, for every group we will create a list of To-Dos. And for that we will use `<ul>`.
+Next, for every group, we will create a list of To-Dos. And for that we will use `<ul>`.
 ```html
 <h5>Due Today</h5>
 <ul class="list-none pl-4">
