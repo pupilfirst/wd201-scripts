@@ -97,6 +97,6 @@ Executing (default): SELECT 1+1 AS result
 Connection with PostgreSQL has been established successfully.
 ````
 
-That's great! You've successfully established connection between your Express application and the PostgreSQL database. See you in the next lesson.
+That's great! You've successfully established a connection between your Express application and the PostgreSQL database. See you in the next lesson.
 
 
