@@ -5,17 +5,12 @@ Express.js is a fast and lightweight framework, used majorly for web application
 With that being said, let's create our first ever Express application.
 
 ### Installing Express.js
-To install Express.js, first, we have to create a project folder and then a `package.json` file, which will be holding all the project dependencies. So, create a folder using `mkdir`, and inside the folder, initialize node using the following command:
-````
-npm init
-````
-The generator will ask you a few questions, it’s OK to just press [enter] for all of them.
-Then, open the project folder in your favourite editor, and check the newly generated `package.json.file`.
-
-Now, to install the Express.js in this application, run the following command:
+First, we will create a new project folder, and inside that folder we will initialize node using `npm init`.
+Then, to install the Express.js in that application, in the terminal we will run the following command:
 ````
 npm install express --save
 ````
+Once that process gets complete, open the project in VS Code.
 
 ### Configuring the Express server
 Node.js has a built-in `http` module as well as `https` module, to create an HTTP/HTTPS server. But the implementation process is kind of difficult.
