@@ -53,7 +53,7 @@ Then,
 ```js
 app.listen(3000)
 ```
-The `app.listen()` function tells the server to start listening for connections on a particular port, in this case port `3000`. This is why we went to `localhost:3000` to look at our **Hello World** example.
+The `app.listen()` function tells the server to start listening for connections on a particular port, in this case, port `3000`. This is why we went to `localhost:3000` to look at our **Hello World** example.
 
 The last part is the route handler:
 ```js
