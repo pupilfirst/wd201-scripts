@@ -8,7 +8,7 @@ Scroll down to view the instructions for macOS.
 
 Open your Terminal and type in the following commands:
 
-(press Y when it asks "Do you want to continue? [Y/n]")
+(press Y when it asks, "Do you want to continue? [Y/n]")
 
 ```bash
 sudo apt update
