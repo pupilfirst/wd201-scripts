@@ -1,5 +1,5 @@
 # Text
-In the previous lesson, you've learned about the key areas which you should keep in mind while designing a webpage. Now, it's time to use those principals to convert the To-Do manager design into an webpage. Let's get started.
+In the previous lesson, you've learned about the key areas which you should keep in mind while designing a webpage. Now, it's time to use those principles to convert the To-Do manager design into a webpage. Let's get started.
 
 # Script
 In this lesson, we will start with our To-Do manager application, to convert the design into an webpage.
