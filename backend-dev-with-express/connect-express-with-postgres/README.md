@@ -14,7 +14,7 @@ Sequelize also requires your database system driver. As we will be working with 
 ````
 npm install pg --save
 ````
-Next, we will establish connection between Postgres and our Express server. So, open the project in VS Code, it's time to write some code.
+Next, we will establish the connection between Postgres and our Express server. So, open the project in VS Code, it's time to write some code.
 
 ### Configuring the database connection parameters
 First, create a new folder named `src` in the root directory. Inside `src`, create a subfolder `db`, and there create a new file `connection.js`.
