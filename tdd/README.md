@@ -12,7 +12,7 @@ TDD is a cyclic process from Red - Green - Blue.
 
 - Red stage
 
-  When a new feature is requested, the developer writes a test first. Upon running the test, the suite will fail. The red phase indicates that code does not work
+When a new feature is requested, the developer writes a test first. Upon running the test, the suite will fail. The red phase indicates that the code does not work.
 
 - Green stage
 
