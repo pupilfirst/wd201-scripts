@@ -103,7 +103,7 @@ connect()
 
 ### Counting rows
 
-Now we should be able to query the database and fetch the stored data. But first let us check the number of rows.
+Now we should be able to query the database and fetch the stored data. But first, let us check the number of rows.
 
 ```js
 import { connect } from "./connectDB.js";
