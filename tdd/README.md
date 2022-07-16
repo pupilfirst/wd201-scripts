@@ -16,7 +16,7 @@ When a new feature is requested, the developer writes a test first. Upon running
 
 - Green stage
 
-  In this stage, developer writes minimum code required to pass the test added. The test show that the functionality of the code is already satisfied. The green phase indicates that everything is working, but not necessary in the most optimal way.
+In this stage, the developer writes the minimum code required to pass the test added. The test shows that the functionality of the code is already satisfied. The green phase indicates that everything is working, but not necessary in the most optimal way.
 
 - Blue stage
 
