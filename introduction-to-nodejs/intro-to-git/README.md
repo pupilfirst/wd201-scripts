@@ -32,8 +32,14 @@ First, follow the link given below to install git in your system. This link will
 
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-Once the installation is complete, verify it by using the following command in the terminal:
 
+First of all, you should install git on your system if you haven't done that already. On Ubuntu Linux, you'll simply need to type in the command `sudo apt-get install git`, and that'll take care of installation.
+
+If you're using macOS, you should already have `git` installed on your system - no additional step should be required.
+
+On Windows, just go to [https://git-scm.com/download/win](https://git-scm.com/download/win) and the download will start automatically. Follow the instructions shown by the installation wizard, to complete the process.
+
+Once the installation is complete, verify it by using the following command in the terminal:
 ````
 git --version
 ````
