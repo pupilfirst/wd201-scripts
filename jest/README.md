@@ -1,6 +1,6 @@
 ## Script
 
-In this lesson, we will learn how to test our JavaScript codebase using `jest` framework.
+In this lesson, we will learn how to test our JavaScript codebase using the `jest` framework.
 
 > Action: todo open https://jestjs.io/ in browser
 
