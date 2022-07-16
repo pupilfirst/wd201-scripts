@@ -28,11 +28,6 @@ GitHub is a Git hosting service that allows us to share a project with other dev
 GitHub brings collaboration directly into the development process. Work is organised into repositories, where developers can outline requirements or direction and set expectations for team members. Then, using the GitHub flow, developers simply create a branch to work on requirements, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page.
 
 ### Install git in your system and create a GitHub account
-First, follow the link given below to install git in your system. This link will lead you to Git's official website. Check the installation steps based on the operating system you have.
-
-https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-
-
 First of all, you should install git on your system if you haven't done that already. On Ubuntu Linux, you'll simply need to type in the command `sudo apt-get install git`, and that'll take care of installation.
 
 If you're using macOS, you should already have `git` installed on your system - no additional step should be required.
