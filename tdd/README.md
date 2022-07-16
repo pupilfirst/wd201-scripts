@@ -1,6 +1,6 @@
 # Text
 
-## Test Driven Developemnt
+## Test Driven Development
 
 Test-driven development reverses traditional development and testing. Usually, we write code first, then write tests to verify if the feature is working properly or not. But with TDD, you will write a test first, then add code until the test passes.
 
