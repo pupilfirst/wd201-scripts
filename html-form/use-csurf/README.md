@@ -1,13 +1,13 @@
 ## Text
 
-In this lesson we will look into how to secure our application against Cross site scripting attacks (XSS attacks).
+In this lesson, we will learn to secure our application against Cross site scripting attacks (XSS attacks).
 
 We prevent XSS attacks by making sure a unique token for a client session is being passed with every request (CSRF token). We use `csurf` package to add this capability to our express.js application. Let's first add it to our project.
 
 ```sh
 npm install csurf
 ```
-Next we need to use this package in our express.js application. Edit the `app.js` file to add the following content.
+Next, we need to use this package in our express.js application. Edit the `app.js` file to add the following content.
 
 ```js
 var csrf = require('csurf')
@@ -18,24 +18,24 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(csrf({ cookie: true }))
 ```
-That's it we are all set. Now our application expects a CSRF token with every `POST`, `PUT` and `DELETE` requests.
+That's it! We are all set. Now, our application expects a CSRF token with every `POST`, `PUT` and `DELETE` requests.
 
 If we try to add a new todo, we should get a error showing `invalid csrf token`.
 ![invalid csrf token](./invalid-csrf.png)
 
 Let's fix that.
 
-Edit the `todos.js` file in `routes` folder to generate a csrf token.
+Edit the `app.js` file to generate a csrf token.
 
 ```js
-router.get('/', async function (req, res, next) {
+router.get('/todos', async function (req, res, next) {
   const overdue = await db.Todo.overdue();
   const dueToday = await db.Todo.dueToday();
   const dueLater = await db.Todo.dueLater();
   res.render('index', { title: 'Todo application', overdue, dueToday, dueLater, csrfToken: req.csrfToken() });
 });
 ```
-Next, we will render it in our todo creation form. We do that by adding the token as a hidden field which will automatically get submitted.
+Next, we will render it in our todo creation form. We do that by adding the token as a _hidden_ field, which will automatically get submitted.
 
 ```html
 <form action="/todos" method="POST">
@@ -73,7 +73,7 @@ Add a new `meta` tag in `head` of the `todos.ejs` file.
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="csrf-token" content="<%= csrfToken %>">
 ```
-Next before we fire a request using `fetch`, we will get the token and inject it into the request.
+Next, before we fire a request using `fetch`, we will get the token and inject it into the request.
 
 ```js
 var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
