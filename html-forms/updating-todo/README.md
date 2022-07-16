@@ -1,17 +1,17 @@
 ## Text
 
-In this lesson we will add capability to mark a to-do item as complete.
+In this lesson, we will add capability to mark a to-do item as complete.
 
-First, let's edit the `todos.js` file in `router` folder to add this capability. To update an entry in database, we use `put` request. So let's add such a route.
+First, let's edit the `app.js` file to add this capability. To update an entry in database, we use `put` request. So let's add such a route.
 
 ```js
-router.put("/:id", async function (req, res, next) {
+app.put("/todos/:id", async function (req, res, next) {
   await db.Todo.markAsComplete(req.params.id);
   res.json({ success: true });
 });
 ```
 
-Here, the `id` of the todo item which is to be updated is passed in the url. We just need to invoke the `markAsCompleted` method which we have already implemented earlier.
+Here, the `id` of the to-do item which is to be updated is passed in the URL. We just need to invoke the `markAsCompleted` method which we have already implemented earlier.
 
 To add this capability to the front end, let's open the `todos.ejs` file in the `views` folder. Now, we need to add capability to update completion status while clicking the checkbox.
 
