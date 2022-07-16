@@ -1,5 +1,5 @@
 # Text
-Routing is one of the most important parts of any Web framework since it defines how our application should handle all the HTTP requests by the client. And in this lesson we are about to explore, how to define routes in Node JS.
+Routing is an important part of a Web framework. It defines how the application should handle all the incoming HTTP requests. In this lesson we are about to explore, how to define routes in an express.js application.
 
 We will work on the same express application that we've created in the **Hello world with Express.js!** lesson.
 
@@ -21,7 +21,7 @@ app.get("/", function (request, response) {
 ```
  Here:
  - `app` is the instance of `express`
- - `METHOD` is nothing but **HTTP verb**, it could be GET, POST, PUT, PATCH, DELETE etc. While defining a route, we have to keep it in lowercase, like: `app.get()`, `app.post()`, `app.delete()`, and so on.
+ - `METHOD` is nothing but a **HTTP verb**, it could be GET, POST, PUT, PATCH, DELETE etc. While defining a route, we have to keep it in lowercase, like: `app.get()`, `app.post()`, `app.delete()`, and so on.
  - `PATH` is a path on the server. This is very important as it determines the actual endpoint where clients would send requests to. For example, let's say we are defining route for our TO-DO application, and the first route we got to define, is to get list of all TO-Dos. So, our path would be, `/todos` and method would be `GET`.
  - `HANDLER` is the callback function which executed when the `PATH` and the `METHOD` are matched. This callback function that takes a `request` object and a `response` object. The *request* object contains information about the request that came from the client, for example: request headers, query parameters, request body, etc. The *response* object contains information that we want to send as a response back to the client. In the above example, the `response.send('hello world');` function sends a response with content in the body of the response (the plain text `hello world`).
 
