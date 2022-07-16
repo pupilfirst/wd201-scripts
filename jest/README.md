@@ -107,7 +107,7 @@ So, in this lesson, we have learned how to use Jest and write test cases. See yo
 
 ## Text
 
-[Jest](https://jestjs.io/) is a testing framework that supports testing of React, Node.js, Angular projects. We can add jest to our project by running the following command.
+[Jest](https://jestjs.io/) is a testing framework that supports testing of React, Node.js and Angular projects. We can add jest to our project by running the following command.
 
 ```sh
 npm install jest --save-dev
