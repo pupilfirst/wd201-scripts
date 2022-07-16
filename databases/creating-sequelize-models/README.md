@@ -123,7 +123,7 @@ connect()
 
 ### Fetching results
 
-We can get all the records using `findAll` method on the model. It would also attach some meta data to the result. To prevent that we pass in an option `raw: true`.
+We can get all the records using `findAll` method on the model. It would also attach some metadata to the result. To prevent that, we pass in an option `raw: true`.
 
 ```js
 import { connect } from "./connectDB.js";
