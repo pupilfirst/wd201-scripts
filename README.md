@@ -37,3 +37,8 @@ This work is licensed under a
 
 - [CamelCase and snake_case](./object-oriented-programming/camel-case-and-snake-case)
 - [Inconstant Constants](./object-oriented-programming/inconstant-constants)
+
+
+## L4. Testing
+
+- [What is testing, types of testing](./testing/README.md)
