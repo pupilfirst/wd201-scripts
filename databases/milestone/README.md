@@ -8,7 +8,7 @@
 
 To complete this milestone, you have to make the following 3 programs work: `listTodos.js`, `addTodo.js`, and `completeTodo.js`.
 
-The exact code for all three of these files will be provided in the following sections. The only thing you need to do is to fill in the `todo.js` file (the sequelize model) with appropriate methods so that these three files work correctly.
+The exact code for all three of these files will be provided in the following sections. The only thing you need to do is to fill in the todo.js file (the sequelize model) with appropriate methods, so that these three files work correctly.
 
 ### 1. listTodos.js
 
@@ -47,9 +47,9 @@ Due Later
 
 - The output format is the same as the To-do assignment in the previous level, except that this time you also have to print the `id` of the row as the first column.
 
-- You should have created `connectDB.js` as well as inserted some sample data in the `todos` table through `createItems.js` before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
+- You should have created connectDB.js, as well as inserted some sample data in the todos table through createItems.js before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
 
-- To solve this problem, you need to have a `todo.js` file which will define the Sequelize model. In it, define the class method `self.showList` that prints the list of to-dos as per the above format. You can use the following template to get started:
+- To solve this problem, you need to have a todo.js file which will define the Sequelize model. In todo.js, define the class method self.showList which will print the list of to-dos as per the format given above. You can use the following template to get started:
 
 ```js
 Todo.showList = async function () {
