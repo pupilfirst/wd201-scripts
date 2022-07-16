@@ -44,7 +44,7 @@ Let's create a folder with name `__tests__` and create a file named `first.js`
 
 We do testing by having different test suites, with several test cases within a suite.
 
-Jest comes with various globals that can be used in tests without explicitly importing it.
+Jest comes with various `globals` that can be used in tests without explicitly importing it.
 
 > Action: open https://jestjs.io/docs/api and highlight the `Globals` and `Expect`.
 
