@@ -1,8 +1,8 @@
 ## Text
 
-In this lesson, we will use our newly designed UI to create new to-do items. To do that, we first need to make our backend handle such a request.
+In this lesson, we will use our newly designed UI to create new to-do items. To do that, first we have to update our backend to handle such requests.
 
-Edit the `todos.js` in `router` folder with following contents.
+Edit the `app.js` with following contents.
 
 First, we need to import the database models.
 
@@ -13,7 +13,7 @@ const db = require("../models/index");
 Next, we can add the endpoint to display todo list in the browser.
 
 ```js
-router.get("/", async function (req, res, next) {
+app.get("/todos", async function (req, res, next) {
   const overdue = await db.Todo.overdue();
   const dueToday = await db.Todo.dueToday();
   const dueLater = await db.Todo.dueLater();
@@ -21,10 +21,10 @@ router.get("/", async function (req, res, next) {
 });
 ```
 
-To create a new todo, we browser should send a `POST` request. The required parameters like `title` and `dueDate` are sent as body of the `POST` request. To create such a handler we need to declare it using `router.post`. Express.js would parse the body of the request and make them available at `req.body`. And we would be able to extract `title` and `dueDate` from `req.body`.
+To create a new todo, web browser should send a `POST` request. The required parameters like `title` and `dueDate` are sent as body of the `POST` request. To create such a handler we need to declare it using `router.post`. Express.js would parse the body of the request and make them available at `req.body`. And we would be able to extract `title` and `dueDate` from `req.body`.
 
 ```js
-router.post("/", async function (req, res, next) {
+app.post("/todos", async function (req, res, next) {
   await db.Todo.addTask({
     title: req.body.title,
     dueDate: new Date(req.body.dueDate),
@@ -46,7 +46,7 @@ This makes sure that when the `Add` button is clicked, the form will be submitte
 Next, we need to make sure the todo text is sent to server using the key `title` and the due date using the key `dueDate`. We can do this by adding `name` attribute on respective input fields. So the final for looks like:
 
 ```html
-<form action="/" method="POST">
+<form action="/todos" method="POST">
   <div class="flex gap-2 py-4">
     <div class="flex-auto w-64">
       <input
@@ -77,4 +77,4 @@ Next, we need to make sure the todo text is sent to server using the key `title`
 </form>
 ```
 
-Save the file and restart the server. We should now be able to create new todo items from the user interface.
+Save the file and restart the server. Now, we would be able to create new todo items from the user interface.
