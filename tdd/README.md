@@ -20,7 +20,7 @@ In this stage, the developer writes the minimum code required to pass the test a
 
 - Blue stage
 
-  In this stage, the developer can modify the existing code without changing the behaviour. This is also known as `Refactoring`. But with the help of tests, one can change the code with confidence.
+In this stage, the developer can modify the existing code without changing the behaviour. This is also known as `Refactoring`. But with the help of tests, one can confidently change the code.
 
 Then the cycle continues.
 
