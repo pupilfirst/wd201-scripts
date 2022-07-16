@@ -79,7 +79,7 @@ export default Todo;
 
 ### Adding rows
 
-Once we have defined a model, we can use it to create, update or delete data in the table. We can add a record by using the `create` method and passing in values for the coloumns as an object.
+Once we have defined a model, we can use it to create, update or delete data in the table. We can add a record by using the `create` method and passing in values for the columns as an object.
 
 ```js
 import { connect } from "./connectDB.js";
