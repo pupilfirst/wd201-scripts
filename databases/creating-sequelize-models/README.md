@@ -85,11 +85,8 @@ Once we have defined a model, we can use it to create, update or delete data in 
 import { connect } from "./connectDB.js";
 import { Todo } from "./Todo.js";
 connect()
-  .then(() => {
-    return Todo.sync(); // sync the table
-  })
-  .then((TodoModel) => {
-    return TodoModel.create({
+  .then() => {
+    return Todo.create({
       title: "First Item",
       dueDate: new Date(),
       complete: false,
@@ -110,10 +107,7 @@ import { connect } from "./connectDB.js";
 import { Todo } from "./Todo.js";
 connect()
   .then(() => {
-    return Todo.sync(); // sync the table
-  })
-  .then((TodoModel) => {
-    return TodoModel.count();
+    return Todo.count();
   })
   .then((todoCount) => {
     console.log(todoCount); // Shows '1'
@@ -129,11 +123,8 @@ We can get all the records using `findAll` method on the model. It would also at
 import { connect } from "./connectDB.js";
 import { Todo } from "./Todo.js";
 connect()
-  .then(() => {
-    return Todo.sync(); // sync the table
-  })
-  .then((TodoModel) => {
-    return TodoModel.findAll({ raw: true });
+  .then((Todo) => {
+    return Todo.findAll({ raw: true });
   })
   .then((todos) => {
     console.log(todos); // prints all the saved todos
@@ -147,11 +138,8 @@ We can get a specific record by using `findOne` method and passing the `where` c
 import { connect } from "./connectDB.js";
 import { Todo } from "./Todo.js";
 connect()
-  .then(() => {
-    return Todo.sync(); // create the table
-  })
-  .then((TodoModel) => {
-    return TodoModel.findOne({ where: { id: 2 } });
+  .then((Todo) => {
+    return Todo.findOne({ where: { id: 2 } });
   })
   .then((todo) => {
     console.log(todo.get({ plain: true }));
@@ -167,11 +155,8 @@ We can use the `update` method to update a record. The following code finds and 
 import { connect } from "./connectDB.js";
 import { Todo } from "./Todo.js";
 connect()
-  .then(() => {
-    return Todo.sync(); // create the table
-  })
-  .then((TodoModel) => {
-    return TodoModel.update({ title: "Updated title" }, { where: { id: 2 } });
+  .then((Todo) => {
+    return Todo.update({ title: "Updated title" }, { where: { id: 2 } });
   })
   .then((todo) => {
     console.log(todo.get({ plain: true }));
@@ -185,11 +170,8 @@ It is possible to make changes to a model instance and write back the update to 
 import { connect } from "./connectDB.js";
 import { Todo } from "./Todo.js";
 connect()
-  .then(() => {
-    return Todo.sync(); // create the table
-  })
-  .then((TodoModel) => {
-    return TodoModel.findOne({ where: { id: 2 } });
+  .then((Todo) => {
+    return Todo.findOne({ where: { id: 2 } });
   })
   .then((todo) => {
     todo.title = "Update using save()";
@@ -207,14 +189,15 @@ To delete a row, `Sequelize` provides `destroy` method on the model.
 import { connect } from "./connectDB.js";
 import { Todo } from "./Todo.js";
 connect()
-  .then(() => {
-    return Todo.sync(); // syncs the table
-  })
-  .then((TodoModel) => {
-    return TodoModel.destroy({ where: { id: 2 } });
+  .then((Todo) => {
+    return Todo.destroy({ where: { id: 2 } });
   })
   .then((deletedRowCount) => {
     console.log(deletedRowCount);
   })
   .catch((err) => console.error(err));
 ```
+
+### Conclusion
+
+In this lesson we have learned how to create Sequelize models and use them to query or update the records in database.
