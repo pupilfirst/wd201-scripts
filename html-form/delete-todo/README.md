@@ -1,11 +1,11 @@
 ## Text
 
-In this lesson we will add capability to delete to-do item.
+In this lesson, we will add capability to delete to-do item.
 
 First, let's edit the `todos.js` file in `router` folder to add this capability. To delete an entry in database, we use `delete` request. So let's add such a route.
 
 ```js
-router.delete('/:id', async function (req, res, next) {
+app.delete('/todos/:id', async function (req, res, next) {
   await db.Todo.removeTask(req.params.id);
   res.json({ success: true })
 });
@@ -13,7 +13,7 @@ router.delete('/:id', async function (req, res, next) {
 
 Here, the `id` of the todo item which is to be deleted is passed in the url. We just need to invoke the `removeTask` method which we have already implemented earlier.
 
-To add this capability to the front end, let's open the `todos.ejs` file in the `views` folder. Now, we need to add capability to delete the todo when clicked on the thrash icon.
+To add this capability to the front end, let's open the `todos.ejs` file in the `views` folder. Now, we need to add capability to delete the to-do when clicked on the trash icon.
 
 We will wrap the `<a>` tags in its own `form`. Then invoke `deleteTodo` when clicked on it. Here we also pass the id to `deleteTodo` to identify which item was invoked.
 
@@ -43,7 +43,7 @@ We will do the same for `dueLater` items also
 </form>
 ```
 
-Next, we update the `overdue` items.
+Next, we have to update the `overdue` items.
 
 ```html
 <form>
@@ -70,11 +70,11 @@ function deleteTodo(id) {
     }
 ```
 
-We used built in `fetch` to do the network request. Here we are making a `delete` request.
+Here, We have used the built in `fetch` to do the network request of type `delete`.
 
 Now, let's run the express server.
 
 ```sh
 DEBUG=todo-manager:* npm start
 ```
-Open the browser and visit `http://localhost:3000/todos` to view our todo application. Now we should be able to click on thrash icon of the todo items and delete it.
+Open the browser and visit `http://localhost:3000/todos` to view our to-do application. Now we should be able to click on thrash icon of the todo items and delete it.
