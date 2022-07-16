@@ -6,7 +6,7 @@ Software testing is evaluating and verifying that software does what it is suppo
 
 ### Why do we need testing?
 
-The most important reason to have a test suite is that people write software. And people make mistakes. These mistakes can be costly if not detected and fixed early. With tests, we have proof that the system works as we have intended.
+The most important reason to have a test suite is that people write software. And people make mistakes. These mistakes can be costly if not detected and fixed early. With tests, we have proof that the system works as we intended.
 
 ### Types of testing
 
