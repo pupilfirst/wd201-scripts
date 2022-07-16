@@ -24,4 +24,4 @@ In this stage, the developer can modify the existing code without changing the b
 
 Then the cycle continues.
 
-TDD banks on _short development cycle_ where we get feedback early on and can prevent mistakes that might prove costly at a later stage.
+TDD banks on a _short development cycle_ where we get feedback early on and can prevent mistakes that might prove costly later.
