@@ -18,7 +18,7 @@ Let's open our project in Visual Studio Code and add `jest` to our project. Let'
 npm install jest --save-dev
 ```
 
-We now have jest in our package.json as a dev dependency. Let's replace the `test` command in `scripts` section in `package.json` file to use `jest`
+We now have jest in our package.json as a dev dependency. Let's replace the `test` command in the `scripts` section in `package.json` file to use `jest`
 
 > Action: Open package.json in editor, and edit the npm test script
 
