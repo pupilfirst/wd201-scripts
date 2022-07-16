@@ -2,7 +2,7 @@
 
 ### Database migrations
 
-We have created table by running a script. But it would become tedious to track the changes made to structure of the table over the time of development. Any command that modifies the structure of the database, like creating tables, or adding and removing columns from an existing table, are all called "migrations". The word is used in the sense that we're "migrating" the database from one state to another new state.
+We have created table by running a script. But it would become tedious to track the changes made to the structure of any table over the time of development. Any command that modifies the structure of the database, like creating tables, or adding and removing columns from an existing table, are all called "migrations". The word is used in the sense that we're "migrating" the database from one state to another new state.
 
 `Sequelize` comes with helper functions that makes migrations easy. First we will have to install a package `sequelize-cli`.
 
@@ -69,13 +69,49 @@ Database saas_db created.
 Now, you can simply generate a model using `db:generate` command and passing in the attributes and types. Let's create a model for Todo. We will have a `title` with type `string`, then `dueDate` of type `date` and a `complete` of type `boolean`
 
 ```sh
-npx sequelize-cli model:generate --name Todo --attributes title:string,dueDate:date,complete:boolean
+npx sequelize-cli model:generate --name Todo --attributes title:string,dueDate:dateonly,completed:boolean
 
 ```
 
-The above command will create a `todo.js` file in `model` folder and migration file in the `migrations` folder.
+The above command will create a `todo.js` file in `model` folder and migration file in the `migrations` folder. The generated migration file looks like this:
 
-Now that you have the model generated for you, we can run the migration.
+```js
+"use strict";
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.createTable("Todos", {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+      },
+      title: {
+        type: Sequelize.STRING,
+      },
+      dueDate: {
+        type: Sequelize.DATEONLY,
+      },
+      completed: {
+        type: Sequelize.BOOLEAN,
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+    });
+  },
+  async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable("Todos");
+  },
+};
+```
+
+Now that you have the migration generated for you, we can run it.
 
 > Note: You have to remove the `type: module` entry from `package.json` for the migration to work.
 
