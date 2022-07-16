@@ -48,7 +48,7 @@ Jest comes with various `globals` that can be used in tests without explicitly i
 
 > Action: open https://jestjs.io/docs/api and highlight the `Globals` and `Expect`.
 
-The `describe` can be used to group together related tests. And each such tests can be written using `test` block. Also we assert or check the correctness using the `expect` construct. Let's write our first test using `Jest`.
+The `describe` can be used to group together related tests. And each such test can be written using `test` block. Also we assert or check the correctness using the `expect` construct. Let's write our first test using `Jest`.
 
 > Action: switch VS Code and open the `first.js` file.
 
