@@ -8,7 +8,7 @@ According to the website,
 
 > "Jest is a delightful JavaScript Testing Framework with a focus on simplicity."
 
-Also, it works with Node.js, React, Angular etc. Basically it supports testing popular JavaScript libraries and frameworks.
+Also, it works with Node.js, React, Angular etc. Basically, it supports testing popular JavaScript libraries and frameworks.
 
 Let's open our project in Visual Studio Code and add `jest` to our project. Let's head to the integrated terminal and run the command.
 
