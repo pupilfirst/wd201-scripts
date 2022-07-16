@@ -121,4 +121,4 @@ To run our tests using jest, edit the `package.json` file to contain the test sc
   }
 ```
 
-By default `jest` looks for tests in folder named `__tests__` or files that end with `.test.js` and `.spec.js`.
+By default `jest` looks for tests in the folder named `__tests__` or files that end with `.test.js` and `.spec.js`.
