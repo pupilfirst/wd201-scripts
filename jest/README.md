@@ -42,7 +42,7 @@ Let's create a folder with name `__tests__` and create a file named `first.js`
 
 > Action: create a folder in project root with name `__tests__` and a file with name `first.js`.
 
-We do testing by having different test suites with several test cases within a suite.
+We do testing by having different test suites, with several test cases within a suite.
 
 Jest comes with various globals that can be used in tests without explicitly importing it.
 
