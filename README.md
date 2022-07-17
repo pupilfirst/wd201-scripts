@@ -42,3 +42,37 @@ This work is licensed under a
 ## L4. Testing
 
 - [What is testing, types of testing](./testing/README.md)
+- [TDD Workflow](./tdd/README.md)
+- [What is Jest](./jest/README.md)
+- [Pre-commit Hook](./git/hooks/README.md)
+- [Running tests automatically using husky and pre-commit hook](./husky-precommit-hook/README.md)
+
+
+## L5. Databases and Sequelize
+
+- [Why Database?](./databases/why-database/README.md)
+- [Setting up Postgres](./databases/setting-up-postgres/README.md)
+- [Connect to Database and create table](./databases/connect-to-db/README.md)
+- [Creating Sequelize model and manipulating data](./databases/creating-sequelize-models/README.md)
+- [Database migrations](./databases/migrations/README.md)
+- [Using seperate database for testing](./databases/separate-db/README.md)
+- [Milestone](./databases/milestone/README.md)
+
+
+## L6. Backend Web development with Express.js
+
+
+
+## L7. Add User Interface for To-do Application
+
+
+## L8. EJS Templating
+
+
+## L9.  HTML forms to save and accept user inputs
+
+- [Adding a new to-do with the help of <form>](./html-forms/add-new-todo/README.md)
+- [Updating a to-do with help of <form>](./html-forms/updating-todo/README.md)
+- [Deleting a to-do with help of <form>](./html-forms/delete-todo/README.md)
+- [What is Cross Site Request Forgery (CSRF) and why should we care?](./html-forms/why-csrf/README.md)
+- [Use csurf package in express.js application](./html-forms/use-csurf/README.md)
