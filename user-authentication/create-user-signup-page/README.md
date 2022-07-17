@@ -17,21 +17,21 @@ First, we will start with the landing page, open the `views/index.ejs` file, the
       <div class="col-start-3 col-span-2 py-10">
         <h1 class="text-xl text-slate-600 font-semibold mb-4">To-Do Manager</h1>
         <p class="py-2">Welcome to the To-Do Manager</p>
-        <p class="py-2">New here? <a href="/users/sign_up" class="text-green-600">Sign-up now</a></p>
-        <p class="py-2">Already have an account? <a href="/users/sign_in" class="text-green-600">Sign-in</a></p>
+        <p class="py-2">New here? <a href="/signup" class="text-green-600">Sign-up now</a></p>
+        <p class="py-2">Already have an account? <a href="/login" class="text-green-600">Sign-in</a></p>
       </div>
     </div>
   </body>
 </html>
 ```
 
-Now, in the browser, if we would click the **Signup** link, ohh it shows an error `Cannot GET /users/sign_up`. This error is coming, because we haven't defined the route for signup page yet. Let's define that, in our `index.js` file.
+Now, in the browser, if we would click the **Signup** link, ohh it shows an error `Cannot GET /signup`. This error is coming, because we haven't defined the route for signup page yet. Let's define that, in our `index.js` file.
 ```js
-app.get("/users/sign_up", (request, response) => {
-  response.render("sign_up");
+app.get("/signup", (request, response) => {
+  response.render("signup");
 });
 ```
-Here, in response, we are asking our app to render a **ejs** template named `sign_up`. So, in the `views` folder, we will create this `sign_up.ejs` file. And inside this file, we will design our signup form using HTML.
+Here, in response, we are asking our app to render a **ejs** template named `signup`. So, in the `views` folder, we will create this `signup.ejs` file. And inside this file, we will design our signup form using HTML.
 ```html
 <html>
   <head>
@@ -71,7 +71,7 @@ Here, in response, we are asking our app to render a **ejs** template named `sig
 </html>
 ```
 > Action: Explain the HTML on the go.
-Now, as you can see, the form's *action* is set to `/todos` path with `POST` method. So, once again, in browser, if we would try to submit the form, it will show me an error `Cannot POST /users`. Because, we haven't defined the route yet. TO do that, open the `index.js` file
+Now, as you can see, the form's *action* is set to `/users` path with `POST` method. So, once again, in browser, if we would try to submit the form, it will show me an error `Cannot POST /users`. Because, we haven't defined the route yet. TO do that, open the `index.js` file
 ```js
 app.post('/users', async function (request, response) {
   // Have to create user here.
