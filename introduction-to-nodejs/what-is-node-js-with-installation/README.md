@@ -23,11 +23,11 @@ Now imagine, what if you could use your JavaScript knowledge to write back-end o
 
 ## What is Node.Js?
 Node.js is a framework for writing server-side JavaScript applications. Node.js is open-source and completely free, it's used by thousands of developers around the world.
-Node is often used to build back end services that communicate with client-side applications.
+Node is often used to build back-end services that communicate with client-side applications.
 
-Every browser has their own JavaScript engine that converts JavaScript into code that a computer can understand. For example, Microsoft Edge uses Chakra, Firefox uses SpiderMonkey, and chrome uses V8.
+Every browser has their own JavaScript engine that converts JavaScript into code that a computer can understand. For example, Microsoft Edge uses Chakra, Firefox uses SpiderMonkey, and Chrome uses V8.
 
-Before Node.js, you could only run JavaScript in the browser. In 2009, Ryan Dahl came up with the idea of executing JavaScript code on the server-side, by using Chrome's v8 engine. Node.js is a platform which is actually built on top of **Chrome's JavaScript Runtime environment**. Which makes it blazing fast when it comes down to the performance.
+Before Node.js, you could only run JavaScript in the browser. In 2009, Ryan Dahl came up with the idea of executing JavaScript code on the server-side, by using Chrome's v8 engine. Node.js is a platform which is actually built on top of **Chrome's JavaScript Runtime environment**, which makes it blazing fast when it comes down to the performance.
 
 So, let's get started with the installation.
 
@@ -117,7 +117,7 @@ If you want, you can also install any specific version as well:
 `nvm install 17`
 
 ### 5. Set a default version
-As I said earlier, in future when you will work on other Node.Js applications, you may have to install other versions as well. If you would like to list all installed Node.Js version, then run:
+As I said earlier, in future when you will work on other Node.js applications, you may have to install other versions as well. If you would like to list all installed Node.Js version, then run:
 
 `nvm ls`
 
@@ -136,4 +136,4 @@ When you install a node.js version using nvm, npm also gets installed automatica
 `npm --version`
 <br/><br/>
 
-That’s it, your system is totally ready for starting your learning journey with Node.Js. See you in the next lesson.
+That’s it, your system is totally ready for starting your learning journey with Node.js. See you in the next lesson.
