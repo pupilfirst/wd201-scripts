@@ -53,13 +53,7 @@ This work is licensed under a
 - *Milestone Task (Not merged yet)*
 
 ## L4. Testing
-
-- [What is testing, types of testing](./testing/README.md)
-- [TDD Workflow](./tdd/README.md)
-- [What is Jest](./jest/README.md)
-- [Pre-commit Hook](./git/hooks/README.md)
-- [Running tests automatically using husky and pre-commit hook](./husky-precommit-hook/README.md)
-
+> TODO
 
 ## L5. Databases and Sequelize
 
@@ -73,11 +67,19 @@ This work is licensed under a
 
 
 ## L6. Backend Web development with Express.js
-
-
+- [Hello world with Express.js!](backend-dev-with-express/introduction-to-express/README.md)
+- [Connect our PostgreSQL database to the Express.js application](backend-dev-with-express/connect-express-with-postgres/README.md)
+- [Routes in Express.js](backend-dev-with-express/routes-in-express/README.md)
+- *Add two features: create a new to-do, and mark an existing to-do as completed (Not merged yet)*
+- *Add tests (Not merged yet)*
+- *Milestone Task + Tests (Automated) (Not merged yet)*
 
 ## L7. Add User Interface for To-do Application
-
+- [Converting a design into a webpage](./todo-user-interface/converting-design-into-webpage/README.md)
+- [Create an interface for accepting a new to-do](./todo-user-interface/interface-for-new-to-do/README.md)
+- [Create an interface for listing the todos](./todo-user-interface/interface-for-listing-to-dos/README.md)
+- [Create an interface to delete a to-do](./todo-user-interface/interface-to-delete-to-do/README.md)
+- *Milestone Task + Tests (Automated) (Not merged yet)*
 
 ## L8. EJS Templating
 
