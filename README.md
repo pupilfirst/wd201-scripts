@@ -23,15 +23,21 @@ This work is licensed under a
 
 ### Intro to Node.Js
 - [What is Node.js and how to install it](./introduction-to-nodejs/what-is-node-js-with-installation/README.md)
+- [Running our first program](./introduction-to-nodejs/running-first-program/README.md)
+- [Using Node.js REPL](./introduction-to-nodejs/nodejs-repl/README.md)
+  
 ### Intro to git and Github
-
-- [Github: How To](./get-started-with-git-and-github/github-how-to)
+- [Using git to version control our code](./introduction-to-nodejs/intro-to-git/README.md)
+- [Github: How To](./introduction-to-nodejs/github-how-to/README.md)
 
 ### Orientation
 
 - [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
   - [Screen recording tool](./get-started-with-git-and-github/getting-help/screen-recording.md)
 - [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
+
+### Milestone
+- [Milestone](./introduction-to-nodejs/milestone/README.md)
 
 ## L3. Object-oriented programming
 
