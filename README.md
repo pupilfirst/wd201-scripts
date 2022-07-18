@@ -52,12 +52,6 @@ This work is licensed under a
 - *Let’s write a  to-do application (Not merged yet)*
 - *Milestone Task (Not merged yet)*
 
-### Style & Substance
-
-- [CamelCase and snake_case](./object-oriented-programming/camel-case-and-snake-case)
-- [Inconstant Constants](./object-oriented-programming/inconstant-constants)
-
-
 ## L4. Testing
 
 - [What is testing, types of testing](./testing/README.md)
