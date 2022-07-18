@@ -45,9 +45,11 @@ Next, we will create the `project.html` that lists the projects we have worked o
 
 ## Using Node.js to display HTML
 
-We already have the necessary files created for our first application to be rendered over an HTTP server. Now we will create the Node.js program to render them.
+We have all the necessary files created for our first application. This will be rendered over a HTTP server. 
 
-In the `index.js` previously created clear all the contents and start fresh.
+Let us write the Node.js program to render these pages.
+
+We already have an `index.js` file in our application. We will clear all the contents of the file and start fresh.
 
 First, include the `http` and `fs` modules in the application.
 
@@ -64,7 +66,7 @@ fs.readFile("home.html", function (err, home) {
 });
 ```
 
-The above command provides you with the content of the file. Next, we will use the HTTP server to render the above content in a port of our choice, here the `localhost:3000`.
+The `readFile` function in the above command provides you with the content of the file `home.html`. Next, we will use the HTTP server to render the above content in a port of our choice, here the `localhost:3000`.
 
 ```js
 fs.readFile("home.html", function (err, home) {
@@ -81,13 +83,15 @@ fs.readFile("home.html", function (err, home) {
 });
 ```
 
-Save the file and run the same using `npm start`. If you navigate to `localhost:3000` you can see that the file is rendered as expected.
+Save the file and run the same using `npm start`. Now, if you navigate to `localhost:3000` you can see that the file is rendered as expected.
 
 The `writeHeader` function informs the Node.js HTTP server that the content should be served as HTML. The `write` function transmits the content received from `readFile`.
 
-But clicking on the Projects link doesn't take you anywhere and the browser shows a different URL but nothing loads. Let us fix that.
+But clicking on the **Projects** link doesn't take you anywhere and the browser shows a different URL but nothing loads. Let us fix that.
 
-We will create routes inside our application that specify the HTTP server and what content to serve based on the URL we are pointing to. This is similar to how APIs work, where a particular URL route provides a version of data as specified by the route.
+We will create routes inside our application. Routes are an important part of the **Node.js** application and they are used to specify an URL path/pattern that is understood by the application to render or return some content.
+
+The routes we create here specify the HTTP server and what content to serve based on the URL we are pointing to. This is similar to how APIs work, where a particular URL route provides a version of data as specified by the route.
 
 To achieve this, we will read both the files and store their contents in a variable.
 
@@ -136,6 +140,6 @@ http
 
 We can run the program again with `npm start`. We can see that the navigation from the Home page to the Project page works and vice versa.
 
-We have successfully created a Node server that receives data and transmits the same to the browser, all with the help of inbuilt functions. In this level, we have covered the most common use cases with Node.js and npm and how we can use these to improve the quality of our application in general.
+We have successfully created a Node server that receives data and transmits the same to the browser, all with the help of inbuilt functions. In this level, we have covered the most common use cases with Node.js and npm and how we can use them to improve the quality of our application in general.
 
-We will learn more use cases for easier and meaningful implementations of the same in the upcoming levels.
+We will learn about more such use cases, for easier and meaningful implementations of the same, in the upcoming levels.
