@@ -12,7 +12,7 @@ npm install passport passport-local connect-ensure-login express-session --save
 Here,
 - `passport`, is the authentication library
 - `passport-local` is our core authentication strategy. Now what is an authentication strategy, we will come to that part later on.
-- `connect-ensure-login` is a authorization middleware library that makes it easy to restrict access to protected pages.
+- `connect-ensure-login` is an authorization middleware library that makes it easy to restrict access to protected pages.
 - `express-session` is a cookie-based session middleware that works for any Express.js application.
 
 ### Now what is a passport strategy?
@@ -93,3 +93,49 @@ passport.deserializeUser(function(id, done) {
 });
 ```
 As the `userId` is stored in session, we are just quering our database to get the user information, then we are passing the user data to the callback. The user data gets attached to `request.user`.
+
+So, that's it! We've successfully configured passport, defined authentication strategy, saved user information in session. Next, we have to configure our routes, to work with passport.
+
+### Configure routes
+There would be two types of routes, 1) publicly accessible ones (like: landing page, signup page, login page etc.), 2) the protected pages (ex. the todos page).
+
+To define the todos page as private, we will attach a method from the `connect-ensure-login` library, to the `/todos` path.
+
+```js
+app.get('/todos', connectEnsureLogin.ensureLoggedIn(), async function (request, response) {
+  const todos = await Todo.findAll().catch((error) => {
+    console.log(error)
+  })
+  response.render("todos");
+})
+```
+The `connectEnsureLogin.ensureLoggedIn()` function in our route ensures that only logged-in users can access the page.
+
+Now, if you would try to access the `GET /todos` path from the browser, it will redirect you to the `/login` page. Though we haven't defined that route yet, we will do that in an upcoming lesson.
+
+Next, we will work on our `signup` endpoint. Previously, after signup we were taking users to the `/todos` page. But, as we have made that route (`/todos`) protected, now we've to initialize the user session after signup, to successfully redirect the user to `/todos` path.
+```js
+app.post('/users', async function (request, response) {
+  const user = await User.create({ 
+    firstName: request.body.firstName,
+    lastName: request.body.lastName,
+    email: request.body.email, 
+    password: request.body.password 
+  }).catch((error) => {
+    console.log(error)
+  });
+  // Initialize session after successful signup
+  request.login(user, function(err) {
+    if (err) {
+      console.log(err);
+    }
+    return response.redirect('/todos');
+  });
+  // response.redirect("/todos"); // Redirected to root path
+})
+```
+
+Let's try to signup once again in browser.
+Yes! it works, and successfully redirects us to the TO-Dos page
+
+So, that's it for this video, see you in the next lesson.
