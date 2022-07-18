@@ -82,7 +82,7 @@ This work is licensed under a
 - *Milestone Task + Tests (Automated) (Not merged yet)*
 
 ## L8. EJS Templating
-
+> TODO
 
 ## L9.  HTML forms to save and accept user inputs
 
@@ -91,3 +91,18 @@ This work is licensed under a
 - [Deleting a to-do with help of <form>](./html-forms/delete-todo/README.md)
 - [What is Cross Site Request Forgery (CSRF) and why should we care?](./html-forms/why-csrf/README.md)
 - [Use csurf package in express.js application](./html-forms/use-csurf/README.md)
+
+## L10. User Authentication and final wrap-up
+- *Introduction (Not merged yet)*
+- *Create the `users` table with a sequelize migration (Not merged yet)*
+- *Associations: adding owners to todo  (Not merged yet)*
+- *Creating a user sign-up page  (Not merged yet)*
+- *Add user authentication using passport.js  (Not merged yet)*
+- *Storing passwords with bcrypt (Not merged yet)*
+- *Create a simple sign-in page which verifies the user's password (Not merged yet)*
+- What exactly is a cookie and why should you care?
+- *Let us store the signed-in user's id in the session! (Not merged yet)*
+- *Implement sign-out by resetting the user session (Not merged yet)*
+- A logged-in user should see and modify only their own to-dos and nobody else's
+- Showing one-off messages to users with connect-flash
+- Ensure no blank to-dos are ever created, with Sequelize validations
