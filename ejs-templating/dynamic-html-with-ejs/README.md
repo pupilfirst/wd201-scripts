@@ -12,7 +12,7 @@ There are a lot of UI libraries that we can use to create this dynamic HTML. But
 
 We will be using **Express.js** to handle routing and [EJS](https://ejs.co/) which is a very popular library for handling dynamic content templates.
 
-One of the reasons EJS is so popular is because it allows writing JavaScript code directly inside the template, so we can use loops, if conditions, and all things provided by JavaScript. Other template libraries use their own syntax and do not directly write JavaScript.
+One of the reasons EJS is so popular is because it allows writing JavaScript code directly inside the template. This means, we can use loops, if conditions, and all other features provided by JavaScript. Other template libraries use their own syntax and do not directly write JavaScript.
 
 ## Setting up EJS
 
@@ -85,7 +85,7 @@ Your final `package.json` will look something like this.
 }
 ```
 
-Now let’s add the `ejs` functionality into the application.
+Now, let’s add the `ejs` functionality into the application.
 
 Create a new folder called **views** and add an `index.ejs` file inside it with the following content:
 
@@ -105,13 +105,13 @@ Create a new folder called **views** and add an `index.ejs` file inside it with 
 
 To render this file, we need to add some code in our `express` app.
 
-First we need to specify the render engine by adding the following code in the `index.js` file.
+First, we have to tell our express application, that we will be using EJS as template engine. We can specify the render engine, by adding the following code in the `index.js` file.
 
 ```js
 app.set("view engine", "ejs");
 ```
 
-And to render the `index.ejs`, we need to use the render method of the response object and pass the name of the ejs file without providing the `.ejs` extension.
+And to render the `index.ejs`, we need to use the `render` method of the `response` object and pass the name of the ejs file without providing the `.ejs` extension.
 
 Express will automatically search for the file with the `.ejs` extension inside the default views directory.
 
@@ -123,4 +123,4 @@ app.get("/", (request, response) => {
 
 Now, if you navigate to `localhost:3000`, you will see the content from `index.ejs` being rendered.
 
-In the future lessons, we will learn more about how to use `ejs` effectively and build a full UI using templating.
+In the future lessons, we will learn more about "how to use `ejs` effectively and build a fully functional user interface using templating".
