@@ -30,7 +30,7 @@ This work is licensed under a
 - [Using git to version control our code](./introduction-to-nodejs/intro-to-git/README.md)
 - [Github: How To](./introduction-to-nodejs/github-how-to/README.md)
 
-### Orientation
+### Orientation (old)
 
 - [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
   - [Screen recording tool](./get-started-with-git-and-github/getting-help/screen-recording.md)
@@ -39,7 +39,18 @@ This work is licensed under a
 ### Milestone
 - [Milestone](./introduction-to-nodejs/milestone/README.md)
 
-## L3. Object-oriented programming
+## L2. Working with NPM
+> TODO
+
+## L3. Node.js deep dive
+
+### Key Concepts
+- [What is an event loop?](./nodejs-deep-dive/what-is-event-loop/README.md)
+- *What is Closure in JavaScript? (Not merged yet)*
+  
+### Apply closure
+- *Let’s write a  to-do application (Not merged yet)*
+- *Milestone Task (Not merged yet)*
 
 ### Style & Substance
 
