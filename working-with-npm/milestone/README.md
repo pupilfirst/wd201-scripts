@@ -7,11 +7,11 @@
 > 3. Take your time, sweat the details, and make every submission count!
 
 ## Problem Description
-To complete this milestone, you have to make two updates to the **Node.js** program you created at this level, as per the details given.
+To complete this milestone, you have to make two updates to the **Node.js** program you have created at this level, as per the details given.
 
 1. Create a new HTML page to showcase your previous project HTML. (You can make use of the `survey.html` you created in WD101 and name the file the same.)
-2. Add a Link to the Projects list page to point to the Survey page.
-3. Create a new route to the Survey page and make sure the navigation from the Projects page works fine.
+2. Add a **Link** to the *Projects list* page to point to the *Survey page*.
+3. Create a new route to the *Survey page* and make sure the navigation from the *Projects page* works fine.
 
 ## Submission Requirements
 1. The Survey page should be imported through CLI commands.
