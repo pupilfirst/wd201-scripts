@@ -25,7 +25,7 @@ Accept: application/json
 Let's modify the listing of Todos to return html when visited using browser and return a `JSON` response when it is invoked using Postman.
 
 ```js
-app.get("/", async function (req, res, next) {
+app.get("/todos", async function (req, res, next) {
   const overdue = await db.Todo.overdue();
   const dueToday = await db.Todo.dueToday();
   const dueLater = await db.Todo.dueLater();
