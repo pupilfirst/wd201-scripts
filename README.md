@@ -40,7 +40,15 @@ This work is licensed under a
 - [Milestone](./introduction-to-nodejs/milestone/README.md)
 
 ## L2. Working with NPM
-> TODO
+- [Why is there a need for a library ecosystem?](./working-with-npm/package-management-and-library-ecosystem/README.md)
+- [What is NPM?](./working-with-npm/about-npm-and-uses/README.md)
+- [What is package.json](./working-with-npm/package-json-in-npm/README.md)
+- [What are NPM scripts](./working-with-npm/npm-scripts/README.md)
+- [Explore built in fs module](./working-with-npm/nodejs-fs-module/README.md)
+- [Explore streams](./working-with-npm/nodejs-stream-module/README.md)
+- [Accepting command line arguments](./working-with-npm/accepting-cli-commands/README.md)
+- [Let's write a program!](./working-with-npm/write-first-node-program/README.md)
+- [Milestone](./working-with-npm/milestone/README.md)
 
 ## L3. Node.js deep dive
 
