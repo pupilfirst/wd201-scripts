@@ -13,4 +13,4 @@ To complete this milestone target, you have to implement the To-do page so that 
 * Ensure CSRF attacks are prevented.
 * Push the code to GitHub.
 * Ensure the application is similar to that of the design provided.
-* Deploy to Heroku and ensure it works well there. We will be using the live Heroku application to test your submission.
+* Deploy to Heroku and ensure it works well there. We will be using the live Heroku application URL, to test your submission.
