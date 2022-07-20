@@ -1,6 +1,6 @@
 # Text
 Previously, we've created a signup form, where a user can enter their details along with their password to create an account.
-In this lesson, we will implement the user authentication module for our To-Do application, using [Passport.Js](https://www.passportjs.org/).
+In this lesson, we will implement the user authentication module for our To-Do application, using [Passport.js](https://www.passportjs.org/).
 
 # Script
 In our To-Do manager application, we need users to authenticate in order to show user-specific To-Dos. The authentication process must be both functional and secure, and creating one from scratch can be quite lengthy process. Because of this, we will use Passport.Js, which is a popular Express middleware that facilitates the login process. So, let's get started.
