@@ -92,4 +92,4 @@ If we visit `http://localhost:3000/todos`, we can see the todo list being render
 }
 ```
 
-So, that's how we add capability to send HTML or JSON response to different client based on the type of repose they accept.
+So, that's how we add capability to send HTML or JSON response to different client based on the type of reponse they accept.
