@@ -90,7 +90,12 @@ This work is licensed under a
 - *Milestone Task + Tests (Automated) (Not merged yet)*
 
 ## L8. EJS Templating
-> TODO
+- [Render dynamic data inside HTML with EJS templates](./ejs-templating/dynamic-html-with-ejs/README.md)
+- [Using view templates](./ejs-templating/view-templates/README.md)
+- [What is MVC?](./ejs-templating/mvc/README.md)
+- [Heroku: deploy your application](./ejs-templating/deploy-application-to-heroku/README.md)
+- [Use EJS templating to render to-do manager](./ejs-templating/ejs-templating-for-todo-manager/README.md)
+- [Milestone](./ejs-templating/milestone/README.md)
 
 ## L9.  HTML forms to save and accept user inputs
 
