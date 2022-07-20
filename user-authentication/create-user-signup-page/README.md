@@ -2,7 +2,7 @@
 Now that we have created the `users` table and using Sequelize migration, let's create an HTML form where new users can sign up.
 
 # Script
-In this video, we are going to create a user signup form. So, when someone new comes to our To-Do application, they should see a link to signup. When we click on the signup link, we should take them to the signup form, where they have to fill some details like: firstName, lastName (which we will keep as optional), email and password. Then, when they click on the signup button, it should take them to a new `users` route as a POST request, to create an entry for this new user in our database. Then, we have to sign-in the user in local browser session. Let's start.
+In this video, we are going to create a user signup form. So, when someone new comes to our To-Do application, they should see a link to signup. When we click on the signup link, we should take them to the signup form, where they have to fill some details like: first name, last name (which we will keep as optional), email and password. Then, when they click on the signup button, it should create an entry for this user in our database. Then, user will be shown their todo list. Let's start.
 
 First, we will start with the landing page, open the `views/index.ejs` file, there we will add a link to our signup page.
 ```html
