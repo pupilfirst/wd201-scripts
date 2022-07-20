@@ -25,7 +25,7 @@ This work is licensed under a
 - [What is Node.js and how to install it](./introduction-to-nodejs/what-is-node-js-with-installation/README.md)
 - [Running our first program](./introduction-to-nodejs/running-first-program/README.md)
 - [Using Node.js REPL](./introduction-to-nodejs/nodejs-repl/README.md)
-  
+
 ### Intro to git and Github
 - [Using git to version control our code](./introduction-to-nodejs/intro-to-git/README.md)
 - [Github: How To](./introduction-to-nodejs/github-how-to/README.md)
@@ -55,13 +55,17 @@ This work is licensed under a
 ### Key Concepts
 - [What is an event loop?](./nodejs-deep-dive/what-is-event-loop/README.md)
 - *What is Closure in JavaScript? (Not merged yet)*
-  
+
 ### Apply closure
 - *Let’s write a  to-do application (Not merged yet)*
 - *Milestone Task (Not merged yet)*
 
 ## L4. Testing
-> TODO
+- [What is testing, and why do we need it?](./testing/why-need-testing/README.md)
+- [TDD workflow](./testing/tdd/README.md)
+- [What is jest?](./testing/jest/README.md)
+- [Git hooks: pre-commit hook](./testing/git-hooks/README.md)
+- [Running tests, and linting automatically as pre-commit hook using Husky, lint staged](./testing/husky-precommit-hook/README.md)
 
 ## L5. Databases and Sequelize
 
