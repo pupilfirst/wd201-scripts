@@ -21,7 +21,7 @@ Most of the **code** to support a dynamic website must run on the server. Creati
 
 Now imagine, what if you could use your JavaScript knowledge to write back-end or server-side logic? This is where the role of Node.js comes in.
 
-## What is Node.Js?
+## What is Node.js?
 Node.js is a framework for writing server-side JavaScript applications. Node.js is open-source and completely free, it's used by thousands of developers around the world.
 Node is often used to build back-end services that communicate with client-side applications.
 
@@ -31,12 +31,12 @@ Before Node.js, you could only run JavaScript in the browser. In 2009, Ryan Dahl
 
 So, let's get started with the installation.
 
-# Script: Installation of Node.Js
+# Script: Installation of Node.js
 
 In this video, I'll show you, how easily you can setup your computer to write Node.js applications.
 I'm assuming that you're either running macOS, or some variant of Linux, or you're probably using WSL (Ubuntu) inside of Windows.
 
-## Install Node.Js using NVM
+## Install Node.js using NVM
 
 There are a number of different ways you can install Node.js on your system. However, one of the most popular is *nvm.* NVM stands for Node Version Manager. It allows us to quickly install and use different versions of Node.js in our computer.
 
@@ -78,7 +78,7 @@ _EXECUTE_
 
 Yaay! It's working! This means, we've successfully installed NVM in our system. Next, I'll show you, how to use NVM effectively.
 
-### 4. Install a stable Node.Js version
+### 4. Install a stable Node.js version
 
 NVM comes with a lot of sub-commands which you can check by running:
 
@@ -86,7 +86,7 @@ NVM comes with a lot of sub-commands which you can check by running:
 
 *GO THROUGH THE MOST USED COMMANDS ONCE, FROM THE OUTPUT >*
 
-##### 4.1 List all available Node.Js versions
+##### 4.1 List all available Node.js versions
 
 To see the list of Node.js versions available to install, enter:
 
@@ -94,8 +94,8 @@ To see the list of Node.js versions available to install, enter:
 
 *GO THROUGH THE OUTPUT >*
 
-##### 4.2 Install the latest Node.Js version
-Now, we will install a stable Node.Js version.
+##### 4.2 Install the latest Node.js version
+Now, we will install a stable Node.js version.
 FYI, for any kind of software, a stable release is a version that has been tested as thoroughly as possible.
 In case of node, it's marked as **LTS**, which stands for Long-term Support. Here, support means that throughout the lifetime of a release, there is a commitment to update and maintain the software.
 
@@ -117,7 +117,7 @@ If you want, you can also install any specific version as well:
 `nvm install 17`
 
 ### 5. Set a default version
-As I said earlier, in future when you will work on other Node.js applications, you may have to install other versions as well. If you would like to list all installed Node.Js version, then run:
+As I said earlier, in future when you will work on other Node.js applications, you may have to install other versions as well. If you would like to list all installed Node.js version, then run:
 
 `nvm ls`
 
