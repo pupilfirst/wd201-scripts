@@ -16,7 +16,7 @@ So let's define the **Todo** model:
 ```js
 const Todo = sequelize.define(
   'todos', 
-  { description: Sequelize.TEXT, isComplete: { type: Sequelize.BOOLEAN, defaultValue: false }, dueDate: Sequelize.DATE } 
+  { description: Sequelize.TEXT, isComplete: { type: Sequelize.BOOLEAN, defaultValue: false }, dueDate: Sequelize.DATEONLY } 
 );
 ```
 Here, we are using `define` method from the `Sequelize` library, to configure our **Todo** model. First, we are setting the table name to be `todos`, then we are defining the column names with it's type. You can refer to [Sequelize documentation](https://sequelize.org/v5/manual/data-types.html) for all available types.
