@@ -10,7 +10,7 @@ This is where the role of **server-side programming** comes in.
 
 ## What is server-side programming?
 Web browsers communicate with web servers using the Hypertext Transfer Protocol (HTTP). When you click a link on a web page or submit a form, an HTTP request is sent from your browser to the target web server.
-On the other hand, web servers wait for client request messages. It processes them when they arrive, and responds back to the browser with an HTTP response message.
+On the other side, web servers wait for client request messages. These servers process client requests when they arrive, and respond back to the browser with an HTTP response message.
 
 The body of a successful response contains the requested resource (for example a new HTML page, or an image, etc...), which could then be displayed by the browser.
 
@@ -40,7 +40,7 @@ I'm assuming that you're either running macOS, or some variant of Linux, or you'
 
 There are a number of different ways you can install Node.js on your system. However, one of the most popular is *nvm.* NVM stands for Node Version Manager. It allows us to quickly install and use different versions of Node.js in our computer.
 
-Even if you only need a single version of Node.js right now, we still recommend using **nvm**. Because in future it will give you the flexibility to switch to another versions, depending on the requirements of your project, with minimal hassle.
+Even if you only need a single version of Node.js right now, we still recommend using **nvm**. Because in future it will give you the flexibility to switch to other versions, depending on the requirements of your project, with minimal hassle.
 
 So, to install NVM, follow the process I'll show next:
 
