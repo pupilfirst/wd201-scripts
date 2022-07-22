@@ -25,7 +25,7 @@ This work is licensed under a
 - [What is Node.js and how to install it](./introduction-to-nodejs/what-is-node-js-with-installation/README.md)
 - [Running our first program](./introduction-to-nodejs/running-first-program/README.md)
 - [Using Node.js REPL](./introduction-to-nodejs/nodejs-repl/README.md)
-  
+
 ### Intro to git and Github
 - [Using git to version control our code](./introduction-to-nodejs/intro-to-git/README.md)
 - [Github: How To](./introduction-to-nodejs/github-how-to/README.md)
@@ -40,20 +40,32 @@ This work is licensed under a
 - [Milestone](./introduction-to-nodejs/milestone/README.md)
 
 ## L2. Working with NPM
-> TODO
+- [Why is there a need for a library ecosystem?](./working-with-npm/package-management-and-library-ecosystem/README.md)
+- [What is NPM?](./working-with-npm/about-npm-and-uses/README.md)
+- [What is package.json](./working-with-npm/package-json-in-npm/README.md)
+- [What are NPM scripts](./working-with-npm/npm-scripts/README.md)
+- [Explore built in fs module](./working-with-npm/nodejs-fs-module/README.md)
+- [Explore streams](./working-with-npm/nodejs-stream-module/README.md)
+- [Accepting command line arguments](./working-with-npm/accepting-cli-commands/README.md)
+- [Let's write a program!](./working-with-npm/write-first-node-program/README.md)
+- [Milestone](./working-with-npm/milestone/README.md)
 
 ## L3. Node.js deep dive
 
 ### Key Concepts
 - [What is an event loop?](./nodejs-deep-dive/what-is-event-loop/README.md)
 - *What is Closure in JavaScript? (Not merged yet)*
-  
+
 ### Apply closure
 - *Let’s write a  to-do application (Not merged yet)*
 - *Milestone Task (Not merged yet)*
 
 ## L4. Testing
-> TODO
+- [What is testing, and why do we need it?](./testing/why-need-testing/README.md)
+- [TDD workflow](./testing/tdd/README.md)
+- [What is jest?](./testing/jest/README.md)
+- [Git hooks: pre-commit hook](./testing/git-hooks/README.md)
+- [Running tests, and linting automatically as pre-commit hook using Husky, lint staged](./testing/husky-precommit-hook/README.md)
 
 ## L5. Databases and Sequelize
 
@@ -82,7 +94,12 @@ This work is licensed under a
 - *Milestone Task + Tests (Automated) (Not merged yet)*
 
 ## L8. EJS Templating
-> TODO
+- [Render dynamic data inside HTML with EJS templates](./ejs-templating/dynamic-html-with-ejs/README.md)
+- [Using view templates](./ejs-templating/view-templates/README.md)
+- [What is MVC?](./ejs-templating/mvc/README.md)
+- [Heroku: deploy your application](./ejs-templating/deploy-application-to-heroku/README.md)
+- [Use EJS templating to render to-do manager](./ejs-templating/ejs-templating-for-todo-manager/README.md)
+- [Milestone](./ejs-templating/milestone/README.md)
 
 ## L9.  HTML forms to save and accept user inputs
 
