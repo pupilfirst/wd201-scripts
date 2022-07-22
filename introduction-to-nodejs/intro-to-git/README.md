@@ -32,9 +32,9 @@ First of all, you should install git on your system if you haven't done that alr
 
 If you're using macOS, you should already have `git` installed on your system - no additional step should be required.
 
-On Windows, just go to [https://git-scm.com/download/win](https://git-scm.com/download/win) and the download will start automatically. Follow the instructions shown by the installation wizard, to complete the process.
+On Windows, **git** comes by default with WSL.
 
-Once the installation is complete, verify it by using the following command in the terminal:
+To check the current git version, run the following command in the terminal:
 ````
 git --version
 ````
