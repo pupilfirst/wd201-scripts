@@ -54,7 +54,7 @@ This work is licensed under a
 
 ### Key Concepts
 - [What is an event loop?](./nodejs-deep-dive/what-is-event-loop/README.md)
-- *What is Closure in JavaScript? (Not merged yet)*
+- [What is Closure in JavaScript?](./nodejs-deep-dive/closures-in-js/README.md)
 
 ### Apply closure
 - *Let’s write a  to-do application (Not merged yet)*
