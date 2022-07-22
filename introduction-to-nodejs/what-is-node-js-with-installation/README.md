@@ -1,7 +1,7 @@
 # Text: Introduction to Node.js
 
 Hello and welcome to WD201! 
-In this course, we will learn about a JavaScript framework called Node.js. I'm assuming that you've already completed the [Web Development 101 course](https://www.pupilfirst.school/courses/1087/curriculum). This means that you're quite familiar with JavaScript, right?
+In this course, we will learn about a JavaScript runtime environment called Node.js. I'm assuming that you've already completed the [Web Development 101 course](https://www.pupilfirst.school/courses/1087/curriculum). This means that you're quite familiar with JavaScript, right?
 
 To recap, JavaScript is a **Programming Language**,  that runs on the end user's browser, and allows us to calculate, manipulate and validate data. Where HTML and CSS are languages that give structure and style to web pages, JavaScript improves the user experience of the web page by converting it from a static page into an interactive one.
 
@@ -22,7 +22,7 @@ Most of the **code** to support a dynamic website must run on the server. Creati
 Now imagine, what if you could use your JavaScript knowledge to write back-end or server-side logic? This is where the role of Node.js comes in.
 
 ## What is Node.js?
-Node.js is a framework for writing server-side JavaScript applications. Node.js is open-source and completely free, it's used by thousands of developers around the world.
+Node.js is a runtime environment for writing server-side JavaScript applications. Node.js is open-source and completely free, it's used by thousands of developers around the world.
 Node is often used to build back-end services that communicate with client-side applications.
 
 Every browser has their own JavaScript engine that converts JavaScript into code that a computer can understand. For example, Microsoft Edge uses Chakra, Firefox uses SpiderMonkey, and Chrome uses V8.
