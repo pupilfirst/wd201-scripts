@@ -1,11 +1,12 @@
 # Text
 In this lesson, we will apply our knowledge of JavaScript **Closures**, to create a simple To-Do manager. 
 
+# Script
 ### The plan
 The plan is:
 - We will create a *parent*(in context of closure) `todoList` function.
-- Inside `todoList`, we will define two *child* functions `add` and `update` to perform respective operations.
-- And in the end, we will make sure that the `todoList` function returns the *list of all todos* along with the `add` and `update` function.
+- Inside `todoList`, we will define two *child* functions `add` and `markAsComplete` to perform respective operations.
+- And in the end, we will make sure that the `todoList` function returns the *list of all todos* along with the `add` and `markAsComplete` function.
 
 ### The implementation
 In this lesson, we will make use of the Node.Js REPL. Open the terminal and run with the `node` command to go inside the REPL mode.
@@ -18,6 +19,7 @@ function todoList() {
   all = []
 ```
 Here, we will keep the list of all todos inside the `all` array.
+A To-do, would have three properties: title, dueDate, completed (of type boolean). And inside the `all` array, we will store To-dos as an object. For ex. `{ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false }`
 
 Next, let's define the` add()` function.
 ```js
@@ -30,7 +32,7 @@ function todoList() {
 ```
 The `add()` function takes a `todoItem` as argument, and pushes into the `all` array.
 
-Similarly, we will define the `update()` function.
+Similarly, we will define the `markAsComplete()` function.
 ```js
 function todoList() {
   all = []
@@ -38,14 +40,14 @@ function todoList() {
     all.push(todoItem)
     console.log(all)
   }
-  function update(index, updatedTodo) {
-    all[index] = updatedTodo
+  function markAsComplete(index) {
+    all[index].completed = true
     console.log(all)
   }
 ```
-Here, the `update()` function takes two arguments, `index` and `updatedTodo`. It updates the `all` array with the `updatedTodo` using the array index.
+Here, the `markAsComplete()` function takes an argument called `index`. It updates the `all` array using the index, and marks that specific To-Do as completed .
 
-To complete the `todoList` function, we will return the `all` array and `add`, `update` functions.
+To complete the `todoList` function, we will return the `all` array and `add`, `markAsComplete` functions.
 ```js
 function todoList() {
   all = []
@@ -53,11 +55,11 @@ function todoList() {
     all.push(todoItem)
     console.log(all)
   }
-  function update(index, updatedTodo) {
-    all[index] = updatedTodo
+  function markAsComplete(index) {
+    all[index].completed = true
     console.log(all)
   }
-  return { all, add, update };
+  return { all, add, markAsComplete };
 }
 ```
 
@@ -75,22 +77,22 @@ Now, you will be able to see the list of all todos by:
 
 To add a new To-Do:
 ````
-> todos.add('I need to go to gym')
-['I need to go to gym'] // Output
-> todos.add('Have to buy potato')
-['I need to go to gym', 'Have to buy potato'] // Output
+> todos.add({ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false })
+[{ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false }] // Output
+> todos.add({ title: 'Have to buy potato', dueDate: '22-06-2022', completed: false })
+[{ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false }, { title: 'Have to buy potato', dueDate: '22-06-2022', completed: false }] // Output
 > todos.all
-['I need to go to gym', 'Have to buy potato'] // Output
+[{ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false }, { title: 'Have to buy potato', dueDate: '22-06-2022', completed: false }] // Output
 ````
 
-To update a To-Do
+To mark a To-Do as complete
 ````
-> todos.update(1, 'Have to buy tomato') // Here 1 is the array index
-['I need to go to gym', 'Have to buy tomato'] // Output
+> todos.markAsComplete(1) // Here 1 is the array index
+[{ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false }, { title: 'Have to buy potato', dueDate: '22-06-2022', completed: true }] // Output
 ````
 
 So, it's working!
 
-As we've learned before, in this example, the two functions `add` and `update` had preserved the legacy variable `all` when the `todoList()` function was executed, and continued to preserve (closure) it.
+As we've learned before, in this example, the two functions `add` and `markAsComplete` had preserved the legacy variable `all` when the `todoList()` function was executed, and continued to preserve (closure) it.
 
 
