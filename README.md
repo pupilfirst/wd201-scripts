@@ -57,7 +57,7 @@ This work is licensed under a
 - [What is Closure in JavaScript?](./nodejs-deep-dive/closures-in-js/README.md)
 
 ### Apply closure
-- *Let’s write a  to-do application (Not merged yet)*
+- *[Let’s write a  to-do application](https://github.com/pupilfirst/wd201-scripts/pull/124/files) (Not merged yet)*
 - *Milestone Task (Not merged yet)*
 
 ## L4. Testing
