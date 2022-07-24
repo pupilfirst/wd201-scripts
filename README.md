@@ -110,8 +110,8 @@ This work is licensed under a
 - [Use csurf package in express.js application](./html-forms/use-csurf/README.md)
 
 ## L10. User Authentication and final wrap-up
-- *Introduction (Not merged yet)*
-- *Create the `users` table with a sequelize migration (Not merged yet)*
+- [Introduction]('./user-authentication/introduction/README.md)
+- [Create the `users` table with a sequelize migration]('./../user-authentication/create-users-table-with-sequelize-migration/README.md)
 - *Associations: adding owners to todo  (Not merged yet)*
 - [Creating a user sign-up page](./user-authentication/create-user-signup-page/README.md)
 - *Add user authentication using passport.js  (Not merged yet)*
