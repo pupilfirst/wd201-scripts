@@ -119,7 +119,30 @@ Let's try it out.
 > Action: fill the form
 Yay! On successful submission, it redirected me back to the root URL. To check the user entry in database, let me open PGAdmin.
 
-See, in `Users` table, the new user information got saved successfully. But, the `password` is stored as a plain text here, which is kind of a very risky thing. As, if anybody can manage to seek into the database, they will be able to see complete user credentials. We will fix this issue in future.
+See, in `Users` table, the new user information got saved successfully. But, the `password` is stored as a plain text here, which is kind of a very risky thing. As, if anybody can manage to seek into the database, they will be able to see complete user credentials. We will fix this issue in later.
+
+### Fixing CSRF vulnerablity
+Now, this signup form has one major security concern, as it is vulnerable to CSRF attacks. To fix it, we will edit the `index.js` file to generate a csrf token.
+
+```js
+app.get("/signup", (request, response) => {
+  response.render("signup", { csrfToken: request.csrfToken() });
+});
+```
+Next, we will render the `csrfToken` in our signup form, as a hidden field, which will automatically get submitted.
+```html
+<h6 class="py-4">Signup as a new user</h6>
+<form action="/users" method="post">
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+  ...
+  ...
+</form>
+```
+Save the file and let's restart our server.
+> Action: try signup once again.
+
+As you can see, signup feature works as expected.
+
 
 That's it for this video, see you in the next one.
 
