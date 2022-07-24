@@ -113,7 +113,7 @@ This work is licensed under a
 - *Introduction (Not merged yet)*
 - *Create the `users` table with a sequelize migration (Not merged yet)*
 - *Associations: adding owners to todo  (Not merged yet)*
-- *Creating a user sign-up page  (Not merged yet)*
+- [Creating a user sign-up page](./user-authentication/create-user-signup-page/README.md)
 - *Add user authentication using passport.js  (Not merged yet)*
 - [Storing passwords with bcrypt](./user-authentication/storing-password-using-bcrypt/README.md)
 - *Create a simple sign-in page which verifies the user's password (Not merged yet)*
