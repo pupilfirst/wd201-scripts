@@ -116,10 +116,10 @@ This work is licensed under a
 - [Creating a user sign-up page](./user-authentication/create-user-signup-page/README.md)
 - *Add user authentication using passport.js  (Not merged yet)*
 - [Storing passwords with bcrypt](./user-authentication/storing-password-using-bcrypt/README.md)
-- *Create a simple sign-in page which verifies the user's password (Not merged yet)*
-- What exactly is a cookie and why should you care?
-- *Let us store the signed-in user's id in the session! (Not merged yet)*
-- *Implement sign-out by resetting the user session (Not merged yet)*
+- [Create a simple sign-in page which verifies the user's password]('./../user-authentication/signin-with-password-verification/README.md)
+- What exactly is a cookie and why should you care? 
+- *Let us store the signed-in user's id in the session! (covered in user authentication using passport.js script)*
+- *[Implement sign-out by resetting the user session](https://github.com/pupilfirst/wd201-scripts/pull/134/files) (Not merged yet)*
 - A logged-in user should see and modify only their own to-dos and nobody else's
 - Showing one-off messages to users with connect-flash
 - Ensure no blank to-dos are ever created, with Sequelize validations
