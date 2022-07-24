@@ -112,7 +112,7 @@ This work is licensed under a
 ## L10. User Authentication and final wrap-up
 - [Introduction]('./user-authentication/introduction/README.md)
 - [Create the `users` table with a sequelize migration]('./../user-authentication/create-users-table-with-sequelize-migration/README.md)
-- *Associations: adding owners to todo  (Not merged yet)*
+- [Associations: adding owners to todo]('./user-authentication/../../user-authentication/associations-adding-owners-to-todo/README.md)
 - [Creating a user sign-up page](./user-authentication/create-user-signup-page/README.md)
 - *Add user authentication using passport.js  (Not merged yet)*
 - [Storing passwords with bcrypt](./user-authentication/storing-password-using-bcrypt/README.md)
