@@ -82,16 +82,16 @@ This work is licensed under a
 - [Hello world with Express.js!](backend-dev-with-express/introduction-to-express/README.md)
 - [Connect our PostgreSQL database to the Express.js application](backend-dev-with-express/connect-express-with-postgres/README.md)
 - [Routes in Express.js](backend-dev-with-express/routes-in-express/README.md)
-- *Add two features: create a new to-do, and mark an existing to-do as completed (Not merged yet)*
+- *[Add two features: create a new to-do, and mark an existing to-do as completed](https://github.com/pupilfirst/wd201-scripts/pull/126/files) (Not merged yet)*
 - *Add tests (Not merged yet)*
-- *Milestone Task + Tests (Automated) (Not merged yet)*
+- *[Milestone Task + Tests (Automated)](https://github.com/pupilfirst/wd201-scripts/pull/121/files) (Not merged yet)*
 
 ## L7. Add User Interface for To-do Application
 - [Converting a design into a webpage](./todo-user-interface/converting-design-into-webpage/README.md)
 - [Create an interface for accepting a new to-do](./todo-user-interface/interface-for-new-to-do/README.md)
 - [Create an interface for listing the todos](./todo-user-interface/interface-for-listing-to-dos/README.md)
 - [Create an interface to delete a to-do](./todo-user-interface/interface-to-delete-to-do/README.md)
-- *Milestone Task + Tests (Automated) (Not merged yet)*
+- [Milestone Task + Tests (Automated)](./todo-user-interface/todo-interface-milestone/README.md)
 
 ## L8. EJS Templating
 - [Render dynamic data inside HTML with EJS templates](./ejs-templating/dynamic-html-with-ejs/README.md)
@@ -115,7 +115,7 @@ This work is licensed under a
 - *Associations: adding owners to todo  (Not merged yet)*
 - *Creating a user sign-up page  (Not merged yet)*
 - *Add user authentication using passport.js  (Not merged yet)*
-- *Storing passwords with bcrypt (Not merged yet)*
+- [Storing passwords with bcrypt](./user-authentication/storing-password-using-bcrypt/README.md)
 - *Create a simple sign-in page which verifies the user's password (Not merged yet)*
 - What exactly is a cookie and why should you care?
 - *Let us store the signed-in user's id in the session! (Not merged yet)*
