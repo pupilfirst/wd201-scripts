@@ -114,7 +114,7 @@ This work is licensed under a
 - [Create the `users` table with a sequelize migration]('./../user-authentication/create-users-table-with-sequelize-migration/README.md)
 - [Associations: adding owners to todo]('./user-authentication/../../user-authentication/associations-adding-owners-to-todo/README.md)
 - [Creating a user sign-up page](./user-authentication/create-user-signup-page/README.md)
-- *Add user authentication using passport.js  (Not merged yet)*
+- [Add user authentication using passport.js]('./../user-authentication/authentication-using-passport/README.md)
 - [Storing passwords with bcrypt](./user-authentication/storing-password-using-bcrypt/README.md)
 - [Create a simple sign-in page which verifies the user's password]('./../user-authentication/signin-with-password-verification/README.md)
 - What exactly is a cookie and why should you care? 
