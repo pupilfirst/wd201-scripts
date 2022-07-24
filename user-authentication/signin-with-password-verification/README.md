@@ -101,4 +101,27 @@ passport.use(new LocalStrategy(
 
 Now, try to login once again, and this time it works. Great!
 
+### Fixing CSRF vulnerablity
+Now, this login form has one major security concern, as it is vulnerable to CSRF attacks. To fix it, we will edit the `index.js` file to generate a csrf token.
+
+```js
+app.get("/login", (request, response) => {
+  response.render("login", { csrfToken: request.csrfToken() });
+});
+```
+Next, we will render the `csrfToken` in our login form, as a hidden field, which will automatically get submitted.
+```html
+<h6 class="py-4">Login to you account</h6>
+<form action="/session" method="post">
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+  ...
+  ...
+</form>
+```
+Save the file and let's restart our server.
+> Action: try loigin once again.
+
+As you can see, login feature works as expected.
+
+
 That's it for this video, see you in the next lesson.
