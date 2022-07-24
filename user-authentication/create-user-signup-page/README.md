@@ -1,71 +1,148 @@
 # Text
-Previously, when we've implemented our user signup flow, we've stored the password as plain text in database. But it's not a good practice, as if anyone can hack into our database, they would be clearly able to see the user credentials. To prevent that from happening, we're going to store a digest of that password.
-
-Before we do that, let's look at the bcrypt library, and see what a password digest looks like.
+Now that we have created the `users` table and using Sequelize migration, let's create an HTML form where new users can sign up.
 
 # Script
-In this tutorial, we are going to see how we can store our users password in our database, in a secure manner. Now we have already discussed this before, we do not ever store the actual passwords as they are. In fact no modern service, saves your passwords in their databases. You can sort of notice that if you go to say Gmail or any other web service that you use on a on a very frequent basis, and if you forgot your password, what they do is they don't send you your original password back to you. They can't because they don't have that data with them. What they instead do is, they send a password reset link, so you can generate and create a new password by yourself. So the reason for this is again, companies don't want to store your original passwords in their databases. 
+In this video, we are going to create a user signup form. So, when someone new comes to our To-Do application, they should see a link to signup. When we click on the signup link, we should take them to the signup form, where they have to fill some details like: first name, last name (which we will keep as optional), email and password. Then, when they click on the signup button, it should create an entry for this user in our database. Then, user will be shown their todo list. Let's start.
 
-So a couple of questions:
-  - What are they doing storing, instead of your actual password? 
-  - And how do they verify when you type your password and you try to login, how do they verify whether your password is correct or not?
+First, we will start with the landing page, open the `views/index.ejs` file, there we will add a link to our signup page.
+```html
+<html>
+  <head>
+    <title>TO-DO Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="grid grid-cols-6">
+      <div class="col-start-3 col-span-2 py-10">
+        <h1 class="text-xl text-slate-600 font-semibold mb-4">To-Do Manager</h1>
+        <p class="py-2">Welcome to the To-Do Manager</p>
+        <p class="py-2">New here? <a href="/signup" class="text-green-600">Sign-up now</a></p>
+        <p class="py-2">Already have an account? <a href="/login" class="text-green-600">Sign-in</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+```
 
-So we are going to answer both of those questions in this video and then we will look at how we can implement the say in our To-do manager application.
-
-### Let's start with the installation of a library called bcrypt
-
-#### Now what is bcrypt?
-**Bcrypt** is a password hashing function which encrypts your password. 
-
-**Hashing** a password refers to taking a plain text password and putting it through a hash algorithm. The hash algorithm takes in a string of any size and outputs a fixed-length string. No matter the size of the original string (i.e., the plain text password), the output (the hash) is always the same length. Since the same process is always applied, the same input always gives the same output.
-
-In our application, we will use Bcrypt.js to encrypt passwords before saving it into the database. 
-
-To install `bcrypt`, in the terminal we will execute the following command
+Now, in the browser, if we would click the **Signup** link, ohh it shows an error `Cannot GET /signup`. This error is coming, because we haven't defined the route for signup page yet. Let's define that, in our `index.js` file.
 ```js
-npm install bcrypt --save
+app.get("/signup", (request, response) => {
+  response.render("signup");
+});
 ```
-
-### Use bcrypt to encrypt password
-To use `bcript`, first we have to import the library in our `index.js` file.
+Here, in response, we are asking our app to render a **ejs** template named `signup`. So, in the `views` folder, we will create this `signup.ejs` file. And inside this file, we will design our signup form using HTML.
+```html
+<html>
+  <head>
+    <title>TO-DO Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="grid grid-cols-6">
+      <div class="col-start-3 col-span-2 py-10">
+        <h1 class="text-xl text-slate-600 font-semibold mb-4">To-Do Manager</h1>
+        <h6 class="py-4">Signup as a new user</h6>
+        <form action="/users" method="post">
+          <div class="py-3">
+            <label for="firstName">First name: </label>
+            <input name="firstName" type="text" class="border border-gray-300 text-gray-900 text-sm rounded w-full p-2" autofocus required>
+          </div>
+          <div class="py-3">
+            <label for="lastName">Last name: </label>
+            <input name="lastName" type="text" class="border border-gray-300 text-gray-900 text-sm rounded w-full p-2">
+          </div>
+          <div class="py-3">
+            <label for="email">Email: </label>
+            <input name="email" type="email" class="border border-gray-300 text-gray-900 text-sm rounded w-full p-2" required>
+          </div>
+          <div class="py-3">
+            <label for="password">Password: </label>
+            <input name="password" type="password" class="border border-gray-300 text-gray-900 text-sm rounded w-full p-2" required>
+          </div>
+          <div class="py-3">
+            <button type="submit" class="text-white bg-green-600 hover:bg-green-700 font-medium rounded text-sm px-5 py-2 mr-2 mb-2">Sign-up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
 ```
-const bcrypt = require('bcrypt')
-```
-Now, we have to define a **salt** to encrypt our password with bcrypt. A salt is a random string that makes the password hash unpredictable. By hashing a plain text password plus a salt, the hash algorithm’s output is no longer predictable.
-
-Next, we set the `saltRounds` value. The higher the `saltRounds` value, the more time the hashing algorithm takes. We have to select a number that is high enough to prevent attacks, but not slower than potential user patience. In this example, we use the default value, 10.
-
-```js
-const saltRounds = 10;
-```
-
-To generate a hashed password while user signup, we will update the `POST /users` route.
+> Action: Explain the HTML on the go.
+Now, as you can see, the form's *action* is set to `/users` path with `POST` method. So, once again, in browser, if we would try to submit the form, it will show me an error `Cannot POST /users`. Because, we haven't defined the route yet. TO do that, open the `index.js` file
 ```js
 app.post('/users', async function (request, response) {
-  const hashedPwd = await bcrypt.hash(request.body.password, saltRounds);
-  console.log(hashedPwd);
+  // Have to create user here.
+})
+```
+Now if we would try to submit the form once again, in the browser's network console, we will be able to see all four values (firstName, lastName, email & password) are getting submitted to the the endpoint we've just created. Now, lets see we are geeting these values in our *user signup endpint* or not.
+```js
+app.post('/users', async function (request, response) {
+  console.log("firstName", request.body.firstName)
+  console.log("lastName", request.body.lastName)
+  console.log("email", request.body.email)
+  console.log("password", request.body.password)
+})
+```
+Submit the form again, and, ohh, in the terminal, all of these values shows `undefined`. This problem is coming because Express is unable to read form values from the request body. 
+To fix it, we will use a built-in Express middleware function called, `express.urlencoded()`. This function parses incoming requests with urlencoded payloads. To configure it, in your `index.js` file, we have add the following code:
+```js
+// Handling form values
+app.use(express.urlencoded({
+  extended: true
+}))
+```
+Let's resubmit the form, and yes! This time it shows the submitted values in terminal. 
+
+Great! Now we have to use the `User` model, to save the new user information into database.
+First, we've to import the `User` model at top of the `index.js` file.
+```js
+const { User, Todo } = require("./models");
+```
+Now we will create the user:
+```js
+app.post('/users', async function (request, response) {
   const user = await User.create({ 
     firstName: request.body.firstName,
     lastName: request.body.lastName,
     email: request.body.email, 
-    password: hashedPwd
+    password: request.body.password 
   }).catch((error) => {
     console.log(error)
   });
-  // Create session after successful signup
-  request.login(user, function(err) {
-    if (err) {
-      console.log(err);
-    }
-    return response.redirect('/todos');
-  });
+  response.redirect("/"); // Redirected to root path
 })
 ```
+Let's try it out.
+> Action: fill the form
+Yay! On successful submission, it redirected me back to the root URL. To check the user entry in database, let me open PGAdmin.
 
-Now, let's try to signup once again, it works. Now let's see how the password looks in PGAdmin.
-> Action: Show users table
+See, in `Users` table, the new user information got saved successfully. But, the `password` is stored as a plain text here, which is kind of a very risky thing. As, if anybody can manage to seek into the database, they will be able to see complete user credentials. We will fix this issue in later.
 
-So, we've successfully encrypted and stored hashed password in database. 
+### Fixing CSRF vulnerablity
+Now, this signup form has one major security concern, as it is vulnerable to CSRF attacks. To fix it, we will edit the `index.js` file to generate a csrf token.
 
-# Text
-In the next lesson, we will design and implement the **User Signin** functionality. There we will learn to compare the plain text password with the hash stored in database. See you there.
+```js
+app.get("/signup", (request, response) => {
+  response.render("signup", { csrfToken: request.csrfToken() });
+});
+```
+Next, we will render the `csrfToken` in our signup form, as a hidden field, which will automatically get submitted.
+```html
+<h6 class="py-4">Signup as a new user</h6>
+<form action="/users" method="post">
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+  ...
+  ...
+</form>
+```
+Save the file and let's restart our server.
+> Action: try signup once again.
+
+As you can see, signup feature works as expected.
+
+
+That's it for this video, see you in the next one.
+
