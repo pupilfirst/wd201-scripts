@@ -21,9 +21,13 @@ const fs = require("fs");
 The Node.js `fs` module is used for some common tasks on the file system as follows:
 
 — Read files
+
 — Create files
+
 — Update files
+
 — Delete files
+
 — Rename files
 
 ## Write a new file using `fs`
