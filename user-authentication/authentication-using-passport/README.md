@@ -72,13 +72,16 @@ passport.use(new LocalStrategy(
 To authenticate, Passport first looks at the user's login details (i.e. email and password), then invokes a verified callback (`done`). Whenever the user gets properly authenticated, we are passing the `user` object into the callback. If the user does not get appropriately authenticated, we are passing the specific error message into the callback.
 
 #### Next, we have to store and retrieve user information in session
-As we are managing our app's sessions with Passport, as soon as a user gets appropriately authenticated, a new session begins. At that time, we will serialize the user data to the session and the user ID will be stored in `request.session.passport.user`. Let's do that
+As we are managing our app's sessions with Passport, as soon as a user gets appropriately authenticated, a new session begins. At that time, we will serialize the user data to the session and the user ID will be stored in `request.session.passport.user`. 
+
+Let's do that
 ```js
 passport.serializeUser(function(user, done) {
   console.log("Serializing user in session: ", user.id)
   done(null, user.id); 
 });
 ```
+For your reference, **serialization** is the process of converting an object into a stream of bytes to more easily save or transmit it. Whereas, deserialization is the reverse process where the byte stream is used to recreate the actual object in memory.
 
 To access user information from session, we will use the `deserializeUser` method.
 ```js
