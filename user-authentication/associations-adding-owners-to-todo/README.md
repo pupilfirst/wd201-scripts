@@ -1,58 +1,49 @@
 # Text
-In this lesson, we will learn to define associations(a.k.a relationships) between two Sequelize models. 
+In this lesson, we will learn to define associations(a.k.a. **relationships**) between two Sequelize models. 
 
-In our application, to show the To-Dos of a logged in user, we have to define relationship between the `Todo` and `User` model. The relation would be **user has many todos**, right? Let's define that.
+In our application, to show the To-Dos of a logged-in user, we have to define the relationship between the `Todo` and `User` model. The relation would be **user has many todos**, right? Let's define that.
 
 # Script
 In this video, we will learn about the steps associated in defining association between two Sequelize models.
 1. First, we have to update our `Todos` table to add a new foreign key `userId`, which will reference to the `Users` table.
-2. Then, we have to define the `has many` and `belongs to` relation in both `User` and `Todo`  model respectively.
+2. Then, we have to define the `has many` and `belongs to` relation in both `User` and `Todo`  model, respectively.
 
 So, let's get started.
 
-### Updating Migration
-Open the migration file which we've generated before to create the `Todos` table. There we will add the following code to add the `userId` column.
+### Creating a new Migration
+To add the `userId` column in `Todos` table, we will create a new migration file in the terminal. 
+```sh
+npx sequelize-cli migration:create --name add-user-id-in-todos
+```
+In VS Code, let's open the migration file. It already comes with a default template, where we have to write just few lines of code to add a new column.
 ```js
 'use strict';
+
 module.exports = {
-  async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Todos', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
+  async up (queryInterface, Sequelize) {
+    await queryInterface.addColumn('Todos', 'userId', {
+      type: Sequelize.DataTypes.INTEGER
+    })
+    await queryInterface.addConstraint('Todos', {
+      fields: ['userId'],
+      type: 'foreign key',
+      references: {
+        table: 'Users',
+        field: 'id'
       },
-      userId: {
-        type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'Users',
-          key: 'id',
-          as: 'userId',
-        }
-      },
-      description: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      ...
-      ...
-      ...
-    });
+      onDelete: 'cascade',
+      onUpdate: 'cascade'
+    })
   },
-  async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Todos');
+
+  async down (queryInterface, Sequelize) {
+    await queryInterface.removeColumn('Todos', 'userId');
   }
 };
 ```
-The `references` section of the `userId` column will set up the `Todos` table in our database to reflect the same relationships we described above. 
+Here, we've used `addConstraint` from the Sequelize `queryInterface` to define that, `userId` is a foreign key in `Todos` table, which actually refers to the `id` column of `Users` table.
 
-But, first we will revert back our database to the initial state by undoing all migrations with the `db:migrate:undo:all` command.
-```sh
-npx sequelize-cli db:migrate:undo:all
-```
-Now, we can run our migration:
+So, we can run our migration:
 ```sh
 npx sequelize-cli db:migrate
 ```
@@ -98,4 +89,4 @@ Similarly, open the `Todo` model:
 ```
 Here, we've defined that, every `Todo` belongs to an `User`.
 
-That's it, in this lesson, we've successfully defined all associations. See you in next video.
+That's it, in this lesson, we've successfully defined all associations. See you in the next video.
