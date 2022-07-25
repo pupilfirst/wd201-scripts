@@ -40,20 +40,32 @@ This work is licensed under a
 - [Milestone](./introduction-to-nodejs/milestone/README.md)
 
 ## L2. Working with NPM
-> TODO
+- [Why is there a need for a library ecosystem?](./working-with-npm/package-management-and-library-ecosystem/README.md)
+- [What is NPM?](./working-with-npm/about-npm-and-uses/README.md)
+- [What is package.json](./working-with-npm/package-json-in-npm/README.md)
+- [What are NPM scripts](./working-with-npm/npm-scripts/README.md)
+- [Explore built in fs module](./working-with-npm/nodejs-fs-module/README.md)
+- [Explore streams](./working-with-npm/nodejs-stream-module/README.md)
+- [Accepting command line arguments](./working-with-npm/accepting-cli-commands/README.md)
+- [Let's write a program!](./working-with-npm/write-first-node-program/README.md)
+- [Milestone](./working-with-npm/milestone/README.md)
 
 ## L3. Node.js deep dive
 
 ### Key Concepts
 - [What is an event loop?](./nodejs-deep-dive/what-is-event-loop/README.md)
-- *What is Closure in JavaScript? (Not merged yet)*
+- [What is Closure in JavaScript?](./nodejs-deep-dive/closures-in-js/README.md)
 
 ### Apply closure
-- *Let’s write a  to-do application (Not merged yet)*
+- *[Let’s write a  to-do application](https://github.com/pupilfirst/wd201-scripts/pull/124/files) (Not merged yet)*
 - *Milestone Task (Not merged yet)*
 
 ## L4. Testing
-> TODO
+- [What is testing, and why do we need it?](./testing/why-need-testing/README.md)
+- [TDD workflow](./testing/tdd/README.md)
+- [What is jest?](./testing/jest/README.md)
+- [Git hooks: pre-commit hook](./testing/git-hooks/README.md)
+- [Running tests, and linting automatically as pre-commit hook using Husky, lint staged](./testing/husky-precommit-hook/README.md)
 
 ## L5. Databases and Sequelize
 
@@ -70,19 +82,24 @@ This work is licensed under a
 - [Hello world with Express.js!](backend-dev-with-express/introduction-to-express/README.md)
 - [Connect our PostgreSQL database to the Express.js application](backend-dev-with-express/connect-express-with-postgres/README.md)
 - [Routes in Express.js](backend-dev-with-express/routes-in-express/README.md)
-- *Add two features: create a new to-do, and mark an existing to-do as completed (Not merged yet)*
+- *[Add two features: create a new to-do, and mark an existing to-do as completed](https://github.com/pupilfirst/wd201-scripts/pull/126/files) (Not merged yet)*
 - *Add tests (Not merged yet)*
-- *Milestone Task + Tests (Automated) (Not merged yet)*
+- *[Milestone Task + Tests (Automated)](https://github.com/pupilfirst/wd201-scripts/pull/121/files) (Not merged yet)*
 
 ## L7. Add User Interface for To-do Application
 - [Converting a design into a webpage](./todo-user-interface/converting-design-into-webpage/README.md)
 - [Create an interface for accepting a new to-do](./todo-user-interface/interface-for-new-to-do/README.md)
 - [Create an interface for listing the todos](./todo-user-interface/interface-for-listing-to-dos/README.md)
 - [Create an interface to delete a to-do](./todo-user-interface/interface-to-delete-to-do/README.md)
-- *Milestone Task + Tests (Automated) (Not merged yet)*
+- [Milestone Task + Tests (Automated)](./todo-user-interface/todo-interface-milestone/README.md)
 
 ## L8. EJS Templating
-> TODO
+- [Render dynamic data inside HTML with EJS templates](./ejs-templating/dynamic-html-with-ejs/README.md)
+- [Using view templates](./ejs-templating/view-templates/README.md)
+- [What is MVC?](./ejs-templating/mvc/README.md)
+- [Heroku: deploy your application](./ejs-templating/deploy-application-to-heroku/README.md)
+- [Use EJS templating to render to-do manager](./ejs-templating/ejs-templating-for-todo-manager/README.md)
+- [Milestone](./ejs-templating/milestone/README.md)
 
 ## L9.  HTML forms to save and accept user inputs
 
@@ -94,16 +111,16 @@ This work is licensed under a
 - [What are APIs](./html-forms/what-are-apis/README.md)
 
 ## L10. User Authentication and final wrap-up
-- *Introduction (Not merged yet)*
-- *Create the `users` table with a sequelize migration (Not merged yet)*
-- *Associations: adding owners to todo  (Not merged yet)*
-- *Creating a user sign-up page  (Not merged yet)*
-- *Add user authentication using passport.js  (Not merged yet)*
-- *Storing passwords with bcrypt (Not merged yet)*
-- *Create a simple sign-in page which verifies the user's password (Not merged yet)*
+- [Introduction]('./user-authentication/introduction/README.md)
+- [Create the `users` table with a sequelize migration]('./../user-authentication/create-users-table-with-sequelize-migration/README.md)
+- [Associations: adding owners to todo]('./user-authentication/../../user-authentication/associations-adding-owners-to-todo/README.md)
+- [Creating a user sign-up page](./user-authentication/create-user-signup-page/README.md)
+- [Add user authentication using passport.js]('./../user-authentication/authentication-using-passport/README.md)
+- [Storing passwords with bcrypt](./user-authentication/storing-password-using-bcrypt/README.md)
+- [Create a simple sign-in page which verifies the user's password]('./../user-authentication/signin-with-password-verification/README.md)
 - What exactly is a cookie and why should you care?
-- *Let us store the signed-in user's id in the session! (Not merged yet)*
-- *Implement sign-out by resetting the user session (Not merged yet)*
+- *Let us store the signed-in user's id in the session! (covered in user authentication using passport.js script)*
+- *[Implement sign-out by resetting the user session](https://github.com/pupilfirst/wd201-scripts/pull/134/files) (Not merged yet)*
 - A logged-in user should see and modify only their own to-dos and nobody else's
 - Showing one-off messages to users with connect-flash
 - Ensure no blank to-dos are ever created, with Sequelize validations
