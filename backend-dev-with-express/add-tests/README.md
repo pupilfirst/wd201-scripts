@@ -195,5 +195,70 @@ Time:        1.601 s, estimated 2 s
 Ran all test suites.
 ```
 
+We have successfully added tests for listing and creating todo items. Next, let's add test to check the mark complete functionality.
 
-We have successfully added tests for listing and creating todo items.
+```js
+test("Mark a todo as complete ", async () => {
+  const agent = request.agent(app);
+  const res = await agent.get("/todos");
+  const csrfToken = extractCsrfToken(res);
+  const createTodoResponse = await agent.post("/todos").send({
+    _csrf: csrfToken,
+    title: "Buy groceries",
+    dueDate: new Date().toISOString(),
+    complete: false,
+  });
+
+  const listTodoResponse = await request(app)
+    .get("/todos")
+    .set("Accept", "application/json");
+  const dueToday = JSON.parse(listTodoResponse.text).dueToday;
+  expect(dueToday.length).toBeGreaterThan(0);
+
+  const markCompleteResponse = await agent
+    .put(`/todos/${dueToday[0].id}`)
+    .send({
+      _csrf: csrfToken,
+    });
+
+  expect(markCompleteResponse.statusCode).toBe(200);
+});
+```
+
+Let's run the tests again.
+
+```sh
+npm test
+```
+
+You should be able to see the following output.
+
+```
+> todo-manager@0.0.0 test
+> NODE_ENV=test jest --detectOpenHandles
+
+GET /todos 200 23.136 ms - 42
+GET /todos 200 11.535 ms - 42
+GET /todos 200 15.431 ms - 2452
+POST /todos 302 44.169 ms - 28
+GET /todos 200 18.461 ms - 188
+GET /todos 200 12.311 ms - 3610
+POST /todos 302 7.612 ms - 28
+GET /todos 200 6.853 ms - 340
+PUT /todos/1 200 5.699 ms - 16
+ PASS  __tests__/todos.js
+  List the todo items
+    ✓ responds with json at /todos (62 ms)
+    ✓ returns data in specified format (24 ms)
+    ✓ create new todo  (133 ms)
+    ✓ Mark a todo as complete  (96 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.661 s, estimated 2 s
+Ran all test suites.
+```
+
+## Conclusion
+You have now added tests to back your code. This would ensure the code will work as it is intended.
