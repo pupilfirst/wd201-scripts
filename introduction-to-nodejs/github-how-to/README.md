@@ -4,7 +4,7 @@ In this video, I'm going to show you, how to use the `git` command line interfac
 Before continuing, let me quickly mention why this course requires you to use git. Git is the de facto standard for version control in the software industry. Regardless of language you use in your work, you'll almost certainly be using git as your version control system. So it's pretty much necessary for every developer out there.
 
 In this lesson, we will simply play around with git, and start getting comfortable with it. 
-We will start the the simple Node.Js application we've created in the [Running our first program](./working-with-npm/write-first-node-program/README.md) lesson.
+We will start the the simple Node.Js application we've created in the [Running our first program](../../working-with-npm/write-first-node-program/README.md) lesson.
 
 Let's go into the project folder, and try out the `git status` command. git will tell us that this isn't a git repository. So let's turn this folder that we just created _into_ a git repository by typing in the command `git init`. 
 This creates a hidden folder `.git` (`ls -al`). This folder is where git is going store its own information. Don't edit anything inside this `.git` folder unless you know what you're doing.
