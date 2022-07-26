@@ -31,7 +31,8 @@ This work is licensed under a
 5. [Github: How To](./introduction-to-nodejs/github-how-to/README.md)
 
 ### Orientation (old)
-Students in TA training can skip this part.
+Students in TA training can skip this section.
+
 6. [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
 7. [Screen recording tool](./get-started-with-git-and-github/getting-help/screen-recording.md)
 8. [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
