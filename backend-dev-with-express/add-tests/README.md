@@ -1,6 +1,6 @@
 ## Text
 
-In this lesson, we will look into how to test the routes that we have created for our Todo web application. We first need to install a npm package `supertest` to help us with the testing. We will install it as a development dependency.
+In this lesson, we will look into how to test the routes that we have created for our Todo web application. First, we need to install a npm package `supertest` to help us with the testing. We will install it as a development dependency.
 
 ```sh
 npm install -D supertest
@@ -85,7 +85,7 @@ Time:        1.496 s, estimated 2 s
 Ran all test suites.
 ```
 
-We can also make sure the response contains data in a specified format that we require. The todo items are supposed to be returned as a json object with following structure:
+We can also make sure the response contains data in a specified format that we require. The To-do items are supposed to be returned as a JSON object with the following structure:
 
 ```json
 {
@@ -131,7 +131,7 @@ Time:        1.454 s, estimated 2 s
 Ran all test suites.
 ```
 
-Next, let's add a test to check the creation of todo. Since, we have protected our todo creation route using a CSRF token, we have to make sure we pass in the token in the request as well. To help us with that, we will install another package named `cheerio`. We will simply send a request to list the todos, extract the csrf token from the response, and then send out actual request to create the todo.
+Next, let's add a test to check the creation of to-do. Since, we have protected our to-do creation route using a CSRF token, we have to make sure we pass in the token in the request as well. To help us with that, we will install another package named `cheerio`. We will simply send a request to list the to-dos, extract the CSRF token from the response, and then send out the actual request to create the to-do.
 
 Let's modify our test script
 
@@ -147,7 +147,7 @@ function extractCsrfToken(res) {
 }
 ```
 
-We just added a function to extract the csrfToken from the html response. Let's add a test now. We will require cookies as well. So we will use a super request `agent`.
+We just added a function to extract the CSRF token from the HTML response. Let's add a test now. We will require cookies as well. So we will use a super request `agent`.
 
 ```js
 test("create new todo ", async () => {
