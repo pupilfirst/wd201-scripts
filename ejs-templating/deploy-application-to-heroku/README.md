@@ -1,6 +1,6 @@
 Currently, your application works in your local environment. But it's time to show the whole world what it can do.
 
-In this section, we will be looking at deploying our Rails application code to Heroku. Heroku is a PaaS that lets companies build, deliver, monitor and scale apps.
+In this section, we will be looking at deploying our **Node.js** application code to Heroku. Heroku is a PaaS that lets companies build, deliver, monitor and scale apps.
 
 Let's set up and configure the Heroku CLI and application:
 
@@ -28,13 +28,13 @@ It will also [add a new _remote_](https://git-scm.com/book/en/v2/Git-Basics-Work
    "test": "echo \"Error: no test specified\" && exit 1"
 }
 ```
-Update your scripts attribute in `package.json` to the above command. Basically, this command tells Heroku to run the command node app.js, which is the same command you’d use to run a node app on your terminal.
+Update your scripts attribute in `package.json` to the above command. Basically, this command tells Heroku to run the command `node app.js`, which is the same command you’d use to run a node app on your terminal.
 
 6. Next, we need our app to connect to your **Postgres** database in order for it to show data. To do that, we will start by installing the Heroku Postgres add-on.
 ```
 heroku addons:create heroku-postgresql:hobby-dev
 ```
-You can check if it installed successfully by going to your Heroku Dashboard and checking your app’s add-ons.
+You can check if it installed successfully, by going to your Heroku Dashboard and checking your app’s add-ons.
 
 7. The next step is to re-configure the “Production” section of your config.json. You can find this in your DB folder, in Config. Find the “Production” section and add the following.
 ```js
