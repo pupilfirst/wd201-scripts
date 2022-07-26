@@ -171,7 +171,7 @@ test("create new todo ", async () => {
 
 Here, we try to create a todo item with today's date as the due date. We expect the http status code to be `302` once a todo item is created. Then we send a request to list the todo items and verify there is indeed an item which is due today.
 
-If you run the tests again using the command `npm run`, you should see following output.
+If you run the tests again using the command `npm test`, you should see following output.
 
 ```
 > todo-manager@0.0.0 test
