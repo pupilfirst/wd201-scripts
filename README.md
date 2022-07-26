@@ -32,7 +32,7 @@ This work is licensed under a
 
 ### Orientation (old)
 
-**Note**: Students in TA training can skip this section.
+**Note**: Students in TA training can skip this section and proceed to Milestone.
 
 6. [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
 7. [Screen recording tool](./get-started-with-git-and-github/getting-help/screen-recording.md)
