@@ -42,7 +42,7 @@ Let us, for now, add a simple `console.log` statement to check if the code is wo
 console.log("First JS import on an EJS application!");
 ```
 
-Saving this file does not restart the nodemon as we have not configured it to listen to changes made in js files.
+Saving this file does not restart the nodemon, as we have not configured it to listen to changes made in js files.
 
 Let us change that by updating the config of `package.json` scripts. Replace the `start` script with the below code.
 
@@ -60,7 +60,7 @@ EJS allows us to split a single file into separate files, so we can have common 
 
 In our case, let us create a Header for the Todo application with the text "This is my Todo Application" as a common view template.
 
-Let us create a new file called `header.ejs` in our application within the views folder.
+Let us create a new file called `header.ejs` in our application within the `views` folder.
 
 Next, let's remove the `h1` element from the index.ejs to this newly created file.
 
