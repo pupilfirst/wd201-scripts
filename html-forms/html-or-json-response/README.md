@@ -2,7 +2,7 @@
 
 In this lesson, we will look into how to return different responses to different clients. A http client can let the server know what kind of response they are expecting. It is done using the `Accept` http header.
 
-The following http header tells the server that the client will accept html content.
+The following http header tells the server that the client will accept **html** content.
 
 ```
 Accept: text/html
