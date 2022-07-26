@@ -2,9 +2,9 @@
 
 In the previous levels, we learned how to use templates with Express to create a User Interface for an application. When working on a complex application such as this, it is advisable to use a web design pattern, which helps simplify the development process.
 
-Design pattern in general is a reusable solution which we can use in our application to solve common problems. For example, the Todo application such as ours can have multiple functions and clubbing them all in a single file can create a complex city for handing the data.
+Design pattern in general is a reusable solution which we can use in our application to solve common problems. For example, the Todo application such as ours can have multiple functions, and clubbing them all in a single file can create complexity in handing the data.
 
-In our case, we are using the MVC framework, which is also called a model view controller framework. What this does, is split the application into separate components, each of which performs a specific function.
+In our case, we are using the MVC framework, which is also called a **Model-View-Controller** framework. What this does, is to split the application into separate components, each of which performs a specific function.
 
 To understand how to build these applications in general, we need to know more about what the MVC framework is. Let's learn more about it.
 
@@ -16,7 +16,7 @@ This is done to separate internal data from how information is presented to and 
 
 ## The Model
 
-The pattern's central component is the **model**. It is the data structure of the application, independent of the user interface. It corresponds to all the data-related logic with which the user interacts. It directly manages the application's data, and logic.
+The pattern's central component is the **model**. It is the data structure of the application, and is independent of the user interface. It corresponds to all the data-related logic with which the user interacts. It directly manages the application's data, and logic.
 
 ## The View
 
