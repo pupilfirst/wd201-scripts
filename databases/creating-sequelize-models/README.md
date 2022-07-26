@@ -22,7 +22,7 @@ After a model is defined, it is available within `sequelize.models` by its model
 ```js
 //  Todo.js
 
-import { sequelize } from "./connectDB.js";
+const  { sequelize } = require("./connectDB.js");
 
 const Todo = sequelize.define(
   "Todo",
@@ -43,7 +43,7 @@ const Todo = sequelize.define(
     tableName: "todos",
   }
 );
-export default Todo;
+module.exports = Todo;
 // Todo.sync(); // create the table
 ```
 
@@ -51,7 +51,7 @@ The second way of defining a model is by extending it from `Model` base class. T
 
 ```js
 const { Sequelize, DataTypes, Model } = require("sequelize");
-import { sequelize } from "./connectDB.js";
+const { sequelize } = require("./connectDB.js");
 
 class Todo extends Model {}
 Todo.init(
@@ -74,7 +74,7 @@ Todo.init(
   }
 );
 
-export default Todo;
+module.exports =  Todo;
 ```
 
 ### Adding rows
@@ -82,8 +82,8 @@ export default Todo;
 Once we have defined a model, we can use it to create, update or delete data in the table. We can add a record by using the `create` method and passing in values for the columns as an object.
 
 ```js
-import { connect } from "./connectDB.js";
-import { Todo } from "./Todo.js";
+const { connect } = rquire("./connectDB.js");
+const Todo = require("./Todo.js");
 connect()
   .then() => {
     return Todo.create({
@@ -103,8 +103,8 @@ connect()
 Now we should be able to query the database and fetch the stored data. But first, let us check the number of rows.
 
 ```js
-import { connect } from "./connectDB.js";
-import { Todo } from "./Todo.js";
+const { connect } = require("./connectDB.js");
+const Todo = require("./Todo.js");
 connect()
   .then(() => {
     return Todo.count();
@@ -120,8 +120,8 @@ connect()
 We can get all the records using `findAll` method on the model. It would also attach some metadata to the result. To prevent that, we pass in an option `raw: true`.
 
 ```js
-import { connect } from "./connectDB.js";
-import { Todo } from "./Todo.js";
+const { connect } = require("./connectDB.js");
+const Todo = require("./Todo.js");
 connect()
   .then((Todo) => {
     return Todo.findAll({ raw: true });
@@ -135,8 +135,8 @@ connect()
 We can get a specific record by using `findOne` method and passing the `where` clause to filter the records through.
 
 ```js
-import { connect } from "./connectDB.js";
-import { Todo } from "./Todo.js";
+const { connect } = require("./connectDB.js");
+const Todo = require("./Todo.js");
 connect()
   .then((Todo) => {
     return Todo.findOne({ where: { id: 2 } });
@@ -152,8 +152,8 @@ connect()
 We can use the `update` method to update a record. The following code finds and updates the title for the record with `id` = 2.
 
 ```js
-import { connect } from "./connectDB.js";
-import { Todo } from "./Todo.js";
+const { connect } = require("./connectDB.js");
+const Todo = require("./Todo.js");
 connect()
   .then((Todo) => {
     return Todo.update({ title: "Updated title" }, { where: { id: 2 } });
@@ -167,8 +167,8 @@ connect()
 It is possible to make changes to a model instance and write back the update to database using the `save` method.
 
 ```js
-import { connect } from "./connectDB.js";
-import { Todo } from "./Todo.js";
+const { connect } = require("./connectDB.js");
+const Todo = require("./Todo.js");
 connect()
   .then((Todo) => {
     return Todo.findOne({ where: { id: 2 } });
@@ -186,8 +186,8 @@ connect()
 To delete a row, `Sequelize` provides `destroy` method on the model.
 
 ```js
-import { connect } from "./connectDB.js";
-import { Todo } from "./Todo.js";
+const { connect } = require("./connectDB.js");
+const Todo = require("./Todo.js");
 connect()
   .then((Todo) => {
     return Todo.destroy({ where: { id: 2 } });

@@ -113,8 +113,6 @@ module.exports = {
 
 Now that you have the migration generated for you, we can run it.
 
-> Note: You have to remove the `type: module` entry from `package.json` for the migration to work.
-
 ```sh
 npx sequelize-cli db:migrate
 ```
