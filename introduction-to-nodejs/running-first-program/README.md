@@ -36,9 +36,11 @@ In the editor, you would find that we’ve created a `package.json` file.
 }
 ```
 
-This file is the heart of a Node.js application. It contains a lot of meta-information about this project like the name of the project, description, current version, license, author of the project etc. And in future, once our project advances, we might need to install certain `npm` libraries. Then the **package.json** file will hold the list of all such dependencies for this project, with specific version numbers.
+This file is the heart of a Node.js application. It contains a lot of meta-information about this project like the name of the project, description, current version, license, author of the project etc. And in future, once our project advances, we might need to install certain `npm` libraries. Then the **package.json** file will hold the list of all such dependencies for this project, with specific version numbers. 
 
-Currently, the `package.json` file points to non existing index.js file and has no dependencies. 
+You can read more about package.json from [this article](https://heynode.com/tutorial/what-packagejson/).
+
+Currently, the `package.json` file of node application points to non existing `index.js` file and has no dependencies. 
 
 #### Let’s write some code
 Let's get started by creating an `index.js` file, with a simple `hello` function.
