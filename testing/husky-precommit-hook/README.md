@@ -85,9 +85,25 @@ Next, we will edit the pre-commit hook configuration to run lint-staged as well.
 npx husky add .husky/pre-commit "npx lint-staged"
 ```
 
-Now let's test the whole set up. Let's edit one of the file and stage it.
+Now let's test the whole set up. Let's edit `todo.test.js` file to test overdue items and stage it.
 
-> TODO: Update based on Todo example once Avishek completes "Let’s write a to-do application"
+> Action: Add following code
+
+```js
+test("Should return overdue items", () => {
+  expect(all.length).toEqual(1);
+  const today = new Date();
+  const oneDay = 60 * 60 * 24 * 1000;
+  add({
+    title: "An overdue test item",
+    completed: false,
+    dueDate: new Date(today.getTime() - 2 * oneDay).toLocaleDateString("en-CA"),
+  });
+  expect(all.length).toEqual(2);
+  overdueItems = overDue();
+  expect(overdueItems.length).toBe(1);
+});
+```
 
 Let's switch over to the terminal and stage the file.
 
