@@ -34,7 +34,7 @@ sequelize
 
 This file, `connectDB.js`, will connect our program with the Postgres database server running on our computer. Postgres is a multi-user database server - this means its process runs in the background of our computer, and any program that wants to talk to it has to first connect to it. This is what we're doing with the `sequelize.authenticate()`. Note that we've used the database name as `todo_db`, and password as `changeme` - both of these were set in the previous target.
 
-Once a connection is established with the server, we can then issue commands to it using Sequelize. First, you have to modify `connectDB.js` to expose two functions.
+Once a connection is established with the server, we can then issue commands to it using Sequelize. First, you have to modify `connectDB.js` to export two functions. In Node.js, we export functions, objects etc. in a module to outside world to consume using `module.exports`.
 
 ```js
 
