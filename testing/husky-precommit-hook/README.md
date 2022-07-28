@@ -1,8 +1,8 @@
 ## Script
 
-In this lesson, we will add a `pre-commit` hook to run the tests and linting automatically before each commit.
+In this lesson, we will add a `pre-commit` hook to run the tests and linting automatically before each commit. Linting is the process of checking for anti patterns in our code. We have configured `ESLint` in our development setup to do this for us.
 
-We will do this with the help of a package called `husky`.
+We will run these tools automatically with the help of a package called `husky`.
 
 > Action: Open https://www.npmjs.com/package/husky in a browser.
 
