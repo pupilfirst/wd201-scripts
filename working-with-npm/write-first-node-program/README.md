@@ -62,7 +62,7 @@ Now, let's start reading the file from the local folder. We will use the `readFi
 
 ```js
 fs.readFile("home.html", function (err, home) {
-  console.log(home);
+  console.log(home.toString());
 });
 ```
 
