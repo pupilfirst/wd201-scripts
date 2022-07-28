@@ -14,3 +14,7 @@ To complete this milestone target, you have to implement tests for your Todo app
 
 * Ensure tests are run using pre-commit hooks using husky.
 * Files are formatted properly using prettier
+
+## Submission Guidelines
+
+Please attach a link to your GitHub repo where the test files are present. Please ensure that the files are in `__tests__` folder in the root of the repository and not in any other directory, and the submitted link is of the repository and not of any branch or directory.
