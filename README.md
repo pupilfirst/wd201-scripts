@@ -79,7 +79,7 @@ This work is licensed under a
 3. [Connect to Database and create table](./databases/connect-to-db/README.md)
 4. [Creating Sequelize model and manipulating data](./databases/creating-sequelize-models/README.md)
 5. [Database migrations](./databases/migrations/README.md)
-6. [Using seperate database for testing](./databases/separate-db/README.md)
+6. [Using separate database for testing](./databases/separate-db/README.md)
 7. [Milestone](./databases/milestone/README.md)
 
 
