@@ -18,7 +18,7 @@ The type of columns can be one of the following:
 
 There are a lot more types available. You can find them [here](https://sequelize.org/docs/v7/other-topics/other-data-types/)
 
-After a model is defined, it is available within `sequelize.models` by its model name. Let's first define a model for our storing our Todos. Create a file named `Todo.js` and type in the following code.
+After a model is defined, it is available within `sequelize.models` by its model name. Let's first define a model for storing our Todos. Create a file named `Todo.js` and type in the following code.
 
 ```js
 //  Todo.js
@@ -48,7 +48,7 @@ module.exports = Todo;
 Todo.sync(); // create the table
 ```
 
-The second way of defining a model is by extending it from `Model` base class. Then using the `init` method with model attributes.
+The second way of defining a model is by extending it from `Model` base class and then using the `init` method with model attributes.
 
 ```js
 const { Sequelize, DataTypes, Model } = require("sequelize");
@@ -129,7 +129,7 @@ connect()
   .catch((err) => console.error(err));
 ```
 
-You can execute the following command to count the number of to-dos.
+You can execute the following command to count the number of todos.
 
 ```sh
 node countTodos.js
@@ -186,7 +186,7 @@ node findSingleTodo.js
 ```
 ### Updating records
 
-We can use the `update` method to update a record. The following code finds and updates the title for the record with `id` = 2. (You might have to pass different id. See the available `id`s  by fetching all to-dos)
+We can use the `update` method to update a record. The following code finds and updates the title for the record with `id` = 2. (You might have to pass a different id. See the available `id`s  by fetching all to-dos)
 
 Create a file named `updateTodo.js` with following code.
 
