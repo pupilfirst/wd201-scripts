@@ -88,7 +88,7 @@ This work is licensed under a
 2. [Connect our PostgreSQL database to the Express.js application](backend-dev-with-express/connect-express-with-postgres/README.md)
 3. [Routes in Express.js](backend-dev-with-express/routes-in-express/README.md)
 4. *[Add two features: create a new to-do, and mark an existing to-do as completed](https://github.com/pupilfirst/wd201-scripts/pull/126/files) (Not merged yet)*
-5. *Add tests (Not merged yet)*
+5. [Add tests to Express.js application](./backend-dev-with-express/add-tests/README.md)
 6. *[Milestone Task + Tests (Automated)](https://github.com/pupilfirst/wd201-scripts/pull/121/files) (Not merged yet)*
 
 ## L7. Add User Interface for To-do Application
@@ -122,7 +122,7 @@ This work is licensed under a
 5. [Add user authentication using passport.js]('./../user-authentication/authentication-using-passport/README.md)
 6. [Storing passwords with bcrypt](./user-authentication/storing-password-using-bcrypt/README.md)
 7. [Create a simple sign-in page which verifies the user's password]('./../user-authentication/signin-with-password-verification/README.md)
-8. What exactly is a cookie and why should you care? 
+8. What exactly is a cookie and why should you care?
 9. *Let us store the signed-in user's id in the session! (covered in user authentication using passport.js script)*
 10. *[Implement sign-out by resetting the user session](https://github.com/pupilfirst/wd201-scripts/pull/134/files) (Not merged yet)*
 11. A logged-in user should see and modify only their own to-dos and nobody else's
