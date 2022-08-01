@@ -8,7 +8,7 @@ Your program must output a to-do list that looks like this:
 My Todo-list
 
 Overdue
-[ ] Submit assignment 2020-01-21
+[ ] Submit assignment 2022-07-21
 
 
 Due Today
@@ -17,18 +17,102 @@ Due Today
 
 
 Due Later
-[ ] File taxes 2020-01-23
-[ ] Call Acme Corp. 2020-01-23
+[ ] File taxes 2022-07-23
+[ ] Pay electric bill. 2022-07-23
 ````
   
+```js
+const todoList = () => {
+  all = []
+  const add = (todoItem) => {
+    all.push(todoItem)
+  }
+  const markAsComplete = (index) => {
+    all[index].completed = true
+  }
+
+  const overdue = (item) => {
+    // Write the date check condition here and return `true` or `false` accordingly.
+    // FILL YOUR CODE HERE
+    // ..
+    // ..
+    // ..
+  }
+
+  const dueToday = (item) => {
+    // Write the date check condition here and return `true` or `false` accordingly.
+    // FILL YOUR CODE HERE
+    // ..
+    // ..
+    // ..
+  }
+
+  const dueLater = (item) => {
+    // Write the date check condition here and return `true` or `false` accordingly.
+    // FILL YOUR CODE HERE
+    // ..
+    // ..
+    // ..
+  }
+
+  const toDisplayableList = (list) => {
+    // Format the To-Do list here, and return the output string as per the format given above.
+    // FILL YOUR CODE HERE
+    // ..
+    // ..
+    // ..
+    // return OUTPUT_STRING
+  }
+
+  return { all, add, markAsComplete, overdue, dueToday, dueLater, toDisplayableList };
+}
+
+// ####################################### #
+// DO NOT CHANGE ANYTHING BELOW THIS LINE. #
+// ####################################### #
+
+const todos = todoList();
+
+const formattedDate = d => {
+  return d.toISOString().split("T")[0]
+}
+
+var d = new Date();
+const today = formattedDate(d)
+const yesterday = formattedDate(new Date(d.setDate(d.getDate() - 1)))
+const tomorrow = formattedDate(new Date(d.setDate(d.getDate() + 1)))
+
+todos.add({ title: 'Submit assignment', dueDate: yesterday, completed: false })
+todos.add({ title: 'Pay rent', dueDate: today, completed: true })
+todos.add({ title: 'Service Vehicle', dueDate: today, completed: false })
+todos.add({ title: 'File taxes', dueDate: tomorrow, completed: false })
+todos.add({ title: 'Pay electric bill', dueDate: tomorrow, completed: false })
+
+console.log("My Todo-list\n\n")
+
+console.log("Overdue\n")
+var overdues = todos.all.filter(todos.overdue)
+var formattedOverdues = todos.toDisplayableList(overdues)
+console.log(formattedOverdues)
+console.log("\n\n")
+
+console.log("Due Today\n")
+var todaydues = todos.all.filter(todos.dueToday)
+var formattedTodaydues = todos.toDisplayableList(todaydues)
+console.log(formattedTodaydues)
+console.log("\n\n")
+
+console.log("Due Later\n")
+var laterdues = todos.all.filter(todos.dueLater)
+var formattedlaterdues = todos.toDisplayableList(laterdues)
+console.log(formattedlaterdues)
+console.log("\n\n")
+```  
 ####  Please read the following notes:
 
-1. Inside the `todoList` function, define a method `toDisplayableList`.
-2. In that function, loop through all To-Dos and create three separate categories, like: Overdue, Due Today, Due Later.
-3. For todos that are due today, do not show the date. For all other todos, show the date.
-4. Create a new folder project and copy the whole To-Do manager implementation in a single file `index.js`.
-5. Initialize a git repository
-6. Commit the changes with proper messages.
-7. Push the code to a new GitHub repository and share the URL with us.
-
+1. For todos that are due today, do not show the date. For all other todos, show the date.
+2. Do not print anything (using `console.log` for example) in the code you write. All methods should just return a value - it is the calling code's responsibility to print to screen (like in `console.log todos.toDisplayableList(todos.all.filter(todos.dueLater))`). This means toDisplayableList should return a string that is printable.
+3. Do not implement any extra features since this makes grading your assignments difficult. For the given input, the output should be exactly as given in the assignment.
+4. Ensure proper naming and formatted code.
+   
 Have fun!
