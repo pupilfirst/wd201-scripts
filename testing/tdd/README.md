@@ -8,7 +8,7 @@ Test-driven development reverses traditional development and testing. Usually, w
 
 TDD is a cyclic process from Red - Green - Blue.
 
-> TODO: Insert image of TDD workflow
+![Red, green, blue cycle](./tdd-cycle.png)
 
 - Red stage
 

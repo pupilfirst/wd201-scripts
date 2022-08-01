@@ -10,8 +10,8 @@ We will create 2 HTML files that are interlinked, similar to the project you wor
 
 Let us create the first-page `home.html`. This will have links to the other page.
 
-```js
-// home.html
+```html
+<!-- home.html -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,8 +27,8 @@ Let us create the first-page `home.html`. This will have links to the other page
 
 Next, we will create the `project.html` that lists the projects we have worked on. We will keep the project list empty for now.
 
-```js
-// project.html
+```html
+<!-- project.html -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,7 +62,7 @@ Now, let's start reading the file from the local folder. We will use the `readFi
 
 ```js
 fs.readFile("home.html", function (err, home) {
-  console.log(home);
+  console.log(home.toString());
 });
 ```
 

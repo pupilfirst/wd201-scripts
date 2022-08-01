@@ -15,9 +15,9 @@ The exact code for all three of these files will be provided in the following se
 Here is the code template for `listTodos.rb`:
 
 ```js
-//  listTodos.rjs
-import { connect } from "./connectDB.js";
-import { Todo } from "./Todo.js";
+//  listTodos.js
+const { connect } = require("./connectDB.js");
+const Todo = require("./Todo.js");
 connect()
   .then(() => {
     return Todo.showList();
@@ -49,7 +49,7 @@ Due Later
 
 - You should have created connectDB.js, as well as inserted some sample data in the todos table through createItems.js before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
 
-- To solve this problem, you need to have a todo.js file which will define the Sequelize model. In todo.js, define the class method self.showList which will print the list of to-dos as per the format given above. You can use the following template to get started:
+- To solve this problem, you need to have a todo.js file which will define the Sequelize model. In todo.js, define the class method `showList` which will print the list of to-dos as per the format given above. You can use the following template to get started:
 
 ```js
 Todo.showList = async function () {
@@ -73,9 +73,10 @@ Todo.showList = async function () {
 Here is the code template for `addTodo.js`:
 
 ```js
-import * as readline from "readline";
+// addTodo.js
+const readline = require("readline");
 
-import { Todo } from "./Todo.js";
+const Todo = require("./Todo.js");
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -108,10 +109,11 @@ When running this program from the command line, it should ask for details of a 
 The code for this file is as follows:
 
 ```js
-import * as readline from "readline";
+// completeTodo.js
+const readline = require("readline");
 
-import { connect } from "./connectDB.js";
-import { Todo } from "./Todo.js";
+const { connect } = require("./connectDB.js");
+const Todo = require("./Todo.js");
 
 const rl = readline.createInterface({
   input: process.stdin,

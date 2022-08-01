@@ -70,4 +70,14 @@ app.put('/todos/:id', function (request, response) {
 })
 ```
 
-So, in this lesson, we've learned to define routes in a Node.js application. See you in the next one.
+5. Route to delete a specific TO-DO by it's ID:
+```js
+app.delete('/todos/:id', function (request, response) {
+  console.log('We have to delete a To-DO with ID: ', request.params.id)
+  // First, we have to query our database to delete a TODO by ID.
+  // Then, we have to respond back with some simplete message like "To-Do deleted successfully":
+  // response.send("To-Do deleted successfully")
+})
+```
+
+So, in this lesson, we've learned to define routes in a Node.Js application. See you in the next one.
