@@ -64,7 +64,7 @@ passport.use(new LocalStrategy(
     User.findOne({ where: { email: username, password: password } }).then(function(user) {
       return done(null, user);
     }).catch((error) => {
-      return done(err);
+      return done(error);
     });
   }
 ));
