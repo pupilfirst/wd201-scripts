@@ -77,7 +77,7 @@ npm config set init-author-email "jane.doe@example.com" --location=global
 You can test whether these settings have been accepted by running:
 
 ```sh
-npm config ls --location-global
+npm config ls
 ```
 
 The output should contain the configuration settings you just added. Now, when you run `npm init` inside a folder, the generated `package.json` file will list your details as the author.
