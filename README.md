@@ -71,6 +71,7 @@ This work is licensed under a
 3. [What is jest?](./testing/jest/README.md)
 4. [Git hooks: pre-commit hook](./testing/git-hooks/README.md)
 5. [Running tests, and linting automatically as pre-commit hook using Husky, lint staged](./testing/husky-precommit-hook/README.md)
+6. [Milestone](./testing/milestone/README.md)
 
 ## L5. Databases and Sequelize
 
