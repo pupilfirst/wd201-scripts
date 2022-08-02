@@ -67,11 +67,11 @@ Following would be the details of the file we just created using CLI.
 
 ## Setting defaults to `package.json`
 
-You can use `set init.author` commands to configure the default values that a new `package.json` starts with. Run the following on the terminal using your name and email address:
+You can use `config set` commands to configure the default values that a new `package.json` starts with. Run the following on the terminal using your name and email address:
 
 ```sh
-npm set init.author.name "Jane Doe"
-npm set init.author.email "jane.doe@gmail.com"
+npm config set init-author-name "Jane Doe" --location=global
+npm config set init-author-email "jane.doe@gmail.com" --location=global
 ```
 
 We will learn more about the other options on `package.json`, which we will use, to configure what dependencies are used and how the application runs in the following lessons.
