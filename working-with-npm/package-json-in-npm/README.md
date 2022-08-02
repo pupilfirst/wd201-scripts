@@ -55,7 +55,7 @@ Following would be the details of the file we just created using CLI.
 {
  "name": "my-node-app",
  "version": "1.0.0",
- "description": "",
+ "description": "My first node application",
  "main": "index.js",
  "scripts": {
    "test": "echo \"Error: no test specified\" && exit 1"
