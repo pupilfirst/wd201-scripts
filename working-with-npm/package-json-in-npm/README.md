@@ -71,7 +71,15 @@ You can use `config set` commands to configure the default values that a new `pa
 
 ```sh
 npm config set init-author-name "Jane Doe" --location=global
-npm config set init-author-email "jane.doe@gmail.com" --location=global
+npm config set init-author-email "jane.doe@example.com" --location=global
 ```
+
+You can test whether these settings have been accepted by running:
+
+```sh
+npm config ls --location-global
+```
+
+The output should contain the configuration settings you just added. Now, when you run `npm init` inside a folder, the generated `package.json` file will list your details as the author.
 
 We will learn more about the other options on `package.json`, which we will use, to configure what dependencies are used and how the application runs in the following lessons.
