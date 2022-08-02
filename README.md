@@ -63,7 +63,7 @@ This work is licensed under a
 
 ### Apply closure
 3. [Let’s write a  to-do application](./nodejs-deep-dive/todo-using-closure/README.md)
-4. *Milestone Task (Not merged yet)*
+4. Milestone (To be added)
 
 ## L4. Testing
 1. [What is testing, and why do we need it?](./testing/why-need-testing/README.md)
@@ -88,16 +88,16 @@ This work is licensed under a
 1. [Hello world with Express.js!](backend-dev-with-express/introduction-to-express/README.md)
 2. [Connect our PostgreSQL database to the Express.js application](backend-dev-with-express/connect-express-with-postgres/README.md)
 3. [Routes in Express.js](backend-dev-with-express/routes-in-express/README.md)
-4. *[Add two features: create a new to-do, and mark an existing to-do as completed](https://github.com/pupilfirst/wd201-scripts/pull/126/files) (Not merged yet)*
+4. Add two features: create a new to-do, and mark an existing to-do as completed (To be added)*
 5. [Add tests to Express.js application](./backend-dev-with-express/add-tests/README.md)
-6. *[Milestone Task + Tests (Automated)](https://github.com/pupilfirst/wd201-scripts/pull/121/files) (Not merged yet)*
+6. Milestone (To be added)
 
 ## L7. Add User Interface for To-do Application
 1. [Converting a design into a webpage](./todo-user-interface/converting-design-into-webpage/README.md)
 2. [Create an interface for accepting a new to-do](./todo-user-interface/interface-for-new-to-do/README.md)
 3. [Create an interface for listing the todos](./todo-user-interface/interface-for-listing-to-dos/README.md)
 4. [Create an interface to delete a to-do](./todo-user-interface/interface-to-delete-to-do/README.md)
-5. [Milestone Task + Tests (Automated)](./todo-user-interface/todo-interface-milestone/README.md)
+5. [Milestone Task](./todo-user-interface/todo-interface-milestone/README.md)
 
 ## L8. EJS Templating
 1. [Render dynamic data inside HTML with EJS templates](./ejs-templating/dynamic-html-with-ejs/README.md)
@@ -105,7 +105,7 @@ This work is licensed under a
 3. [What is MVC?](./ejs-templating/mvc/README.md)
 4. [Heroku: deploy your application](./ejs-templating/deploy-application-to-heroku/README.md)
 5. [Use EJS templating to render to-do manager](./ejs-templating/ejs-templating-for-todo-manager/README.md)
-6. [Milestone](./ejs-templating/milestone/README.md)
+6. Milestone(To be added)
 
 ## L9.  HTML forms to save and accept user inputs
 
@@ -114,6 +114,7 @@ This work is licensed under a
 3. [Deleting a to-do with help of <form>](./html-forms/delete-todo/README.md)
 4. [What is Cross Site Request Forgery (CSRF) and why should we care?](./html-forms/why-csrf/README.md)
 5. [Use csurf package in express.js application](./html-forms/use-csurf/README.md)
+6. Milestone (To be added)
 
 ## L10. User Authentication and final wrap-up
 1. [Introduction]('./user-authentication/introduction/README.md)
@@ -129,3 +130,4 @@ This work is licensed under a
 11. A logged-in user should see and modify only their own to-dos and nobody else's
 12. Showing one-off messages to users with connect-flash
 13. Ensure no blank to-dos are ever created, with Sequelize validations
+14. Milestone (To be added)
