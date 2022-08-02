@@ -97,7 +97,7 @@ This work is licensed under a
 2. [Create an interface for accepting a new to-do](./todo-user-interface/interface-for-new-to-do/README.md)
 3. [Create an interface for listing the todos](./todo-user-interface/interface-for-listing-to-dos/README.md)
 4. [Create an interface to delete a to-do](./todo-user-interface/interface-to-delete-to-do/README.md)
-5. [Milestone Task](./todo-user-interface/todo-interface-milestone/README.md)
+5. [Milestone](./todo-user-interface/todo-interface-milestone/README.md)
 
 ## L8. EJS Templating
 1. [Render dynamic data inside HTML with EJS templates](./ejs-templating/dynamic-html-with-ejs/README.md)
@@ -105,7 +105,7 @@ This work is licensed under a
 3. [What is MVC?](./ejs-templating/mvc/README.md)
 4. [Heroku: deploy your application](./ejs-templating/deploy-application-to-heroku/README.md)
 5. [Use EJS templating to render to-do manager](./ejs-templating/ejs-templating-for-todo-manager/README.md)
-6. Milestone(To be added)
+6. Milestone (To be added)
 
 ## L9.  HTML forms to save and accept user inputs
 
