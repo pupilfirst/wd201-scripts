@@ -114,7 +114,8 @@ This work is licensed under a
 3. [Deleting a to-do with help of <form>](./html-forms/delete-todo/README.md)
 4. [What is Cross Site Request Forgery (CSRF) and why should we care?](./html-forms/why-csrf/README.md)
 5. [Use csurf package in express.js application](./html-forms/use-csurf/README.md)
-6. Milestone (To be added)
+6. What is an API
+7. [Milestone](./html-forms/milestone/README.md)
 
 ## L10. User Authentication and final wrap-up
 1. [Introduction]('./user-authentication/introduction/README.md)
