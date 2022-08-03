@@ -24,7 +24,7 @@ const Todo = sequelize.define(
 );
 ```
 
-In the sequelize model, we added a constraint of `allowNull` to be `false`. This means that when you add a new to-do, it should always have a to-do text associated with it. If not, sequalize database throws an error, which is being sent back to the application from the server.
+In the sequelize model, we added a constraint of `allowNull` to be `false`. This means that when you add a new to-do, it should always have a to-do text associated with it. If not, the database throws an error, which is being sent back to the application from the server.
 
 Validation is a check performed at the JavaScript level. Providing custom validation capabilities can be tricky. We can also use one of the built-in validators provided by Sequelize. If validation fails, no SQL queries are sent to the database.
 
