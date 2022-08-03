@@ -55,7 +55,7 @@ Following would be the details of the file we just created using CLI.
 {
  "name": "my-node-app",
  "version": "1.0.0",
- "description": "",
+ "description": "My first node application",
  "main": "index.js",
  "scripts": {
    "test": "echo \"Error: no test specified\" && exit 1"
@@ -67,11 +67,19 @@ Following would be the details of the file we just created using CLI.
 
 ## Setting defaults to `package.json`
 
-You can use the init command to configure the `package.json` with default configuration options. On the Terminal, we can run the following commands to set the default author email, and author name.
+You can use `config set` commands to configure the default values that a new `package.json` starts with. Run the following on the terminal using your name and email address:
 
-```js
-npm set init.author.name “Jane Doe”
-npm set init.author.email “jane.doe@gmail.com”
+```sh
+npm config set init-author-name "Jane Doe" --location=global
+npm config set init-author-email "jane.doe@example.com" --location=global
 ```
+
+You can test whether these settings have been accepted by running:
+
+```sh
+npm config ls
+```
+
+The output should contain the configuration settings you just added. Now, when you run `npm init` inside a folder, the generated `package.json` file will list your details as the author.
 
 We will learn more about the other options on `package.json`, which we will use, to configure what dependencies are used and how the application runs in the following lessons.

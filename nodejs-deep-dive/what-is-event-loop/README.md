@@ -1,8 +1,8 @@
 # Text
 In this lesson we will learn about the concept of **event loop** and **call stack** in Node.js.
 
-In Node.js, JavaScript code runs on a single thread. Means it can handle one task at a time or a piece of code at a time. Thus, two statement in JavaScript can not be executed in parallel. Execution happens line by line, which means each line of JavaScript code (or statements) are synchronous.
-But there is a way to run your code asynchronously. For example, if you use `setTimeout()` function, a Web API given by browser, which makes sure that your code executes after specified time (in millisecond). Let's take a look
+In Node.js, JavaScript code runs on a single thread. This means it can handle one task at a time or a piece of code at a time. Thus, two statements in JavaScript can not be executed in parallel. Execution happens line by line, which means each line of JavaScript code (or statements) is synchronous.
+But there is a way to run your code asynchronously. For example, you can use `setTimeout()` function, a Web API given by browser, which makes sure that your code executes after specified time (in millisecond). Let's take a look
 ```js
 console.log('Hello 1');
 
@@ -19,22 +19,22 @@ After executing above statements, browser will print Hello 1” & Hello 3” fir
 # Script 
 ### The call stack
 Node.js has a single **call stack**, which along with other parts like *heap*, *queue* constitutes the JavaScript's concurrency behaviour.
-The Call Stack is a data structure which records the function calls, basically where in the program we are. If we call a function to execute, we push something on to the stack, and when we *return* from a function, we *pop* off the top of the stack.
+The Call Stack is a data structure which records the function calls - which basically indicates where exactly in the program we are. If we *call* a function to execute, we *push* something on to the stack, and when we *return* from a function, we *pop* off the top of the stack.
 
 The event loop continuously checks the call stack to see if there's any function that needs to run. Let's see a simple event loop implementation:
 
 ```js
-const firstName = () => console.log('John')
+const firstName = () => console.log('John');
 
-const lastName = () => console.log('Doe')
+const lastName = () => console.log('Doe');
 
 const printName = () => {
-  console.log('My name is:')
-  firstName()
-  lastName()
+  console.log('My name is:');
+  firstName();
+  lastName();
 }
 
-printName()
+printName();
 ```
 When this code runs, first `printName()` is called. Inside `printName()` we first call `firstName()`, then we call `lastName()`.
 
@@ -49,17 +49,17 @@ until the call stack is empty.
 The previous example was bit simple, it's normal execution that happened as usual like any other programming language. Let's see a bit more complex call stack with an example of `setTimeout()`.
 
 ```js
-const firstName = () => console.log('John')
+const firstName = () => console.log('John');
 
-const lastName = () => console.log('Doe')
+const lastName = () => console.log('Doe');
 
 const printName = () => {
-  console.log('My name is:')
-  setTimeout(firstName, 0)
-  lastName()
+  console.log('My name is:');
+  setTimeout(firstName, 0);
+  lastName();
 }
 
-printName()
+printName();
 ```
 The output would be:
 ````
@@ -67,7 +67,7 @@ My name is:
 Doe
 John
 ````
-Wait, why the last name got printed before the first name here?
+Wait, why did the last name get printed before the first name here?
 Actually, when this code runs, first `printName()` is called. Inside `printName()` we first call `setTimeout`, passing `firstName` as an argument, and we instruct it to run immediately as fast as it can, passing 0 as the timer. 
 
 When `setTimeout()` is called, the Browser or Node.js starts the timer. Here another important component named **Message Queue** comes into the picture. Once this timer expires, the callback function (firstName in this case) is put in the **Message Queue**.
