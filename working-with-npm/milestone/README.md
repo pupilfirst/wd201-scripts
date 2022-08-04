@@ -10,12 +10,12 @@
 To complete this milestone, you have to make two updates to the **Node.js** program you have created at this level, as per the details given.
 
 1. Create a new HTML page to showcase your previous project HTML. (You can make use of the `registration.html` you created in WD101 as a part of Capstone and name the file the same.)
-2. Add a **Link** to the *Projects list* page to point to the *Survey page*.
+2. Add a **Link** to the *Projects list* page to point to the *Registration page*.
 3. Create a new route to the *Registration page* and make sure the navigation from the *Projects page* works fine.
 
 ## Submission Requirements
-1. The Survey page should be imported through CLI commands.
-2. The Node program should get a file path as input for the Survey page.
+1. The Registration page should be imported through CLI commands.
+2. The Node program should get a file path as input for the Registration page.
 3. The result should be streamed to the browser.
 
 Meet you in the next level!
