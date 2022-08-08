@@ -32,7 +32,7 @@ const todoList = () => {
   }
 
   const overdue = (item) => {
-    // Write the date check condition here and return `true` or `false` accordingly.
+    // Write the date check condition here and return the array of overdue items accordingly.
     // FILL YOUR CODE HERE
     // ..
     // ..
@@ -40,7 +40,7 @@ const todoList = () => {
   }
 
   const dueToday = (item) => {
-    // Write the date check condition here and return `true` or `false` accordingly.
+    // Write the date check condition here and return the array of todo items that are due today accordingly.
     // FILL YOUR CODE HERE
     // ..
     // ..
@@ -48,7 +48,7 @@ const todoList = () => {
   }
 
   const dueLater = (item) => {
-    // Write the date check condition here and return `true` or `false` accordingly.
+    // Write the date check condition here and return the array of todo items that are due later accordingly.
     // FILL YOUR CODE HERE
     // ..
     // ..
@@ -91,19 +91,19 @@ todos.add({ title: 'Pay electric bill', dueDate: tomorrow, completed: false })
 console.log("My Todo-list\n\n")
 
 console.log("Overdue\n")
-var overdues = todos.all.filter(todos.overdue)
+var overdues = todos.overdue()
 var formattedOverdues = todos.toDisplayableList(overdues)
 console.log(formattedOverdues)
 console.log("\n\n")
 
 console.log("Due Today\n")
-var todaydues = todos.all.filter(todos.dueToday)
+var todaydues = todos.dueToday()
 var formattedTodaydues = todos.toDisplayableList(todaydues)
 console.log(formattedTodaydues)
 console.log("\n\n")
 
 console.log("Due Later\n")
-var laterdues = todos.all.filter(todos.dueLater)
+var laterdues = todos.dueLater()
 var formattedlaterdues = todos.toDisplayableList(laterdues)
 console.log(formattedlaterdues)
 console.log("\n\n")
@@ -111,7 +111,7 @@ console.log("\n\n")
 ####  Please read the following notes:
 
 1. For todos that are due today, do not show the date. For all other todos, show the date.
-2. Do not print anything (using `console.log` for example) in the code you write. All methods should just return a value - it is the calling code's responsibility to print to screen (like in `console.log todos.toDisplayableList(todos.all.filter(todos.dueLater))`). This means toDisplayableList should return a string that is printable.
+2. Do not print anything (using `console.log` for example) in the code you write. All methods should just return a value - it is the calling code's responsibility to print to screen (like in `console.log todos.toDisplayableList(laterdues)`). This means `toDisplayableList` should return a string that is printable.
 3. Do not implement any extra features since this makes grading your assignments difficult. For the given input, the output should be exactly as given in the assignment.
 4. Ensure proper naming and formatted code.
    
