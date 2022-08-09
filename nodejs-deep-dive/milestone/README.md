@@ -99,7 +99,7 @@ console.log("\n\n")
 console.log("Due Today\n")
 let itemsDueToday = todos.dueToday()
 let formattedItemsDueToday = todos.toDisplayableList(itemsDueToday)
-console.log(formattedTodaydues)
+console.log(formattedItemsDueToday)
 console.log("\n\n")
 
 console.log("Due Later\n")
