@@ -103,7 +103,7 @@ console.log(formattedTodaydues)
 console.log("\n\n")
 
 console.log("Due Later\n")
-var laterdues = todos.dueLater()
+let itemsDueLater = todos.dueLater()
 var formattedlaterdues = todos.toDisplayableList(laterdues)
 console.log(formattedlaterdues)
 console.log("\n\n")
