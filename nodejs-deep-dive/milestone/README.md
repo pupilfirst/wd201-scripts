@@ -104,7 +104,7 @@ console.log("\n\n")
 
 console.log("Due Later\n")
 let itemsDueLater = todos.dueLater()
-var formattedlaterdues = todos.toDisplayableList(laterdues)
+let formattedItemsDueLater = todos.toDisplayableList(itemsDueLater)
 console.log(formattedItemsDueLater)
 console.log("\n\n")
 ```  
