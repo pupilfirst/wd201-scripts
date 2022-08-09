@@ -98,7 +98,7 @@ console.log("\n\n")
 
 console.log("Due Today\n")
 let itemsDueToday = todos.dueToday()
-var formattedTodaydues = todos.toDisplayableList(todaydues)
+let formattedItemsDueToday = todos.toDisplayableList(itemsDueToday)
 console.log(formattedTodaydues)
 console.log("\n\n")
 
