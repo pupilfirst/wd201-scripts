@@ -97,7 +97,7 @@ console.log(formattedOverdues)
 console.log("\n\n")
 
 console.log("Due Today\n")
-var todaydues = todos.dueToday()
+let itemsDueToday = todos.dueToday()
 var formattedTodaydues = todos.toDisplayableList(todaydues)
 console.log(formattedTodaydues)
 console.log("\n\n")
