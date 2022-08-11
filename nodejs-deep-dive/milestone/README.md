@@ -20,7 +20,7 @@ Due Later
 [ ] File taxes 2022-07-23
 [ ] Pay electric bill. 2022-07-23
 ````
-  
+
 ```js
 const todoList = () => {
   all = []
@@ -31,7 +31,7 @@ const todoList = () => {
     all[index].completed = true
   }
 
-  const overdue = (item) => {
+  const overdue = () => {
     // Write the date check condition here and return the array of overdue items accordingly.
     // FILL YOUR CODE HERE
     // ..
@@ -39,7 +39,7 @@ const todoList = () => {
     // ..
   }
 
-  const dueToday = (item) => {
+  const dueToday = () => {
     // Write the date check condition here and return the array of todo items that are due today accordingly.
     // FILL YOUR CODE HERE
     // ..
@@ -47,7 +47,7 @@ const todoList = () => {
     // ..
   }
 
-  const dueLater = (item) => {
+  const dueLater = () => {
     // Write the date check condition here and return the array of todo items that are due later accordingly.
     // FILL YOUR CODE HERE
     // ..
@@ -107,12 +107,12 @@ let itemsDueLater = todos.dueLater()
 let formattedItemsDueLater = todos.toDisplayableList(itemsDueLater)
 console.log(formattedItemsDueLater)
 console.log("\n\n")
-```  
+```
 ####  Please read the following notes:
 
 1. For todos that are due today, do not show the date. For all other todos, show the date.
 2. Do not print anything (using `console.log` for example) in the code you write. All methods should just return a value - it is the calling code's responsibility to print to screen (like in `console.log todos.toDisplayableList(laterdues)`). This means `toDisplayableList` should return a string that is printable.
 3. Do not implement any extra features since this makes grading your assignments difficult. For the given input, the output should be exactly as given in the assignment.
 4. Ensure proper naming and formatted code.
-   
+
 Have fun!
