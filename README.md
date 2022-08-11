@@ -53,8 +53,6 @@ This work is licensed under a
 9. [Milestone](./working-with-npm/milestone/README.md)
 
 
-# Work in progress levels
-
 ## L3. Node.js deep dive
 
 ### Key Concepts
@@ -63,7 +61,7 @@ This work is licensed under a
 
 ### Apply closure
 3. [Let’s write a  to-do application](./nodejs-deep-dive/todo-using-closure/README.md)
-4. Milestone (To be added)
+4. [Milestone](./nodejs-deep-dive/milestone/README.md)
 
 ## L4. Testing
 1. [What is testing, and why do we need it?](./testing/why-need-testing/README.md)
@@ -83,6 +81,7 @@ This work is licensed under a
 6. [Using separate database for testing](./databases/separate-db/README.md)
 7. [Milestone](./databases/milestone/README.md)
 
+# Work in progress levels
 
 ## L6. Backend Web development with Express.js
 1. [Hello world with Express.js!](backend-dev-with-express/introduction-to-express/README.md)
