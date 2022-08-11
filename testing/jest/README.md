@@ -98,34 +98,34 @@ We can now try to write tests for our todo application. Let's remove `first.js` 
 
 ```js
 // todo.js
-function todoList() {
+const todoList = () => {
   let all = [];
-  function add(todoItem) {
+  const add = (todoItem) => {
     all.push(todoItem);
-  }
-  function markAsComplete(index) {
+  };
+  const markAsComplete = (index) => {
     all[index].completed = true;
-  }
+  };
 
-  function overdue() {
+  const overdue = () => {
     return all.filter(
       (item) => item.dueDate < new Date().toLocaleDateString("en-CA")
     );
-  }
+  };
 
-  function dueToday() {
+  const dueToday = () => {
     return all.filter(
       (item) => item.dueDate == new Date().toLocaleDateString("en-CA")
     );
-  }
+  };
 
-  function dueLater() {
+  const dueLater = () => {
     return all.filter(
       (item) => item.dueDate > new Date().toLocaleDateString("en-CA")
     );
-  }
+  };
   return { all, add, markAsComplete, overDue, dueToday, dueLater };
-}
+};
 
 module.exports = todoList;
 ```
