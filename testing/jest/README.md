@@ -124,7 +124,7 @@ const todoList = () => {
       (item) => item.dueDate > new Date().toLocaleDateString("en-CA")
     );
   };
-  return { all, add, markAsComplete, overDue, dueToday, dueLater };
+  return { all, add, markAsComplete, overdue, dueToday, dueLater };
 };
 
 module.exports = todoList;
@@ -137,7 +137,7 @@ Now create a file named `todo.test.js`
 ```js
 let todoList = require("./todo");
 
-const { all, overDue, markAsComplete, add } = todoList();
+const { all, markAsComplete, add } = todoList();
 /* eslint-disable no-undef */
 describe("Todo List Test Suite", () => {
   test("Should add a new todo", () => {});
