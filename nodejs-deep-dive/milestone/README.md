@@ -80,7 +80,7 @@ const formattedDate = d => {
 var d = new Date();
 const today = formattedDate(d)
 const yesterday = formattedDate(new Date(d.setDate(d.getDate() - 1)))
-const tomorrow = formattedDate(new Date(d.setDate(d.getDate() + 1)))
+const tomorrow = formattedDate(new Date(d.setDate(d.getDate() + 2)))
 
 todos.add({ title: 'Submit assignment', dueDate: yesterday, completed: false })
 todos.add({ title: 'Pay rent', dueDate: today, completed: true })
