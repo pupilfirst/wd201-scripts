@@ -19,7 +19,7 @@ Next, we will add a prepare script, which will configure `git` to use `.husky` f
 > Action: Switch over to terminal and execute following command
 
 ```sh
-npm set-script prepare "husky install"
+npm pkg set scripts.prepare="husky install"
 ```
 
 Now, we need to run the `prepare` script to fulfill the prerequisites.
