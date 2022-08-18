@@ -20,7 +20,7 @@ To set up `connect-flash` run the below command inside out project folder. As co
 npm i connect-flash --save
 ```
 
-This command adds `connect-flash` module to your application and you can start using this on your `index.js`
+This command adds `connect-flash` module to your application and you can start using this in your `index.js`
 
 Import the module using the below statement in your `index.js` file after the `express-session` declaration.
 
