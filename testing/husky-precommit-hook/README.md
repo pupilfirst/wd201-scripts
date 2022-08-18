@@ -71,12 +71,57 @@ Next, we will configure lint-staged to run eslint and prettier. We would do that
 "lint-staged": {
     "*.js": [
       "eslint",
-      "prettier --write"
+      "prettier --write ."
     ]
   },
 
 ```
 
+We need to make sure we have `eslint` and `prettier` configurations in our project.
+
+We can add eslint configuration by executing `npm init @eslint/config`
+
+```sh
+npm init @eslint/config
+```
+Select the choices to match our setup.
+
+```
+✔ How would you like to use ESLint? · problems
+✔ What type of modules does your project use? · commonjs
+✔ Which framework does your project use? · none
+✔ Does your project use TypeScript? · No / Yes
+✔ Where does your code run? · node
+✔ What format do you want your config file to be in? · JSON
+```
+or you can just create a `.eslintrc.json` file in project root with following content.
+
+```json
+{
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+    }
+}
+
+```
+
+Next, we need configuration for prettier.
+
+Create `.prettierrc.json` in project root with the following content.
+
+```json
+{}
+```
 Next, we will edit the pre-commit hook configuration to run lint-staged as well. Let's switch to the terminal and execute the following command.
 
 > Action: switch to terminal and execute the command
