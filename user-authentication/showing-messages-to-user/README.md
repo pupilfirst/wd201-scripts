@@ -10,7 +10,7 @@ That's what we'll do in this lesson, using **Node.js** `connect-flash` module.
 
 When a user is redirected to a certain page, pop messages can be displayed or rendered using the connect-flash module in Node.js.
 
-In our application, we can show messages when users to add or remove items from a to-do list. We can also use it to alert the user every time they log in or out, along with showing any error messages.
+In our application, we can show messages when users add or remove items from a to-do list. We can also use it to alert the user every time they log in or out, along with showing any error messages.
 
 ## Using `connect-flash` to display Flash Messages
 
