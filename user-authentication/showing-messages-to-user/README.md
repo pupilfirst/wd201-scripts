@@ -35,20 +35,6 @@ const path = require("path");
 app.set("views", path.join(__dirname, "views"));
 ```
 
-Next let us create a session function to be used within the app using the below code.
-
-```js
-app.use(
-  session({
-    secret: "mytodoapp",
-    saveUninitialized: true,
-    resave: true,
-  })
-);
-```
-
-The `secret` here is a string key which is used to authenticate this message session.
-
 Next we will write a flash function which connects to the `connect-flash` module as below.
 
 ```js
