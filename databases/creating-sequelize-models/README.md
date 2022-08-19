@@ -87,7 +87,7 @@ Let's create a file named `createItem.js`.
 
 ```js
 // createItem.js
-const { connect } = rquire("./connectDB.js");
+const { connect } = require("./connectDB.js");
 const Todo = require("./Todo.js");
 connect()
   .then() => {
