@@ -117,11 +117,17 @@ or you can just create a `.eslintrc.json` file in project root with following co
 
 Next, we need configuration for prettier.
 
+Let's install prettier in our project as a developer dependency.
+
+```sh
+npm i prettier -D
+```
 Create `.prettierrc.json` in project root with the following content.
 
 ```json
 {}
 ```
+
 Next, we will edit the pre-commit hook configuration to run lint-staged as well. Let's switch to the terminal and execute the following command.
 
 > Action: switch to terminal and execute the command
