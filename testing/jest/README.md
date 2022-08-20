@@ -123,7 +123,7 @@ const todoList = () => {
 
   const dueToday = () => {
     return all.filter(
-      (item) => item.dueDate == new Date().toLocaleDateString("en-CA")
+      (item) => item.dueDate === new Date().toLocaleDateString("en-CA")
     );
   };
 
@@ -138,12 +138,13 @@ const todoList = () => {
 module.exports = todoList;
 ```
 
-Now create a file named `todo.test.js`
+Now create a file named `todo.js` in `__tests__` folder
 
 > Action: Add following code:
 
 ```js
-let todoList = require("./todo");
+// __tests__/todo.js
+let todoList = require("../todo");
 
 const { all, markAsComplete, add } = todoList();
 /* eslint-disable no-undef */

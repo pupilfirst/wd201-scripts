@@ -11,7 +11,7 @@ Let's first add `husky` to our project. Open the integrated terminal and install
 > Action: Switch over to terminal and execute following command
 
 ```sh
-npm install husky -D
+npm install husky --save-dev
 ```
 
 Next, we will add a prepare script, which will configure `git` to use `.husky` folder to use as hooks path.
@@ -60,7 +60,7 @@ Let's add it to our project.
 > Action: Open the terminal and execute the command.
 
 ```sh
-npm install lint-staged -D
+npm install lint-staged --save-dev
 ```
 
 Next, we will configure lint-staged to run eslint and prettier. We would do that by editing the package.json file.
@@ -120,7 +120,7 @@ Next, we need configuration for prettier.
 Let's install prettier in our project as a developer dependency.
 
 ```sh
-npm i prettier -D
+npm i prettier --save-dev
 ```
 Create `.prettierrc.json` in project root with the following content.
 
@@ -196,7 +196,7 @@ git commit -m "Add pre-commit hook to run tests"
 We can enforce consistent code formatting, styling in our codebase by making use of `lint-staged`. To add it to our project, install it first.
 
 ```sh
-npm install lint-staged -D
+npm install lint-staged --save-dev
 ```
 
 Edit `package.json` to add configuration for `lint-staged`.
