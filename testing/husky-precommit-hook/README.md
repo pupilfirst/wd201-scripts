@@ -11,7 +11,7 @@ Let's first add `husky` to our project. Open the integrated terminal and install
 > Action: Switch over to terminal and execute following command
 
 ```sh
-npm install husky -D
+npm install husky --save-dev
 ```
 
 Next, we will add a prepare script, which will configure `git` to use `.husky` folder to use as hooks path.
@@ -19,7 +19,7 @@ Next, we will add a prepare script, which will configure `git` to use `.husky` f
 > Action: Switch over to terminal and execute following command
 
 ```sh
-npm set-script prepare "husky install"
+npm pkg set scripts.prepare="husky install"
 ```
 
 Now, we need to run the `prepare` script to fulfill the prerequisites.
@@ -60,7 +60,7 @@ Let's add it to our project.
 > Action: Open the terminal and execute the command.
 
 ```sh
-npm install lint-staged -D
+npm install lint-staged --save-dev
 ```
 
 Next, we will configure lint-staged to run eslint and prettier. We would do that by editing the package.json file.
@@ -71,10 +71,61 @@ Next, we will configure lint-staged to run eslint and prettier. We would do that
 "lint-staged": {
     "*.js": [
       "eslint",
-      "prettier --write"
+      "prettier --write ."
     ]
   },
 
+```
+
+We need to make sure we have `eslint` and `prettier` configurations in our project.
+
+We can add eslint configuration by executing `npm init @eslint/config`
+
+```sh
+npm init @eslint/config
+```
+Select the choices to match our setup.
+
+```
+✔ How would you like to use ESLint? · problems
+✔ What type of modules does your project use? · commonjs
+✔ Which framework does your project use? · none
+✔ Does your project use TypeScript? · No / Yes
+✔ Where does your code run? · node
+✔ What format do you want your config file to be in? · JSON
+```
+or you can just create a `.eslintrc.json` file in project root with following content.
+
+```json
+{
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+    }
+}
+
+```
+
+Next, we need configuration for prettier.
+
+Let's install prettier in our project as a developer dependency.
+
+```sh
+npm i prettier --save-dev
+```
+Create `.prettierrc.json` in project root with the following content.
+
+```json
+{}
 ```
 
 Next, we will edit the pre-commit hook configuration to run lint-staged as well. Let's switch to the terminal and execute the following command.
@@ -145,7 +196,7 @@ git commit -m "Add pre-commit hook to run tests"
 We can enforce consistent code formatting, styling in our codebase by making use of `lint-staged`. To add it to our project, install it first.
 
 ```sh
-npm install lint-staged -D
+npm install lint-staged --save-dev
 ```
 
 Edit `package.json` to add configuration for `lint-staged`.

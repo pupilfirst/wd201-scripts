@@ -18,7 +18,15 @@ Let's open our project in Visual Studio Code and add `jest` to our project. Let'
 npm install jest --save-dev
 ```
 
-We now have jest in our package.json as a dev dependency. Let's replace the `test` command in the `scripts` section in `package.json` file to use `jest`
+Let us tell git not to track the `node_module` folder by adding it to `.gitignore` file. Let's create a file named `.gitignore` in the root of the project and add `node_modules/` to it.
+
+>Action: create a file `.gitignore` with following content.
+
+```
+node_modules/
+```
+
+We currently have jest in our package.json as a dev dependency. Let's replace the `test` command in the `scripts` section in `package.json` file to use `jest`
 
 > Action: Open package.json in editor, and edit the npm test script
 
@@ -115,7 +123,7 @@ const todoList = () => {
 
   const dueToday = () => {
     return all.filter(
-      (item) => item.dueDate == new Date().toLocaleDateString("en-CA")
+      (item) => item.dueDate === new Date().toLocaleDateString("en-CA")
     );
   };
 
@@ -130,12 +138,13 @@ const todoList = () => {
 module.exports = todoList;
 ```
 
-Now create a file named `todo.test.js`
+Now create a file named `todo.js` in `__tests__` folder
 
 > Action: Add following code:
 
 ```js
-let todoList = require("./todo");
+// __tests__/todo.js
+let todoList = require("../todo");
 
 const { all, markAsComplete, add } = todoList();
 /* eslint-disable no-undef */
