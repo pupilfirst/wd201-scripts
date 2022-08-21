@@ -1,5 +1,5 @@
 # Text
-In this lesson, we will apply our knowledge of JavaScript **Closures**, to create a simple To-Do manager. 
+In this lesson, we will apply our knowledge of JavaScript **Closures**, to create a simple Todo manager. 
 
 # Script
 ### The plan
@@ -9,7 +9,7 @@ The plan is:
 - And in the end, we will make sure that the `todoList` function returns the *list of all todos* along with the `add` and `markAsComplete` function.
 
 ### The implementation
-In this lesson, we will make use of the Node.Js REPL. Open the terminal and run with the `node` command to go inside the REPL mode.
+In this lesson, we will make use of the Node.js REPL. Open the terminal and run with the `node` command to go inside the REPL mode.
 
 So, let's get started.
 
@@ -19,7 +19,7 @@ function todoList() {
   all = []
 ```
 Here, we will keep the list of all todos inside the `all` array.
-A To-do, would have three properties: title, dueDate, completed (of type boolean). And inside the `all` array, we will store To-dos as an object. For ex. `{ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false }`
+A Todo, would have three properties: title, dueDate, completed (of type boolean). And inside the `all` array, we will store Todos as an object. For ex. `{ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false }`
 
 Next, let's define the` add()` function.
 ```js
@@ -45,7 +45,7 @@ function todoList() {
     console.log(all)
   }
 ```
-Here, the `markAsComplete()` function takes an argument called `index`. It updates the `all` array using the index, and marks that specific To-Do as completed .
+Here, the `markAsComplete()` function takes an argument called `index`. It updates the `all` array using the index, and marks that specific Todo as completed .
 
 To complete the `todoList` function, we will return the `all` array and `add`, `markAsComplete` functions.
 ```js
@@ -75,7 +75,7 @@ Now, you will be able to see the list of all todos by:
 [] // It will return an empty array
 ````
 
-To add a new To-Do:
+To add a new Todo:
 ````
 > todos.add({ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false })
 [{ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false }] // Output
@@ -85,7 +85,7 @@ To add a new To-Do:
 [{ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false }, { title: 'Have to buy potato', dueDate: '22-06-2022', completed: false }] // Output
 ````
 
-To mark a To-Do as complete
+To mark a Todo as complete
 ````
 > todos.markAsComplete(1) // Here 1 is the array index
 [{ title: 'I need to go to gym', dueDate: '22-06-2022', completed: false }, { title: 'Have to buy potato', dueDate: '22-06-2022', completed: true }] // Output

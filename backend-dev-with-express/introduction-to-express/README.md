@@ -56,7 +56,7 @@ app.get('/', function (request, response) {
   response.send('Hello World')
 })
 ```
-This part is very important. Here, using the app.get() method, Express creates a route handler to listen for GET requests from a client. The first argument in this function is the route path. In this case, we’re listening for GET requests on `localhost:3000/`. If we wanted to listen for a POST request, then we would use `app.post()`.
+This part is very important. Here, using the `app.get()` method, Express creates a route handler to listen for GET requests from a client. The first argument in this function is the route path. In this case, we’re listening for GET requests on `localhost:3000/`. If we wanted to listen for a POST request, then we would use `app.post()`.
 
 The second argument is a callback function that takes a `request` object and a `response` object. The *request* object contains information about the request that came from the client, for example: request headers, query parameters, request body, etc. The *response* object contains information that we want to send as a response back to the client.
 

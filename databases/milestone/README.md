@@ -12,7 +12,7 @@ The exact code for all three of these files will be provided in the following se
 
 ### 1. listTodos.js
 
-Here is the code template for `listTodos.rb`:
+Here is the code template for `listTodos.js`:
 
 ```js
 //  listTodos.js
