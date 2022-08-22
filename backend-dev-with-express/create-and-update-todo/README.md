@@ -61,11 +61,11 @@ curl -d '{"title":"Go the gym","dueDate":"2022-07-02"}' -H "Content-Type: applic
 This `curl` call will create a new **todo** entry in our database, and will return the new database object to us.
  
  
-### Step 4: Complete the `update Todo` endpoint implementation
+### Step 4: Complete the `markAsCompleted Todo` endpoint implementation
 To update the TO-DO that we've just created, we will use the `.update()` method. This method takes two arguments, first we have to provide an object of Todo attributes that we want to update, and second we have to pass another object of query parameters. In this case, we will find a Todo by its ID, that is present in our request parameter.
 ```js
-app.put('/todos/:id', async function (request, response) {
- console.log('We have to update a Todo with ID: ', request.params.id)
+app.put('/todos/:id/markAsCompleted', async function (request, response) {
+ console.log('We have to mark a Todo as completed with ID: ', request.params.id)
  const todo = await Todo.update({ completed: true }, {
    where: {
      id: request.params.id
@@ -79,7 +79,7 @@ app.put('/todos/:id', async function (request, response) {
  
 Let's test it out using `curl`:
 ````
-curl -d '' -H "Content-Type: application/json" -X PUT http://localhost:3000/todos/1
+curl -d '' -H "Content-Type: application/json" -X PUT http://localhost:3000/todos/1/markAsCompleted
 ````
 Great! this request updates the todo with *ID 1* and sets `completed` as `true`.
  
