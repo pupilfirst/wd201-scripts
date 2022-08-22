@@ -1,94 +1,87 @@
 # Text
-
+ 
 Previously, you've learned, how to define routes in an **Express.JS** application. There we've also defined routes to create a TO-DO, update a TODO and to get details of a TO-DO. But the real implementation inside the callback function is not complete yet. And in this lesson we are about to do that. So, let's get started.
-
+ 
 # Video Script
 Hey there, in this video we will write some logic inside our route definitions, to *create* and *update* a TO-DO. We will also use Sequelize to persist our data in PostgreSQL database. And to test our routes, we will respond back in JSON format, as our user interface is not ready yet.
-
+ 
 ### Step 1: Define the TO-DO model using Sequelize
-Before we can write login inside our TO-DO endpoints, we have to define the **TODO** *model* using Sequelize.
-
-As you already know, Sequelize is an ORM (Object Relational Mapping), and it creates an object-oriented layer between Node.Js and the PostgreSQL database. It helps us to work with data without even worrying about the raw SQL queries. 
-
-> Action: Open VS Code
-
-So let's define the **Todo** model:
-```js
-const Todo = sequelize.define(
-  'todos', 
-  { description: Sequelize.TEXT, isComplete: { type: Sequelize.BOOLEAN, defaultValue: false }, dueDate: Sequelize.DATEONLY } 
-);
+Before we can write logic inside our TO-DO endpoints, we have to define the **TODO** *model* using Sequelize.
+ 
+To generate the **Todo** model, we will use the `db:generate` command of `sequelize-cli`. In this command, we have to pass the attributes of **Todo** along with their types. A **Todo** will have a `title` with type `string`, then `dueDate` of type `date` and a `complete` of type `boolean`.
+ 
+```sh
+npx sequelize-cli model:generate --name Todo --attributes title:string,dueDate:dateonly,completed:boolean
 ```
-Here, we are using `define` method from the `Sequelize` library, to configure our **Todo** model. First, we are setting the table name to be `todos`, then we are defining the column names with it's type. You can refer to [Sequelize documentation](https://sequelize.org/v5/manual/data-types.html) for all available types.
-
-### Step 2: Create database tables
-Next, we have to create the `todos` table in our database. For that, we will use the `sync` method from sequelize.
-```js
-// Sync database to create/update tables
-sequelize.sync({ force: true })
-.then(() => {
-  console.log(`Database & tables synced successfully!`);
-});
+ 
+The above command will create a `todo.js` file in `model` folder and migration file in the `migrations` folder.
+ 
+> Action: Show both files in VS Code
+ 
+### Step 2: Create database table
+The migration file has all the codes that we need to create the `Todos` table in the database. To simply run the migration file, we will execute the following command in the terminal:
+ 
+```sh
+npx sequelize-cli db:migrate
 ```
-Run the **index.js** file from terminal using the `node index.js` command and you would see that the `todos` table is created in database.
-
+This will create the `Todos` table in the database.
+> Action: Show the Todos table using PGAdmin.
+ 
 ### Step 3: Complete the `create Todo` endpoint implementation
-Now, in the **create TODO** endpoint, first we have to read the request body to look for the To-Do *description* and *due date*. 
-
-Here we need the `body-parser` module to accept and parse JSON request body. Nowdays, the `body-parser` package comes by default with Express and we just have to `require` it:
+In order to perform any operation for Todo, first we have to import the model in our primary `index.js` file.
+```js
+const { Todo } = require("./models");
+```
+ 
+Next, in the **create TODO** endpoint, we have to read the request body to look for the To-Do *title* and *dueDate*.
+ 
+Here we need the `body-parser` module to accept and parse JSON request body. Nowadays, the `body-parser` package comes by default with Express and we just have to `require` it:
 ```js
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 ```
-
+ 
 Next, inside the `create` TO-DO route, we will use the `.create()` method from **Sequelize**, to insert a *todo* into the database, based on the request body:
 ```js
-app.post('/todos', function (request, response) {
-  console.log('Creating new TODO: ', request.body)
-  var description = request.body.description;
-  var dueDate = request.body.dueDate;
-  Todo.create({ description: description, dueDate: dueDate }).then(function(todo) {
-    response.json(todo);
-  });
+app.post('/todos', async function (request, response) {
+ console.log('Creating new Todo: ', request.body)
+ const todo = await Todo.create({ title: request.body.title, dueDate: request.body.dueDate, completed: false }).catch((error) => {
+   console.log(error)
+   return response.status(422).json(error);
+ })
+ return response.json(todo);
 })
 ```
-
+ 
 We can test it out with a simple `curl` request from our terminal:
 ````
-curl -d '{"description":"Go the gym","dueDate":"2022-07-02"}' -H "Content-Type: application/json" -X POST http://localhost:3000/todos
+curl -d '{"title":"Go the gym","dueDate":"2022-07-02"}' -H "Content-Type: application/json" -X POST http://localhost:3000/todos
 ````
-
+ 
 This `curl` call will create a new **todo** entry in our database, and will return the new database object to us.
-
-
+ 
+ 
 ### Step 4: Complete the `update Todo` endpoint implementation
-To update the TO-DO that we've just created, first we have to find it out with it's ID. And for that we will use the `findByPk()` method. This method searches for an entity with the given primary key. 
-
+To update the TO-DO that we've just created, we will use the `.update()` method. This method takes two arguments, first we have to provide an object of Todo attributes that we want to update, and second we have to pass another object of query parameters. In this case, we will find a Todo by its ID, that is present in our request parameter.
 ```js
-app.put('/todos/:id', function(request, response) {
-  Todo.findByPk(request.params.id).then(function(todo) {
-    console.log(todo) // Finds out the speficic TODO from database.
-  });
-});
+app.put('/todos/:id', async function (request, response) {
+ console.log('We have to update a Todo with ID: ', request.params.id)
+ const todo = await Todo.update({ completed: true }, {
+   where: {
+     id: request.params.id
+   }
+ }).catch((error) => {
+   return response.status(422).json(error);
+ })
+ return response.json(todo);
+})
 ```
-Then, we have to perform the update operation on that todo instance using the `.update()` method.
-```js
-app.put('/todos/:id', function(request, response) {
-  Todo.findByPk(request.params.id).then(function(todo) {
-    todo.update({
-      description: request.body.description,
-      dueDate: request.body.dueDate
-    }).then((todo) => {
-      response.json(todo);
-    });
-  });
-});
-```
-
+ 
 Let's test it out using `curl`:
 ````
-curl -d '{"description":"go the office"}' -H "Content-Type: application/json" -X PUT http://localhost:3000/todos/1
+curl -d '' -H "Content-Type: application/json" -X PUT http://localhost:3000/todos/1
 ````
-Great! this request updates the todo with *ID 1* with new description and returns the updated object.
-
+Great! this request updates the todo with *ID 1* and sets `completed` as `true`.
+ 
 That's all for this video, see you in the next one.
+
