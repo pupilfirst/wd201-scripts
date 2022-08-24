@@ -59,14 +59,12 @@ app.post('/todos', function (request, response) {
 ```
 In this route definition, we've used the `POST` HTTP method, as we are creating a new entry in the database. Another important point to observe, the `PATH` value of this endpoint matches with the route to *get list of all Todos*, but notice the HTTP method is different there. So, whenever you are defining any routes, remember to keep the combination of `HTTP METHOD + PATH` unique, throughout the application.
 
-4. Route to update a specific Todo by it's ID:
+4. Route to update a specific Todo by it's ID, to mark it as `completed`:
 ```js
-app.put('/todos/:id', function (request, response) {
+app.put('/todos/:id/markAsCompleted', function (request, response) {
   console.log('We have to update a Todo with ID: ', request.params.id)
-  console.log('Here the attributes that need to be updated, are: ', request.body)
   // First, we have to query our database to update details of a Todo with a specific ID.
-  // Then, we have to respond back with the updated Todo instance:
-  // response.send(todo)
+  // Then, we have to respond back with the updated Todo
 })
 ```
 
