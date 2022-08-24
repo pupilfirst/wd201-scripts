@@ -23,6 +23,14 @@ To check, if the Tailwind CSS is loaded properly, first will try to style `h1` t
 ```
 Great! It's working.
 
+The background color is not looking that good, so in the `public/css/styles.css`, we will change it to **white**.
+```css
+body {
+  font-family: sans-serif;
+  background: #FFFFFF;
+}
+```
+
 ### Now, let's define the Layout
 To define the layout, we will use Grids from TailwindCSS. You can read their [documentation](https://tailwindcss.com/docs/grid-template-columns) for more information.
 As per the design image, the Todo-Manager is positioned at the center of the page, with even blank spaces on both left and right sides.
