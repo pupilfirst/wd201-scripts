@@ -2,20 +2,11 @@
 In the previous lesson, you've learned about the key areas which you should keep in mind while designing a webpage. Now, it's time to use those principles to convert the To-Do manager design into a webpage. Let's get started.
 
 # Script
-In this lesson, we will start with our To-Do manager application, to convert the design into a webpage.
+In this lesson, we will start designing our To-Do manager application, to convert the design into a webpage.
 
-First, in your working directory, create a folder named `todo-manager` and then inside that folder create a `index.html` file. In that HTML file, let's define the default HTML structure.
-```html
-<html>
-  <head>
-    <title>TO-DO Manager</title>
-  </head>
-  <body>
-  </body>
-</html>
-```
+We will start with the `index.ejs` file, which is present inside the `views` folder.
 
-Then, we will add the **TailwindCSS** into the `<head>` section of this HTML file. Previously, we've already introduced you to TailwindCSS, a utility-first CSS framework, packed with tons of CSS classes, which can be composed to build any webpage.
+First, we will add the **TailwindCSS** into the `<head>` section of this EJS template. Previously, we've already introduced you to TailwindCSS, a utility-first CSS framework, packed with tons of CSS classes, which can be composed to build any webpage.
 ```html
 <head>
   <title>TO-DO Manager</title>
@@ -24,13 +15,11 @@ Then, we will add the **TailwindCSS** into the `<head>` section of this HTML fil
 </head>
 ```
 
-To check, if the Tailwind CSS is loaded properly, add a simple heading (h1) there:
+To check, if the Tailwind CSS is loaded properly, first will try to style `h1` tag present in `header.ejs`:
 ```html
-<body>
-  <h1 class="text-2xl font-semibold text-gray-600">
-    My Todo-list
-  </h1>
-</body>
+<h1 class="text-2xl font-semibold text-gray-600">
+  My Todo-list
+</h1>
 ```
 Great! It's working.
 
@@ -41,9 +30,7 @@ As per the design image, the Todo-Manager is positioned at the center of the pag
 <body>
   <div class="grid grid-cols-6">
     <div class="col-start-3 col-span-2">
-      <h1 class="text-2xl font-semibold text-gray-600 mt-20">
-        My Todo-list
-      </h1>
+      <%- include('header.ejs') %>
     </div>
   </div>
 <body>
