@@ -42,7 +42,7 @@ First, we have to edit the `config/config.json` file to have the correct databas
   "development": {
     "username": "your-postgresql-username",
     "password": "your-postgresql-password",
-    "database": "first-express-app-db",
+    "database": "todo-db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
@@ -50,7 +50,7 @@ First, we have to edit the `config/config.json` file to have the correct databas
 ```
 Here, we've defined the database credentials for `development` environment. The same file can be updated for `staging` and `production` environment as well. The default  value of `dialect` was set to `mysql`, which we've changed to `postgres` as we will be working with PostgreSQL.
 
-Now to check if these credentials are correct and to create the database named `first-express-app-db` in our PostgreSQL database server, we will run the follwoing command:
+Now to check if these credentials are correct and to create the database named `todo-db` in our PostgreSQL database server, we will run the follwoing command:
 ```sh
 npx sequelize-cli db:create
 
@@ -58,7 +58,7 @@ Sequelize CLI [Node: 14.17.0, CLI: 6.4.1, ORM: 6.21.4]
 
 Loaded configuration file "config/config.json".
 Using environment "development".
-Database **first-express-app-db** created.
+Database **todo-db** created.
 ```
 
 Our database got created. That's great!
