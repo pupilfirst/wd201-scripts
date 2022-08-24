@@ -45,11 +45,13 @@ Next, inside the `create` TO-DO route, we will use the `.create()` method from *
 ```js
 app.post('/todos', async function (request, response) {
  console.log('Creating new Todo: ', request.body)
- const todo = await Todo.create({ title: request.body.title, dueDate: request.body.dueDate, completed: false }).catch((error) => {
+ try {
+  const todo = await Todo.create({ title: request.body.title, dueDate: request.body.dueDate, completed: false })
+  return response.json(todo);
+ } catch (error) {
    console.log(error)
    return response.status(422).json(error);
- })
- return response.json(todo);
+ }
 })
 ```
  
@@ -60,20 +62,83 @@ curl -d '{"title":"Go the gym","dueDate":"2022-07-02"}' -H "Content-Type: applic
  
 This `curl` call will create a new **todo** entry in our database, and will return the new database object to us.
  
- 
+We can further refractor the code by defining a `addTodo`  class method in the `Todo` model, and moving the `Todo.create` method there itself.
+```js
+  class Todo extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    }
+
+    static addTodo({ title, dueDate }) {
+      return this.create({ title: title, dueDate: dueDate, completed: false });
+    }
+  }
+```
+Here, inside the `addTodo` method, `this` refers to the class Todo itself.
+
+Now we can call this class method `addTodo` from our route definition:
+```js
+app.post('/todos', async function (request, response) {
+  console.log('Creating new Todo: ', request.body)
+  try {
+    const todo = await Todo.addTodo(request.body);
+    return response.json(todo);   
+  } catch (error) {
+    console.log(error)
+    return response.status(422).json(error);    
+  }
+})
+```
+
 ### Step 4: Complete the `markAsCompleted Todo` endpoint implementation
-To update the TO-DO that we've just created, we will use the `.update()` method. This method takes two arguments, first we have to provide an object of Todo attributes that we want to update, and second we have to pass another object of query parameters. In this case, we will find a Todo by its ID, that is present in our request parameter.
+To update the TO-DO that we've just created, we will use the `.update()` method of Sequelize. 
+
+But first, we have to find out the Todo that we want to update. In that case, we will use the `findByPk` method, where we have to pass the Todo ID that we are getting as part of the query parameter.
 ```js
 app.put('/todos/:id/markAsCompleted', async function (request, response) {
- console.log('We have to mark a Todo as completed with ID: ', request.params.id)
- const todo = await Todo.update({ completed: true }, {
-   where: {
-     id: request.params.id
-   }
- }).catch((error) => {
-   return response.status(422).json(error);
- })
- return response.json(todo);
+  console.log('We have to update a Todo with ID: ', request.params.id)
+  const todo = await Todo.findByPk(request.params.id)
+})
+```
+
+Next, we will define an instance method in Todo model named `markAsCompleted`, where we will actually update the Todo using `.update()`
+```js
+  class Todo extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    }
+
+    static addTodo({ title, dueDate }) {
+      return this.create({ title, dueDate, completed: false });
+    }
+
+    markAsCompleted() {
+      return this.update({ completed: true })
+    }
+  }
+```
+Here, inside the `markAsCompleted` method, `this` refers to an instance of class Todo. Now we can call this method from our route definition.
+```js
+app.put('/todos/:id/markAsCompleted', async function (request, response) {
+  console.log('We have to update a Todo with ID: ', request.params.id)
+  const todo = await Todo.findByPk(request.params.id)
+  try {
+    const updatedTodo = await todo.markAsCompleted()
+    return response.json(updatedTodo);
+  } catch (error) {
+    console.log(error)
+    return response.status(422).json(error);   
+  }
 })
 ```
  
@@ -81,7 +146,8 @@ Let's test it out using `curl`:
 ````
 curl -d '' -H "Content-Type: application/json" -X PUT http://localhost:3000/todos/1/markAsCompleted
 ````
-Great! this request updates the todo with *ID 1* and sets `completed` as `true`.
+
+Great! This request updates the to-do with *ID 1* and sets `completed` as `true`.
  
 That's all for this video, see you in the next one.
 
