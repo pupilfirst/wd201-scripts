@@ -17,13 +17,19 @@ Here is the code template for `listTodos.js`:
 ```js
 //  listTodos.js
 const { connect } = require("./connectDB.js");
-const Todo = require("./Todo.js");
-connect()
-  .then(() => {
-    return Todo.showList();
-  })
-  .then(() => {})
-  .catch((err) => console.error(err));
+const Todo = require("./TodoModel.js");
+
+const listTodo = async () => {
+  try {
+    await connect();
+    await Todo.showList();
+  } catch (error) {
+    console.error(error);
+  }
+};
+(async () => {
+  await listTodo();
+})();
 ```
 
 When running this program from the command line, it should print to-dos from the database in the following format:
@@ -49,23 +55,30 @@ Due Later
 
 - You should have created connectDB.js, as well as inserted some sample data in the todos table through createItems.js before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
 
-- To solve this problem, you need to have a todo.js file which will define the Sequelize model. In todo.js, define the class method `showList` which will print the list of to-dos as per the format given above. You can use the following template to get started:
+- To solve this problem, you need to have a TodoModel.js file which will define the Sequelize model. In TodoModel.js, define the class (static) method `showList` which will print the list of to-dos as per the format given above. You can use the following template to get started:
 
 ```js
-Todo.showList = async function () {
-  console.log("My Todo list \n");
+class Todo extends Model {
 
-  console.log("Overdue");
-  // FILL IN HERE
-  console.log("\n");
+  static async addTask(params) {
+    return await Todo.create(params);
+  }
+  static async showList {
+    console.log("My Todo list \n");
 
-  console.log("Due Today");
-  // FILL IN HERE
-  console.log("\n");
+    console.log("Overdue");
+    // FILL IN HERE
+    console.log("\n");
 
-  console.log("Due Later");
-  // FILL IN HERE
-};
+    console.log("Due Today");
+    // FILL IN HERE
+    console.log("\n");
+
+    console.log("Due Later");
+    // FILL IN HERE
+  };
+}
+
 ```
 
 ### 2. addTodo.js
@@ -74,33 +87,31 @@ Here is the code template for `addTodo.js`:
 
 ```js
 // addTodo.js
-const readline = require("readline");
+const { connect } = require("./connectDB.js");
+const Todo = require("./TodoModel.js");
 
-const Todo = require("./Todo.js");
+const createTodo = async (params) => {
+  try {
+    await connect();
+    await Todo.addTask(params);
+  } catch (error) {
+    console.error(error);
+  }
+};
+(async () => {
+  // Read title, number of days in due from command line and construct the todo item
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+  // FILL HERE
+  // await createTodo(...);
 
-rl.question("todo text: ", (todoText) => {
-  rl.question(
-    "How many days from now is it due? (give an integer value) ",
-    (days) => {
-      const daysInt = parseInt(days.trim());
-      rl.close();
-      Todo.addTask({ title: todoText, days: daysInt }).then((todo) => {
-        console.log(`New todo created with id ${todo.id}`);
-        Todo.showList();
-      });
-    }
-  );
-});
+  await Todo.showList();
+})();
+
 ```
 
-When running this program from the command line, it should ask for details of a new to-do, save it to the database, and print the new list of to-dos.
+When running this program from the command line, it should accept title, due in days as command line argument for details of a new to-do, save it to the database, and print the new list of to-dos.
 
-- To solve this problem, you should implement the class method `addTask` in the `Todo` model. It will take an object as parameter, containing `dueInDays` and `title`.
+- To solve this problem, you should implement the class method `addTask` in the `Todo` model. It will take an object as parameter, containing `dueInDays` and `title`. A new todo item will be incomplete by default.
 
 - Note that `dueInDays` is not a date, but an integer. It is like saying "this task will be due in 3 days". So, when implementing `addTask`, you should compute the date before saving it to the database.
 
@@ -110,37 +121,28 @@ The code for this file is as follows:
 
 ```js
 // completeTodo.js
-const readline = require("readline");
-
 const { connect } = require("./connectDB.js");
-const Todo = require("./Todo.js");
+const Todo = require("./TodoModel.js");
+const markAsComplete = async (id) => {
+  try {
+    const todo = await Todo.markAsComplete(id);
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+    console.log(todo.displayableString());
 
-connect()
-  .then(() => {
-    return Todo.showList();
-  })
-  .then(() => {
-    rl.question(
-      "Which todo do you want to mark as complete? (Enter id): ",
-      async (todoID) => {
-        rl.close();
-        const id = parseInt(todoID.trim());
-        await Todo.markAsComplete(id);
-        await Todo.showList();
-      }
-    );
-  })
-  .catch((err) => console.error(err))
-  .finally(() => {});
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+(async () => {
+  // Fill here to accept id from command line
+
+  // await markAsComplete(id)
+})();
 ```
 
-- Implement class method `markAsComplete` which takes a To-do ID, and sets its `complete` to `true`.
+- Implement class method `markAsComplete` which takes a To-do ID, and sets its `complete` to `true`. The `id` should be accepted as a commandline argument.
 
 ## Submission Guidelines
 
-Please attach a link to your GitHub repo where the three files are present. The repo would also have files `connectDB.js` and `todo.js`. Please ensure that the files are in the root of the repository and not in any directory, and the submitted link is of the repository and not of any branch or directory.
+Please attach a link to your GitHub repo where the three files are present. The repo would also have files `connectDB.js` and `TodoModel.js`. Please ensure that the files are in the root of the repository and not in any directory, and the submitted link is of the repository and not of any branch or directory.
