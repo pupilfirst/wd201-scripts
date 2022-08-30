@@ -2,7 +2,7 @@
 
 ### Database migrations
 
-We have created table by running a script. But it would become tedious to track the changes made to the structure of any table over the time of development. Any command that modifies the structure of the database, like creating tables, or adding and removing columns from an existing table, are all called "migrations". The word is used in the sense that we're "migrating" the database from one state to another new state.
+In this lesson, we will learn about database migrations. So far, we have created table by running a script. But it would become tedious to track the changes made to the structure of any table over the time of development. Any command that modifies the structure of the database, like creating tables, or adding and removing columns from an existing table, are all called "migrations". The word is used in the sense that we're "migrating" the database from one state to another new state.
 
 `Sequelize` comes with helper functions that make migrations easy. First we will have to install a package `sequelize-cli`.
 
@@ -66,7 +66,7 @@ Using environment "development".
 Database saas_db created.
 ```
 
-Now, you can simply generate a model using `db:generate` command and passing in the attributes and types. Let's create a model for Todo. We will have a `title` with type `string`, then `dueDate` of type `date` and a `complete` of type `boolean`.
+Now, you can simply generate a model using `model:generate` command and passing in the attributes and types. Let's create a model for Todo. We will have a `title` with type `string`, then `dueDate` of type `date` and a `complete` of type `boolean`.
 
 ```sh
 npx sequelize-cli model:generate --name Todo --attributes title:string,dueDate:dateonly,completed:boolean
