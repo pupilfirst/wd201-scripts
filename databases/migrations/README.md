@@ -32,26 +32,13 @@ Let's make sure the configuration has correct parameters to connect to the datab
   "development": {
     "username": "postgres",
     "password": "changeme",
-    "database": "saas_db",
+    "database": "todo_db_dev",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
   }
 }
 
-```
-
-Now, let's execute the command to drop the database.
-
-```sh
-npx sequelize-cli db:drop
-
-
-Sequelize CLI [Node: 16.13.0, CLI: 6.4.1, ORM: 6.21.2]
-
-Loaded configuration file "config/config.json".
-Using environment "development".
-Database saas_db dropped.
 ```
 
 To create the database, we can use `db:create` command.
@@ -63,7 +50,7 @@ Sequelize CLI [Node: 16.13.0, CLI: 6.4.1, ORM: 6.21.2]
 
 Loaded configuration file "config/config.json".
 Using environment "development".
-Database saas_db created.
+Database todo_db_dev created.
 ```
 
 Now, you can simply generate a model using `model:generate` command and passing in the attributes and types. Let's create a model for Todo. We will have a `title` with type `string`, then `dueDate` of type `date` and a `complete` of type `boolean`.
