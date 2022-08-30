@@ -347,3 +347,8 @@ node index.js
 ### Conclusion
 
 In this lesson we have learned how to create Sequelize models and use them to query or update the records in database.
+
+
+Read more about [IIFE at MDN](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+[Sequelize model basics](https://sequelize.org/docs/v6/core-concepts/model-basics/)
+[Sequelize querying basics](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/)
