@@ -53,7 +53,7 @@ Due Later
 
 - The output format is the same as the To-do assignment in the previous level, except that this time you also have to print the `id` of the row as the first column.
 
-- You should have created connectDB.js, as well as inserted some sample data in the todos table through createItems.js before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
+- You should have created connectDB.js, as well as inserted some sample data in the todos table through addTodo.js before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
 
 - To solve this problem, you need to have a TodoModel.js file which will define the Sequelize model. In TodoModel.js, define the class (static) method `showList` which will print the list of to-dos as per the format given above. You can use the following template to get started:
 
@@ -63,7 +63,7 @@ class Todo extends Model {
   static async addTask(params) {
     return await Todo.create(params);
   }
-  static async showList {
+  static async showList() {
     console.log("My Todo list \n");
 
     console.log("Overdue");
