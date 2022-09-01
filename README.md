@@ -117,7 +117,7 @@ This work is licensed under a
 7. [Milestone](./html-forms/milestone/README.md)
 
 ## L10. User Authentication and final wrap-up
-1. [Introduction]('./user-authentication/introduction/README.md)
+1. [Introduction](./user-authentication/introduction/README.md)
 2. [Create the `users` table with a sequelize migration]('./../user-authentication/create-users-table-with-sequelize-migration/README.md)
 3. [Associations: adding owners to todo]('./user-authentication/../../user-authentication/associations-adding-owners-to-todo/README.md)
 4. [Creating a user sign-up page](./user-authentication/create-user-signup-page/README.md)
