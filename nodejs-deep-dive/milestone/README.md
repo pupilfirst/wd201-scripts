@@ -77,10 +77,14 @@ const formattedDate = d => {
   return d.toISOString().split("T")[0]
 }
 
-var d = new Date();
-const today = formattedDate(d)
-const yesterday = formattedDate(new Date(d.setDate(d.getDate() - 1)))
-const tomorrow = formattedDate(new Date(d.setDate(d.getDate() + 2)))
+var dateToday = new Date()
+const today = formattedDate(dateToday)
+const yesterday = formattedDate(
+  new Date(new Date().setDate(dateToday.getDate() - 1))
+)
+const tomorrow = formattedDate(
+  new Date(new Date().setDate(dateToday.getDate() + 1))
+)
 
 todos.add({ title: 'Submit assignment', dueDate: yesterday, completed: false })
 todos.add({ title: 'Pay rent', dueDate: today, completed: true })
