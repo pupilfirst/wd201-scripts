@@ -79,6 +79,7 @@ module.exports = Todo;
 ```
 
 ### Adding rows
+
 In this video we will learn how to insert, update and delete data from our todo table using seqelize.
 
 We can add a record by using the `create` method and passing in values for the columns as an object.
@@ -107,7 +108,6 @@ const createTodo = async () => {
 (async () => {
   await createTodo();
 })();
-
 ```
 
 You can execute the following command to create the first to-do item.
@@ -117,14 +117,15 @@ node index.js
 ```
 
 You can further refactor the code to make testing easier by encapsulating the creation of todo item in a static function. Let's edit the `TodoModel`.
+
 ```js
 class Todo extends Model {
-
   static async addTask(params) {
     return await Todo.create(params);
   }
 }
 ```
+
 Now, we can replace the call to `create` method in `index.js` with `addTask`.
 
 ```js
@@ -143,6 +144,7 @@ const createTodo = async () => {
   }
 };
 ```
+
 ### Counting rows
 
 Now we should be able to query the database and fetch the stored data. But first, let us check the number of rows.
@@ -158,7 +160,7 @@ const countItems = async () => {
   } catch (error) {
     console.error(error);
   }
-}
+};
 
 (async () => {
   // await createTodo();
@@ -182,13 +184,12 @@ Add `getAllTodos` in `index.html`
 const getAllTodos = async () => {
   try {
     const todos = await Todo.findAll();
-    const todoList = todos.map(todo => todo.displayableString()).join("\n");
+    const todoList = todos.map((todo) => todo.displayableString()).join("\n");
     console.log(todoList);
-
   } catch (error) {
     console.error(error);
   }
-}
+};
 
 (async () => {
   // await createTodo();
@@ -196,20 +197,22 @@ const getAllTodos = async () => {
   await getAllTodos();
 })();
 ```
+
 Update `TodoModel` to return a readable string for an item.
+
 ```js
 // TodoModel.js
 class Todo extends Model {
-
   static async addTask(params) {
     return await Todo.create(params);
   }
 
   displayableString() {
-    return `${this.id}. ${this.title} - ${this.dueDate}`
+    return `${this.id}. ${this.title} - ${this.dueDate}`;
   }
 }
 ```
+
 You can execute the file using the following command.
 
 ```sh
@@ -225,19 +228,16 @@ const getSingleTodo = async () => {
   try {
     const todo = await Todo.findOne({
       where: {
-        completed: false
+        completed: false,
       },
-      order: [
-        ['id', 'DESC']
-      ]
+      order: [["id", "DESC"]],
     });
 
     console.log(todo.displayableString());
-
   } catch (error) {
     console.error(error);
   }
-}
+};
 
 (async () => {
   // await createTodo();
@@ -261,18 +261,20 @@ Add `updateItem` function in `index.js`.
 ```js
 const updateItem = async (id) => {
   try {
-    const todo = await Todo.update({completed: true}, {
-      where: {
-        id: id
+    const todo = await Todo.update(
+      { completed: true },
+      {
+        where: {
+          id: id,
+        },
       }
-    });
+    );
 
     console.log(todo.displayableString());
-
   } catch (error) {
     console.error(error);
   }
-}
+};
 
 (async () => {
   // await createTodo();
@@ -288,23 +290,23 @@ Also update the Todo model to format the item in a redable format.
 ```js
 // TodoModel.js
 class Todo extends Model {
-
   static async addTask(params) {
     return await Todo.create(params);
   }
 
   displayableString() {
-    return `${this.completed ? '[x]': '[ ]'} ${this.id}. ${this.title} - ${this.dueDate}`
+    return `${this.completed ? "[x]" : "[ ]"} ${this.id}. ${this.title} - ${
+      this.dueDate
+    }`;
   }
 }
 ```
+
 You can update the todo item by executing following command.
 
 ```sh
 node index.js
 ```
-
-
 
 ### Deleting records
 
@@ -317,16 +319,15 @@ const deleteItem = async (id) => {
   try {
     const deletedRowCount = await Todo.destroy({
       where: {
-        id: id
-      }
+        id: id,
+      },
     });
 
     console.log(`Deleted ${deletedRowCount} rows!`);
-
   } catch (error) {
     console.error(error);
   }
-}
+};
 
 (async () => {
   // await createTodo();
@@ -344,10 +345,35 @@ You can delete the to-do item by executing following command.
 node index.js
 ```
 
+## Why use IIFE?
+
+You might be wondering why we had to use the cryptic Immediately Invoked Function expression to do something simple as querying the database. The answer is you dont. Let's comment out the code block and invoke the `getAllTodos` function.
+
+It works fine. Let's also get the count of records we have in the database. So I will add a call to `countItems` as well. Let's run it again.
+
+Now, we can see the asynchronous nature of JavaScript kicking in. Both these functions are executed in parallel. So whichever finishes first, prints the result first.
+
+We can mimic synchronous behaviour by `await`-ing on an `async` function. But since, we don't have a function context here, we cannot write `await getAllTodos()`.
+
+Instead we can create another async function called `run` and move all these code into it.
+
+```js
+const run = async () => {
+  // await createTodo();
+  // await countItems();
+  await getAllTodos();
+  // await updateItem(2);
+  await deleteItem(2);
+  await getAllTodos();
+};
+
+run();
+```
+Then invoke the run function instead. Now, the results appear in the way we intended. Next, we can modify the run function to be an anonymous function, ie, a function which doesn't have any name associated with it. And here we have our Immediately Invoked Function Expression.
+
 ### Conclusion
 
 In this lesson we have learned how to create Sequelize models and use them to query or update the records in database.
-
 
 Read more about [IIFE at MDN](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
 [Sequelize model basics](https://sequelize.org/docs/v6/core-concepts/model-basics/)

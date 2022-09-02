@@ -16,13 +16,11 @@ Here is the code template for `listTodos.js`:
 
 ```js
 //  listTodos.js
-const { connect } = require("./connectDB.js");
-const Todo = require("./TodoModel.js");
+const db = require("./models/index");
 
 const listTodo = async () => {
   try {
-    await connect();
-    await Todo.showList();
+    await db.Todo.showList();
   } catch (error) {
     console.error(error);
   }
@@ -53,31 +51,61 @@ Due Later
 
 - The output format is the same as the To-do assignment in the previous level, except that this time you also have to print the `id` of the row as the first column.
 
-- You should have created connectDB.js, as well as inserted some sample data in the todos table through addTodo.js before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
+- You should have inserted some sample data in the todos table through addTodo.js before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
 
-- To solve this problem, you need to have a TodoModel.js file which will define the Sequelize model. In TodoModel.js, define the class (static) method `showList` which will print the list of to-dos as per the format given above. You can use the following template to get started:
+- To solve this problem, you need to have a `models/todo.js` file which will define the Sequelize model. In `todo.js`, define the class (static) method `showList` which will print the list of to-dos as per the format given above. You can use the following template to get started:
 
 ```js
-class Todo extends Model {
+// models/todo.js
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Todo extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static async addTask(params) {
+      // Make relevent modifications here
+      return await Todo.create(params);
+    }
+    static async showList() {
+      console.log("My Todo list \n");
 
-  static async addTask(params) {
-    return await Todo.create(params);
+      console.log("Overdue");
+      // FILL IN HERE
+      console.log("\n");
+
+      console.log("Due Today");
+      // FILL IN HERE
+      console.log("\n");
+
+      console.log("Due Later");
+      // FILL IN HERE
+    };
+
+    static associate(models) {
+      // define association here
+    }
+    displayableString() {
+      // Make relevent modifications here
+      let checkbox = this.completed ? "[x]" : "[ ]";
+      return `${this.id}. ${checkbox} ${this.title} ${this.dueDate}`;
+    }
   }
-  static async showList() {
-    console.log("My Todo list \n");
-
-    console.log("Overdue");
-    // FILL IN HERE
-    console.log("\n");
-
-    console.log("Due Today");
-    // FILL IN HERE
-    console.log("\n");
-
-    console.log("Due Later");
-    // FILL IN HERE
-  };
-}
+  Todo.init({
+    title: DataTypes.STRING,
+    dueDate: DataTypes.DATEONLY,
+    completed: DataTypes.BOOLEAN
+  }, {
+    sequelize,
+    modelName: 'Todo',
+  });
+  return Todo;
+};
 
 ```
 
@@ -87,12 +115,10 @@ Here is the code template for `addTodo.js`:
 
 ```js
 // addTodo.js
-const { connect } = require("./connectDB.js");
-const Todo = require("./TodoModel.js");
+const db = require("./models/index")
 
 const createTodo = async (params) => {
   try {
-    await connect();
     await Todo.addTask(params);
   } catch (error) {
     console.error(error);
@@ -106,7 +132,6 @@ const createTodo = async (params) => {
 
   await Todo.showList();
 })();
-
 ```
 
 When running this program from the command line, it should accept title, due in days as command line argument for details of a new to-do, save it to the database, and print the new list of to-dos.
@@ -121,27 +146,24 @@ The code for this file is as follows:
 
 ```js
 // completeTodo.js
-const { connect } = require("./connectDB.js");
-const Todo = require("./TodoModel.js");
+const db = require("./models/index");
 const markAsComplete = async (id) => {
   try {
-    const todo = await Todo.markAsComplete(id);
+    await db.Todo.markAsComplete(id);
 
     console.log(todo.displayableString());
-
   } catch (error) {
     console.error(error);
   }
-}
+};
 
 (async () => {
   // Fill here to accept id from command line
-
   // await markAsComplete(id)
 })();
 ```
 
-- Implement class method `markAsComplete` which takes a To-do ID, and sets its `complete` to `true`. The `id` should be accepted as a commandline argument.
+- Implement a class method `markAsComplete` on `models/todo.js` which takes a To-do ID, and sets its `complete` to `true`. The `id` should be accepted as a commandline argument.
 
 ## Submission Guidelines
 
