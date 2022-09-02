@@ -1,10 +1,11 @@
 # Text
 
 ## Problem Description
-To complete this milestone, you have to work on top of the To-Do manager application that we've just created using Closure.
+**To complete this level**: You have to work on top of the To-Do manager application that we've just created using Closure.
 
 Your program must output a to-do list that looks like this:
-````
+
+```
 My Todo-list
 
 Overdue
@@ -19,9 +20,11 @@ Due Today
 Due Later
 [ ] File taxes 2022-07-23
 [ ] Pay electric bill. 2022-07-23
-````
+```
 
-```js
+Here is the template you should use to write the program. You are expected to complete four functions namely `overdue`, `dueToday`, `dueLater` and `toDisplayableList`. 
+
+```javascript
 const todoList = () => {
   all = []
   const add = (todoItem) => {
@@ -112,11 +115,16 @@ let formattedItemsDueLater = todos.toDisplayableList(itemsDueLater)
 console.log(formattedItemsDueLater)
 console.log("\n\n")
 ```
-####  Please read the following notes:
 
-1. For todos that are due today, do not show the date. For all other todos, show the date.
-2. Do not print anything (using `console.log` for example) in the code you write. All methods should just return a value - it is the calling code's responsibility to print to screen (like in `console.log todos.toDisplayableList(laterdues)`). This means `toDisplayableList` should return a string that is printable.
-3. Do not implement any extra features since this makes grading your assignments difficult. For the given input, the output should be exactly as given in the assignment.
-4. Ensure proper naming and formatted code.
+
+## Please read the following notes:
+
+1.  For to-dos that are due today, do not show the date. For all other to-dos, show the date.
+2.  Do not print anything (using  `console.log`  for example) in the code you write. All methods should just return a value - it is the calling code's responsibility to print to screen (like in  `console.log todos.toDisplayableList(laterdues)`). This means  `toDisplayableList`  should return a printable string.
+3.  Do not implement any extra features since this makes grading your assignments difficult. For the given input, the output should be exactly as given in the assignment.
+4. Save the completed code using the template into a file named `index.js` for submission.
+5.  Ensure proper naming and formatted code.
 
 Have fun!
+
+Your submission will be reviewed automatically using a test script. The conditions mentioned above should be followed exactly to ensure that these tests can identify the required functions and test the to-do application output.
