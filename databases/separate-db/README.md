@@ -126,7 +126,19 @@ Next we can run the tests and it would use the credentials for test database.
 ```sh
 npm test
 ```
+You should see the tests getting executed and producing an output like the following:
 
+```
+ PASS  __tests__/todo.js
+  Todolist Test Suite
+    ✓ Should add new todo (40 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.974 s, estimated 2 s
+Ran all test suites.
+```
 ### Conclusion
 
 In this lesson, we have learned how to configure and use a separate database for testing purposes.
