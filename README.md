@@ -48,9 +48,10 @@ This work is licensed under a
 4. [What are NPM scripts](./working-with-npm/npm-scripts/README.md)
 5. [Explore built in fs module](./working-with-npm/nodejs-fs-module/README.md)
 6. [Explore streams](./working-with-npm/nodejs-stream-module/README.md)
-7. [Accepting command line arguments](./working-with-npm/accepting-cli-commands/README.md)
-8. [Let's write a program!](./working-with-npm/write-first-node-program/README.md)
-9. [Milestone](./working-with-npm/milestone/README.md)
+7. [Working with npm install](./working-with-npm/npm-install-packages/README.md)
+8. [Accepting command line arguments](./working-with-npm/accepting-cli-commands/README.md)
+9. [Let's write a program!](./working-with-npm/write-first-node-program/README.md)
+10. [Milestone](./working-with-npm/milestone/README.md)
 
 
 ## L3. Node.js deep dive
