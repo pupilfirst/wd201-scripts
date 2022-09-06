@@ -30,13 +30,16 @@ This work is licensed under a
 4. [Using git to version control our code](./introduction-to-nodejs/intro-to-git/README.md)
 5. [Github: How To](./introduction-to-nodejs/github-how-to/README.md)
 
+### Code Quality
+6. [Code quality using ESLint](./introduction-to-nodejs/setting-up-eslint/README.md)
+
 ### Orientation (old)
 
 **Note**: Students in TA training can skip this section and proceed to Milestone.
 
-6. [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
-7. [Screen recording tool](./get-started-with-git-and-github/getting-help/screen-recording.md)
-8. [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
+7. [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
+8. [Screen recording tool](./get-started-with-git-and-github/getting-help/screen-recording.md)
+9. [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
 
 ### Milestone
 9. [Milestone](./introduction-to-nodejs/milestone/README.md)
