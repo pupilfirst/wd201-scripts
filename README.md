@@ -112,26 +112,44 @@ This work is licensed under a
 
 ## L9.  HTML forms to save and accept user inputs
 
+### HTML Forms 
 1. [Adding a new to-do with the help of <form>](./html-forms/add-new-todo/README.md)
 2. [Updating a to-do with help of <form>](./html-forms/updating-todo/README.md)
 3. [Deleting a to-do with help of <form>](./html-forms/delete-todo/README.md)
+
+### CSRF token
 4. [What is Cross Site Request Forgery (CSRF) and why should we care?](./html-forms/why-csrf/README.md)
 5. [Use csurf package in express.js application](./html-forms/use-csurf/README.md)
+
+### API 
 6. What is an API
+
 7. [Milestone](./html-forms/milestone/README.md)
 
 ## L10. User Authentication and final wrap-up
+
+### Sequelize associations 
+
 1. [Introduction](./user-authentication/introduction/README.md)
 2. [Create the `users` table with a sequelize migration]('./../user-authentication/create-users-table-with-sequelize-migration/README.md)
 3. [Associations: adding owners to todo]('./user-authentication/../../user-authentication/associations-adding-owners-to-todo/README.md)
+
+### Signing up new users
+
 4. [Creating a user sign-up page](./user-authentication/create-user-signup-page/README.md)
 5. [Add user authentication using passport.js]('./../user-authentication/authentication-using-passport/README.md)
 6. [Storing passwords with bcrypt](./user-authentication/storing-password-using-bcrypt/README.md)
+
+### Cookies, sessions, and the user authentication workflow
+
 7. [Create a simple sign-in page which verifies the user's password]('./../user-authentication/signin-with-password-verification/README.md)
 8. What exactly is a cookie and why should you care?
 9. *Let us store the signed-in user's id in the session! (covered in user authentication using passport.js script)*
 10. *[Implement sign-out by resetting the user session](https://github.com/pupilfirst/wd201-scripts/pull/134/files) (Not merged yet)*
 11. A logged-in user should see and modify only their own to-dos and nobody else's
+
+### Flash messages and sequelize validations
+
 12. Showing one-off messages to users with connect-flash
 13. Ensure no blank to-dos are ever created, with Sequelize validations
 14. Milestone (To be added)
