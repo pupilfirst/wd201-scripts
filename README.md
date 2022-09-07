@@ -95,20 +95,22 @@ This work is licensed under a
 5. [Add tests to Express.js application](./backend-dev-with-express/add-tests/README.md)
 6. Milestone (To be added)
 
-## L7. Add User Interface for To-do Application
-1. [Converting a design into a webpage](./todo-user-interface/converting-design-into-webpage/README.md)
-2. [Create an interface for accepting a new to-do](./todo-user-interface/interface-for-new-to-do/README.md)
-3. [Create an interface for listing the todos](./todo-user-interface/interface-for-listing-to-dos/README.md)
-4. [Create an interface to delete a to-do](./todo-user-interface/interface-to-delete-to-do/README.md)
-5. [Milestone](./todo-user-interface/todo-interface-milestone/README.md)
-
-## L8. EJS Templating
+## L7. EJS Templating
 1. [Render dynamic data inside HTML with EJS templates](./ejs-templating/dynamic-html-with-ejs/README.md)
 2. [Using view templates](./ejs-templating/view-templates/README.md)
 3. [What is MVC?](./ejs-templating/mvc/README.md)
 4. [Heroku: deploy your application](./ejs-templating/deploy-application-to-heroku/README.md)
 5. [Use EJS templating to render to-do manager](./ejs-templating/ejs-templating-for-todo-manager/README.md)
 6. Milestone (To be added)
+
+
+## L8. Add User Interface for To-do Application
+1. [Converting a design into a webpage](./todo-user-interface/converting-design-into-webpage/README.md)
+2. [Create an interface for accepting a new to-do](./todo-user-interface/interface-for-new-to-do/README.md)
+3. [Create an interface for listing the todos](./todo-user-interface/interface-for-listing-to-dos/README.md)
+4. [Create an interface to delete a to-do](./todo-user-interface/interface-to-delete-to-do/README.md)
+5. [Milestone](./todo-user-interface/todo-interface-milestone/README.md)
+
 
 ## L9.  HTML forms to save and accept user inputs
 
