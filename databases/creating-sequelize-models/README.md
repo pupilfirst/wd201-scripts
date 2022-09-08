@@ -22,7 +22,7 @@ After a model is defined, it is available within `sequelize.models` by its model
 
 ```js
 //  TodoModel.js
-
+const { DataTypes } = require("sequelize");
 const { sequelize } = require("./connectDB.js");
 
 const Todo = sequelize.define(
