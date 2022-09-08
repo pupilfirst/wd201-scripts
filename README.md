@@ -85,13 +85,11 @@ This work is licensed under a
 6. [Using separate database for testing](./databases/separate-db/README.md)
 7. [Milestone](./databases/milestone/README.md)
 
-# Work in progress levels
-
 ## L6. Backend Web development with Express.js
 1. [Hello world with Express.js!](backend-dev-with-express/introduction-to-express/README.md)
 2. [Connect our PostgreSQL database to the Express.js application](backend-dev-with-express/connect-express-with-postgres/README.md)
 3. [Routes in Express.js](backend-dev-with-express/routes-in-express/README.md)
-4. Add two features: create a new to-do, and mark an existing to-do as completed (To be added)*
+4. [Add two features: create a new to-do, and mark an existing to-do as completed](./backend-dev-with-express/create-and-update-todo/README.md)
 5. [Add tests to Express.js application](./backend-dev-with-express/add-tests/README.md)
 6. Milestone (To be added)
 
@@ -101,7 +99,7 @@ This work is licensed under a
 3. [What is MVC?](./ejs-templating/mvc/README.md)
 4. [Heroku: deploy your application](./ejs-templating/deploy-application-to-heroku/README.md)
 5. [Use EJS templating to render to-do manager](./ejs-templating/ejs-templating-for-todo-manager/README.md)
-6. Milestone (To be added)
+6. Milestone (Moved to private repo)
 
 
 ## L8. Add User Interface for To-do Application
