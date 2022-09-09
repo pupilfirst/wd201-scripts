@@ -12,7 +12,7 @@ Let us write some JavaScript code to mock these steps. Since, these steps are as
 
 ```js
 // render.js
-const fetchUserDetais = (userID, next) => {
+const fetchUserDetails = (userID, next) => {
   console.log("Fetching user details");
 
   setTimeout(() => {
@@ -33,7 +33,7 @@ const render = (image) => {
   }, 1000);
 };
 
-fetchUserDetais("john", (imageURL) => {
+fetchUserDetails("john", (imageURL) => {
   downloadImage(imageURL, (imageData) => {
     render(imageData);
   });
@@ -57,7 +57,7 @@ Render image: Data from https://image.example.com/john
 Now, imagine, if you had some other functions like resizing the image, applying some trasnformation etc, then the sample code would look something like:
 
 ```js
-fetchUserDetais("john", (imageURL) => {
+fetchUserDetails("john", (imageURL) => {
   downloadImage(imageURL, (imageData) => {
     resizeImage(imageData, (resizedImage) => {
       transformImage(resizedImage, (transformedImage) => {
@@ -98,7 +98,7 @@ aPromise
 We can rewrite our code to use `Promise`.
 
 ```js
-const fetchUserDetais = (userID) => {
+const fetchUserDetails = (userID) => {
   console.log("Fetching user details");
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -124,7 +124,7 @@ const render = (image) => {
   });
 };
 
-fetchUserDetais("john")
+fetchUserDetails("john")
   .then((imageURL) => downloadImage(imageURL))
   .then((imageData) => render(imageData))
   .catch((err) => {
@@ -138,7 +138,7 @@ fetchUserDetais("john")
 We can further simplify the code to be:
 
 ```js
-fetchUserDetais("john")
+fetchUserDetails("john")
   .then(downloadImage)
   .then(render)
   .catch((err) => {
@@ -157,7 +157,7 @@ The keywords `async` and `await` were introduced in ECMAScript 2017. It is a syn
 
 Keyword `async` can only be used with a function declaration. It tells the JS runtime to wrap the function within a `Promise`. So a function marked as `async` would return a Promise and value would be returned when the promise is fulfilled.
 
-Keyword `await` can only be used with a `Promise`. It can only be used within a function which is marked as `async`. The `async` keyword tells the JS runtime to hold the program execution till the promise is resolved or rejected.
+Keyword `await` can only be used with a `Promise`. It can only be used within a function which is marked as `async`. The `await` keyword tells the JS runtime to hold the program execution till the promise is resolved or rejected.
 
 We can now rewrite our sample code to use async / await:
 
@@ -169,7 +169,7 @@ const time = async (ms) => {
     }, ms);
   });
 };
-const fetchUserDetais = async (userID) => {
+const fetchUserDetails = async (userID) => {
   console.log("Fetching user details");
   await time(1000);
   return `https://image.example.com/${userID}`;
@@ -188,7 +188,7 @@ const render = async (image) => {
 
 const run = async () => {
   try {
-    const userDetails = await fetchUserDetais("john");
+    const userDetails = await fetchUserDetails("john");
     const imageData = await downloadImage(userDetails);
     await render(imageData);
   } catch (err) {
