@@ -80,13 +80,37 @@ Promises were introduced in [ES6](https://www.w3schools.com/js/js_es6.asp) versi
 - fulfilled: meaning that the operation was completed successfully.
 - rejected: meaning that the operation failed.
 
-We can create a new `Promise` using the following syntax:
+We can create a new `Promise` using the following syntax.
 
 ```js
-const aPromise = new Promise((resolve, reject) => {});
+const aPromise = new Promise((resolve, reject) => {
+  //  ...
+});
 ```
 
-We can either `resolve` the promise to change it to `fulfilled` state or `reject` it to change the state to `rejected`. We can chain multiple promises to mimic synchronous behaviour using `then`:
+A promise should be either resolved or rejected to proceed further.
+
+The following promise will be resolved after a second.
+
+```js
+const aPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Some data");
+  }, 1000);
+});
+```
+
+The following promise will be rejected after a second.
+
+```js
+const anotherPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(new Error("Server was unreachable!"));
+  }, 1000);
+});
+```
+
+We can either `resolve` the promise to change it to `fulfilled` state or `reject` it to change the state to `rejected`. We can chain multiple promises to mimic synchronous behaviour using `then`.:
 
 ```js
 aPromise
@@ -204,7 +228,6 @@ We have marked functions as `async` and we had to write a helper funcion `time` 
 Also since our functions are `async`, we had to write a `run` function so that we can wait on the `async` functions using the `await` keyword.
 
 The code looks like a synchronous one and is much easier to read. Any errors that happen will get thrown and will be caught using the `try..catch` block.
-
 
 ## Further Reading
 
