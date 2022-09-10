@@ -120,6 +120,7 @@ const render = (image) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log(`Render image: ${image}`);
+      resolve();
     }, 1000);
   });
 };
