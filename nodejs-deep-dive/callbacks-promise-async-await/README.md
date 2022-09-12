@@ -54,7 +54,7 @@ Downloading image
 Render image: Data from https://image.example.com/john
 ```
 
-Now, imagine, if you had some other functions like resizing the image, applying some trasnformation etc, then the sample code would look something like:
+Now, imagine, if you had some other functions like resizing the image, applying some transformation etc, then the sample code would look something like:
 
 ```js
 fetchUserDetails("john", (imageURL) => {
@@ -131,7 +131,7 @@ const fetchUserDetails = (userID) => {
   });
 };
 
-const downloadImage = (imageURL, next) => {
+const downloadImage = (imageURL) => {
   console.log("Downloading image");
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -200,7 +200,7 @@ const fetchUserDetails = async (userID) => {
   return `https://image.example.com/${userID}`;
 };
 
-const downloadImage = async (imageURL, next) => {
+const downloadImage = async (imageURL) => {
   console.log("Downloading image");
   await time(1000);
   return `Data from ${imageURL}`;
