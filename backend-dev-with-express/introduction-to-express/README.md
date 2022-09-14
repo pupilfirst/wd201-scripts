@@ -1,8 +1,10 @@
-# Text
+# Script
 In this lesson, we will create an HTTP server using Express.js.
 
 Express.js is a fast and lightweight framework, used majorly for web application development. Express is built on top of Node.js. It is designed to develop websites, web apps, & API’s easily.
 With that being said, let's create our first ever Express application.
+
+From this lesson onwards, we will gradually build a todo-management application, where you will be able to add tasks with a due date, and once you finish the task, you will be able to mark it as completed. It's as simple as that. With  that being said, let's get started.
 
 ### Installing Express.js
 First, we will initialize node project using `npm init`.
