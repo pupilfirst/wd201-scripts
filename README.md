@@ -94,7 +94,7 @@ This work is licensed under a
 3. [Routes in Express.js](backend-dev-with-express/routes-in-express/README.md)
 4. [Add two features: create a new to-do, and mark an existing to-do as completed](./backend-dev-with-express/create-and-update-todo/README.md)
 5. [Add tests to Express.js application](./backend-dev-with-express/add-tests/README.md)
-6. Milestone (Moved to private repo)
+6. [Milestone](./backend-dev-with-express/milestone/README.md)
 
 ## L7. EJS Templating
 1. [Render dynamic data inside HTML with EJS templates](./ejs-templating/dynamic-html-with-ejs/README.md)
