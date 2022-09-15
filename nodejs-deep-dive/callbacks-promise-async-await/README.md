@@ -1,17 +1,35 @@
 ## Text
 
-In this lesson, we will learn about callback, promise, and async - await in JavaScript.
+In this lesson, we will learn about callbacks, promises, and async - await in JavaScript.
 
-Let us take an example where a user image is being displayed. To do that, we will have to:
+You already know how to read contents of a file. Because of the asynchronous nature of JavaScript, we had to pass a function which would get invoked once the file is opened and data is ready.
+
+Let us take another example where image of a user is being displayed. To do that, we will have to:
 
 1. Fetch user details.
 2. Download user image.
 3. Render the image.
 
-Let us write some JavaScript code to mock these steps. Since, these steps are asynchronous, to do one after the other, we have to pass the next step as a callback to the function. We will mimic the asynchronous nature using `setTimeout` here. Let's create a file `render.js`:
+Let us write some JavaScript code to mock these steps. Let's create a file `render.js`:
 
 ```js
 // render.js
+const fetchUserDetails = (userID) => {
+  console.log("Fetching user details");
+};
+
+const downloadImage = (imageURL) => {
+  console.log("Downloading image");
+};
+
+const render = (image) => {
+  console.log("Render image");
+};
+```
+Now, let's try to make it work. We will first fetch the user details for a user named john, and similar to the file reading example, we will pass a callback function which will have image URL of the user.
+
+
+```js
 const fetchUserDetails = (userID, next) => {
   console.log("Fetching user details");
 
