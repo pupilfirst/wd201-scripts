@@ -146,13 +146,12 @@ This work is licensed under a
 ### Cookies, sessions, and the user authentication workflow
 
 7. [Create a simple sign-in page which verifies the user's password]('./../user-authentication/signin-with-password-verification/README.md)
-8. What exactly is a cookie and why should you care?
-9. *Let us store the signed-in user's id in the session! (covered in user authentication using passport.js script)*
-10. *[Implement sign-out by resetting the user session](https://github.com/pupilfirst/wd201-scripts/pull/134/files) (Not merged yet)*
-11. A logged-in user should see and modify only their own to-dos and nobody else's
+8. [What exactly is a cookie and why should you care?](./user-authentication/why-cookies/README.md)
+9.  *[Implement sign-out by resetting the user session](https://github.com/pupilfirst/wd201-scripts/pull/134/files) (Not merged yet)*
+10. A logged-in user should see and modify only their own to-dos and nobody else's
 
 ### Flash messages and sequelize validations
 
-12. Showing one-off messages to users with connect-flash
-13. Ensure no blank to-dos are ever created, with Sequelize validations
-14. Milestone (To be added)
+11. [Showing one-off messages to users with connect-flash](./user-authentication/showing-messages-to-user/README.md)
+12. [Ensure no blank to-dos are ever created, with Sequelize validations](./user-authentication/prevent-blank-todo-with-sequelize-validation/README.md)
+13. Milestone (To be added)
