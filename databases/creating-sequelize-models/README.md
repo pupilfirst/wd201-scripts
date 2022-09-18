@@ -77,6 +77,7 @@ Todo.init(
 Todo.sync();
 module.exports = Todo;
 ```
+ We will use the second syntax to define our model.
 
 ### Adding rows
 
