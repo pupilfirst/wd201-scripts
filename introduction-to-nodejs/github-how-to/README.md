@@ -3,14 +3,14 @@ In this video, I'm going to show you, how to use the `git` command line interfac
 
 Before continuing, let me quickly mention why this course requires you to use git. Git is the de facto standard for version control in the software industry. Regardless of language you use in your work, you'll almost certainly be using git as your version control system. So it's pretty much necessary for every developer out there.
 
-In this lesson, we will simply play around with git, and start getting comfortable with it. 
+In this lesson, we will simply play around with git, and start getting comfortable with it.
 We will start the simple Node.js application we've created in the [Running our first program](../../introduction-to-nodejs/running-first-program/README.md) lesson.
 
-Let's go into the project folder, and try out the `git status` command. git will tell us that this isn't a git repository. So let's turn this folder that we just created _into_ a git repository by typing in the command `git init`. 
+Let's go into the project folder, and try out the `git status` command. git will tell us that this isn't a git repository. So let's turn this folder that we just created _into_ a git repository by typing in the command `git init`.
 This creates a hidden folder `.git` (`ls -al`). This folder is where git is going store its own information. Don't edit anything inside this `.git` folder unless you know what you're doing.
 
 Now if we try the `git status` command again, git tells us that we're on the branch `master`, but that there are no commits yet. You can think of commits as _changes_, and git tracks changes inside a repository, as a series of commits.
-git is also telling us that there's now two untracked file, the `package.json` and the `index.js`, and that we can add it with the `git add` command. So let's do that. 
+git is also telling us that there's now two untracked file, the `package.json` and the `index.js`, and that we can add it with the `git add` command. So let's do that.
 
 If we try `git status` again, it tells us that there is a change that is ready to be committed. So we can finally make our first commit.
 
@@ -41,5 +41,15 @@ For example, if I make a small change to the `index.js` file. I'll change the co
 Indeed, if I check the repository on Github, the update has showed up there.
 
 That was a quick demo of how to push code to Github. In this course, you're going to find many tasks that ask you submit your code as Github URLs. When that happens you'll want to push your code to a Github repo, and then share the URL to that repository or a folder within the repo, with us as a part of your submission.
+
+### Ignoring files that doesn't need to be versioned
+
+In our projects, we will have some folders or files that we don't want to be tracked or versioned. We can do this by creating a `.gitignore` file and add the path to folder or file that we don't need to be tracked.
+
+For example, `node_modules` folder is usually excluded from git repository. To do that we will have the following content in `.gitignore` file.
+
+```
+node_modules
+```
 
 That's it for now. See you in the next lesson!
