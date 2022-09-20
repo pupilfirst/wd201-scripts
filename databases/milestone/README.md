@@ -49,7 +49,7 @@ Due Later
 27. [ ] Call Acme Corp. 2022-07-14
 ```
 
-- The output format is the same as the To-do assignment in the previous level, except that this time you also have to print the `id` of the row as the first column.
+- The output format is the same as the To-do assignment in the previous level, except that this time you also have to print the `id` of the row as the first column. Make sure to remove any leading or trailing spaces while printing the todo item.
 
 - You should have inserted some sample data in the todos table through addTodo.js before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
 
