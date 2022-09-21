@@ -5,7 +5,7 @@ For this milestone target, you must update your To-do Manager **Node.js** reposi
 ## Requirements
 
 1. Introduce `ejs` in the existing application and render an Index page.
-2. Render **Header** content using view templates on the Index page.
+2. Render **Header** content using view templates on the Index page with a `h1` tag containing text "This is my Todo Application".
 3. Deploy your application to Heroku.
 
 All of the above has already been done in the tutorials, so you'll be able to implement them by simply following them.
@@ -14,6 +14,6 @@ All of the above has already been done in the tutorials, so you'll be able to im
 
 There are few additional requirements that are not covered in the tutorials:
 
-1. Display the already created **Todos** in the index page using a view template with JavaScript.
-2. Add a **Footer** section as a view template and include it on the Index page.
+1. Display the already created **Todos** in the index page using a view template `todos.ejs` with JavaScript. 
+2. Add a **Footer** section as a view template and include it on the Index page. This should use a `h1` tag containing text "Built with Node.js".
 3. Finally, you should deploy this application to Heroku and submit the application URL along with the GitHub source URL.
