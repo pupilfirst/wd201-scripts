@@ -12,7 +12,7 @@ All of the above has already been done in the tutorials, so you'll be able to im
 
 ## New requirements
 
-There are two additional requirements that are not covered in the tutorials:
+There are few additional requirements that are not covered in the tutorials:
 
 1. Display the already created **Todos** in the index page using a view template with JavaScript.
 2. Add a **Footer** section as a view template and include it on the Index page.
