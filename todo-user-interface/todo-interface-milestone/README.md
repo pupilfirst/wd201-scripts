@@ -3,8 +3,8 @@
 ## Problem Description
 To complete this milestone, you have to make two changes to the To-Do manager page, as per the design given. Update the `views/index.ejs` file to:
 
-1. Show the number of Todo's for every category (Due Today, Due Tomorrow, Remaining), just after the heading.
-2. And for remaining To-dos, show the due date just after the To-Do description.
+1. Show the number of Todo's for every category (Overdue, Due Today, Due Later), just after the heading.
+2. And for To-dos which are in the **Due Later** category, show the due date just after the To-Do description.
    
 ## Submission Requirements
 1. Commit the changes and push the code to GitHub.
