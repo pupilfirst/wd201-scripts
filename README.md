@@ -101,8 +101,7 @@ This work is licensed under a
 2. [Using view templates](./ejs-templating/view-templates/README.md)
 3. [What is MVC?](./ejs-templating/mvc/README.md)
 4. [Heroku: deploy your application](./ejs-templating/deploy-application-to-heroku/README.md)
-5. [Use EJS templating to render to-do manager](./ejs-templating/ejs-templating-for-todo-manager/README.md)
-6. Milestone
+5. [Milestone](./ejs-templating/milestone/README.md)
 
 
 ## L8. Add User Interface for To-do Application
@@ -154,4 +153,4 @@ This work is licensed under a
 
 11. [Showing one-off messages to users with connect-flash](./user-authentication/showing-messages-to-user/README.md)
 12. [Ensure no blank to-dos are ever created, with Sequelize validations](./user-authentication/prevent-blank-todo-with-sequelize-validation/README.md)
-13. Milestone (To be added)
+13. [Milestone](./user-authentication/milestone/README.md)
