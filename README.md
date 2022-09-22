@@ -62,10 +62,11 @@ This work is licensed under a
 ### Key Concepts
 1. [What is an event loop?](./nodejs-deep-dive/what-is-event-loop/README.md)
 2. [What is Closure in JavaScript?](./nodejs-deep-dive/closures-in-js/README.md)
+3. [Callbacks, Promises, and async - await](./nodejs-deep-dive/callbacks-promise-async-await/README.md)
 
 ### Apply closure
-3. [Let’s write a  to-do application](./nodejs-deep-dive/todo-using-closure/README.md)
-4. [Milestone](./nodejs-deep-dive/milestone/README.md)
+4. [Let’s write a  to-do application](./nodejs-deep-dive/todo-using-closure/README.md)
+5. [Milestone](./nodejs-deep-dive/milestone/README.md)
 
 ## L4. Testing
 1. [What is testing, and why do we need it?](./testing/why-need-testing/README.md)
@@ -114,7 +115,7 @@ This work is licensed under a
 
 ## L9.  HTML forms to save and accept user inputs
 
-### HTML Forms 
+### HTML Forms
 1. [Adding a new to-do with the help of <form>](./html-forms/add-new-todo/README.md)
 2. [Updating a to-do with help of <form>](./html-forms/updating-todo/README.md)
 3. [Deleting a to-do with help of <form>](./html-forms/delete-todo/README.md)
@@ -123,14 +124,14 @@ This work is licensed under a
 4. [What is Cross Site Request Forgery (CSRF) and why should we care?](./html-forms/why-csrf/README.md)
 5. [Use csurf package in express.js application](./html-forms/use-csurf/README.md)
 
-### API 
+### API
 6. What is an API
 
 7. [Milestone](./html-forms/milestone/README.md)
 
 ## L10. User Authentication and final wrap-up
 
-### Sequelize associations 
+### Sequelize associations
 
 1. [Introduction](./user-authentication/introduction/README.md)
 2. [Create the `users` table with a sequelize migration]('./../user-authentication/create-users-table-with-sequelize-migration/README.md)
