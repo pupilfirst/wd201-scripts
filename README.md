@@ -123,11 +123,9 @@ This work is licensed under a
 ### CSRF token
 4. [What is Cross Site Request Forgery (CSRF) and why should we care?](./html-forms/why-csrf/README.md)
 5. [Use csurf package in express.js application](./html-forms/use-csurf/README.md)
-
-### API
-6. What is an API
-
-7. [Milestone](./html-forms/milestone/README.md)
+6. [What are APIs](./html-forms/what-are-apis/README.md)
+7. [Send JSON or HTML response based on request headers](./html-forms/html-or-json-response/README.md)
+8. [Milestone](./html-forms/milestone/README.md)
 
 ## L10. User Authentication and final wrap-up
 
