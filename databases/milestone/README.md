@@ -8,22 +8,26 @@
 
 To complete this milestone, you have to make the following 3 programs work: `listTodos.js`, `addTodo.js`, and `completeTodo.js`.
 
-The exact code for all three of these files will be provided in the following sections. The only thing you need to do is to fill in the todo.js file (the sequelize model) with appropriate methods, so that these three files work correctly.
+The exact code for all three of these files will be provided in the following sections. You need to fill in the `models/todo.js` file (the sequelize model) with appropriate methods, so that these three files work correctly.
 
 ### 1. listTodos.js
 
-Here is the code template for `listTodos.rb`:
+Here is the code template for `listTodos.js`:
 
 ```js
 //  listTodos.js
-const { connect } = require("./connectDB.js");
-const Todo = require("./Todo.js");
-connect()
-  .then(() => {
-    return Todo.showList();
-  })
-  .then(() => {})
-  .catch((err) => console.error(err));
+const db = require("./models/index");
+
+const listTodo = async () => {
+  try {
+    await db.Todo.showList();
+  } catch (error) {
+    console.error(error);
+  }
+};
+(async () => {
+  await listTodo();
+})();
 ```
 
 When running this program from the command line, it should print to-dos from the database in the following format:
@@ -45,26 +49,77 @@ Due Later
 27. [ ] Call Acme Corp. 2022-07-14
 ```
 
-- The output format is the same as the To-do assignment in the previous level, except that this time you also have to print the `id` of the row as the first column.
+- The output format is the same as the To-do assignment in the previous level, except that this time you also have to print the `id` of the row as the first column. Make sure to remove any leading or trailing spaces while printing the todo item.
 
-- You should have created connectDB.js, as well as inserted some sample data in the todos table through createItems.js before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
+- You should have inserted some sample data in the todos table through addTodo.js before attempting this. All of this is explained in the previous sections, so make sure you've followed them thoroughly.
 
-- To solve this problem, you need to have a todo.js file which will define the Sequelize model. In todo.js, define the class method `showList` which will print the list of to-dos as per the format given above. You can use the following template to get started:
+- To solve this problem, you need to have a `models/todo.js` file which will define the Sequelize model. In `todo.js`, define the class (static) method `showList` which will print the list of to-dos as per the format given above. You can use the following template to get started:
 
 ```js
-Todo.showList = async function () {
-  console.log("My Todo list \n");
+// models/todo.js
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Todo extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static async addTask(params) {
+      return await Todo.create(params);
+    }
+    static async showList() {
+      console.log("My Todo list \n");
 
-  console.log("Overdue");
-  // FILL IN HERE
-  console.log("\n");
+      console.log("Overdue");
+      // FILL IN HERE
+      console.log("\n");
 
-  console.log("Due Today");
-  // FILL IN HERE
-  console.log("\n");
+      console.log("Due Today");
+      // FILL IN HERE
+      console.log("\n");
 
-  console.log("Due Later");
-  // FILL IN HERE
+      console.log("Due Later");
+      // FILL IN HERE
+    }
+
+    static async overdue() {
+      // FILL IN HERE TO RETURN OVERDUE ITEMS
+    }
+
+    static async dueToday() {
+      // FILL IN HERE TO RETURN ITEMS DUE tODAY
+    }
+
+    static async dueLater() {
+      // FILL IN HERE TO RETURN ITEMS DUE LATER
+    }
+
+    static async markAsComplete(id) {
+      // FILL IN HERE TO MARK AN ITEM AS COMPLETE
+
+    }
+
+    static associate(models) {
+      // define association here
+    }
+    displayableString() {
+      let checkbox = this.completed ? "[x]" : "[ ]";
+      return `${this.id}. ${checkbox} ${this.title} ${this.dueDate}`;
+    }
+  }
+  Todo.init({
+    title: DataTypes.STRING,
+    dueDate: DataTypes.DATEONLY,
+    completed: DataTypes.BOOLEAN
+  }, {
+    sequelize,
+    modelName: 'Todo',
+  });
+  return Todo;
 };
 ```
 
@@ -74,35 +129,42 @@ Here is the code template for `addTodo.js`:
 
 ```js
 // addTodo.js
-const readline = require("readline");
+var argv = require('minimist')(process.argv.slice(2));
+const db = require("./models/index")
 
-const Todo = require("./Todo.js");
+const createTodo = async (params) => {
+  try {
+    await db.Todo.addTask(params);
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+const getJSDate = (days) => {
+  if (!Number.isInteger(days)) {
+    throw new Error("Need to pass an integer as days");
+  }
+  const today = new Date();
+  const oneDay = 60 * 60 * 24 * 1000;
+  return new Date(today.getTime() + days * oneDay)
+}
+(async () => {
+  const { title, dueInDays } = argv;
+  if (!title || dueInDays === undefined) {
+    throw new Error("title and dueInDays are required. \nSample command: node addTodo.js --title=\"Buy milk\" --dueInDays=-2 ")
+  }
+  await createTodo({ title, dueDate: getJSDate(dueInDays), completed: false })
+  await db.Todo.showList();
+})();
 
-rl.question("todo text: ", (todoText) => {
-  rl.question(
-    "How many days from now is it due? (give an integer value) ",
-    (days) => {
-      const daysInt = parseInt(days.trim());
-      rl.close();
-      Todo.addTask({ title: todoText, days: daysInt }).then((todo) => {
-        console.log(`New todo created with id ${todo.id}`);
-        Todo.showList();
-      });
-    }
-  );
-});
 ```
 
-When running this program from the command line, it should ask for details of a new to-do, save it to the database, and print the new list of to-dos.
+When running this program from the command line, it should accept title, due in days as command line argument for details of a new to-do, save it to the database, and print the new list of to-dos. You can add a todo using the command:
 
-- To solve this problem, you should implement the class method `addTask` in the `Todo` model. It will take an object as parameter, containing `dueInDays` and `title`.
-
-- Note that `dueInDays` is not a date, but an integer. It is like saying "this task will be due in 3 days". So, when implementing `addTask`, you should compute the date before saving it to the database.
+```sh
+node addTodo.js --title="hello there" --dueInDays=2
+```
+- Note that `dueInDays` is not a date, but an integer. It is like saying "this task will be due in 3 days".
 
 ### 3. completeTodo.js
 
@@ -110,37 +172,32 @@ The code for this file is as follows:
 
 ```js
 // completeTodo.js
-const readline = require("readline");
+var argv = require('minimist')(process.argv.slice(2));
+const db = require("./models/index");
+const markAsComplete = async (id) => {
+  try {
+    await db.Todo.markAsComplete(id);
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-const { connect } = require("./connectDB.js");
-const Todo = require("./Todo.js");
+(async () => {
+  const { id } = argv;
+  if(!id) {
+    throw new Error("Need to pass an id");
+  }
+  if(!Number.isInteger(id)) {
+    throw new Error("The id needs to be an integer")
+  }
+  await markAsComplete(id);
+  await db.Todo.showList();
+})();
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-connect()
-  .then(() => {
-    return Todo.showList();
-  })
-  .then(() => {
-    rl.question(
-      "Which todo do you want to mark as complete? (Enter id): ",
-      async (todoID) => {
-        rl.close();
-        const id = parseInt(todoID.trim());
-        await Todo.markAsComplete(id);
-        await Todo.showList();
-      }
-    );
-  })
-  .catch((err) => console.error(err))
-  .finally(() => {});
 ```
 
-- Implement class method `markAsComplete` which takes a To-do ID, and sets its `complete` to `true`.
+- Implement a class method `markAsComplete` on `models/todo.js` which takes a To-do ID, and sets its `completed` attribute  to `true`. The `id` should be accepted as a commandline argument.
 
 ## Submission Guidelines
 
-Please attach a link to your GitHub repo where the three files are present. The repo would also have files `connectDB.js` and `todo.js`. Please ensure that the files are in the root of the repository and not in any directory, and the submitted link is of the repository and not of any branch or directory.
+Please attach a link to your GitHub repo where the these files are present. The repo would also have files generated by the sequelize-cli. Please ensure that the files are in the root of the repository and not in any directory, and the submitted link is of the repository and not of any branch or directory.

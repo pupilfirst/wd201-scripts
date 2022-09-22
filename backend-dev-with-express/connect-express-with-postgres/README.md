@@ -16,87 +16,51 @@ npm install pg --save
 ````
 Next, we will establish the connection between Postgres and our Express server. So, open the project in VS Code, it's time to write some code.
 
+### Installing Sequelize-cli
+`Sequelize` comes with a beautiful command line interface or CLI, which makes working with database super easy. To install `sequelize-cli`, run the following command:
+```sh
+npm install sequelize-cli --save-dev
+```
+
+Now, we can make use of this package to generate a folder structure to keep our database connection configurations, models and migrations.
+
+```sh
+npx sequelize-cli init
+```
+
+This will create folders like:
+
+- `config` - which holds database connection parameters like username, db name, host, password.
+- `migrations` - which contains state or alterations made to the tables over time.
+- `models`- representation of tables that are being used in the project.
+- `seeders` - initial data that can be populated to the database.
+
 ### Configuring the database connection parameters
-First, create a new folder named `src` in the root directory. Inside `src`, create a subfolder `db`, and there create a new file `connection.js`.
-In  this file, we will open the connection steam between Sequelize and PostgreSQL server.
-```js
-const Sequelize = require("sequelize");
-
-const sequelize = new Sequelize("todo-app", "db-username", "db-password", {
-  host: "127.0.0.1",
-  dialect: "postgres"
-});
-
-sequelize.authenticate().then(() => {
-  console.log("Successfully connected to database!");
-}).catch((err) => {
-  console.log(err);
-});
-
-module.exports = sequelize;
-global.sequelize = sequelize;
-```
-Now, let's understand the above snippet, line by line.
-```js
-const Sequelize = require("sequelize");
-```
-Here, this line requires the **Sequelize** module that was installed via NPM.
-
-Next,
-```js
-const sequelize = new Sequelize("todo-app", "db-username", "db-password", {
-  host: "127.0.0.1",
-  dialect: "postgres"
-});
-```
-In these lines, we are providing a few key information to Sequelize about the PostgreSQL database. This includes, **database name** (*todo-app* in this case), *database username* and *password*, *host* and *dialect*. In dialect, we are providing `postgres` as we are working with PostgreSQL. Remember, using Sequelize we can connect with other database services as well, like MySQL, SQLite etc.
-
-Next,
-```js
-sequelize.authenticate().then(() => {
-  console.log("Connection with PostgreSQL has been established successfully.");
-}).catch((error) => {
-  console.error('Unable to connect to the database:', error);
-});
-```
-Here, using the `sequelize.authenticate()` function, we are checking if the connection is OK or not.
-
-After that,
-```js
-module.exports = sequelize;
-global.sequelize = sequelize;
-```
-Here, we are exporting the connection instance and making it globally accessible. This means, we can access the Sequelize instance from any module on our environment or application, without import.
-
-### Connecting to database
-Now, inside the `index.js` file, we just have to `require` the connection module to connect to the database and expose the connection instance globally.
-```js
-const express = require('express');
-const app = express();
-
-// Adding database connection to the app
-require("./src/db/connection");
-```
-
-Next, run the code using the following command.
-````
-node index.js
-````
-But, since we haven’t created the database in PostgreSQL, it will return the following error.
-````
+First, we have to edit the `config/config.json` file to have the correct database credentials.
+```json
 {
-  name: 'SequelizeConnectionError',
-  message: 'database "todo-app" does not exist'
+  "development": {
+    "username": "your-postgresql-username",
+    "password": "your-postgresql-password",
+    "database": "todo-db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
 }
-````
-To solve this, open your PostgreSQL Admin or PostgreSQL Command Line Interface and create a database named `todo-app`.
+```
+Here, we've defined the database credentials for `development` environment. The same file can be updated for `staging` and `production` environment as well. The default  value of `dialect` was set to `mysql`, which we've changed to `postgres` as we will be working with PostgreSQL.
 
-Once done, run the same code again and this time you should see the message as shown below.
-````
-Executing (default): SELECT 1+1 AS result
-Connection with PostgreSQL has been established successfully.
-````
+Now to check if these credentials are correct and to create the database named `todo-db` in our PostgreSQL database server, we will run the follwoing command:
+```sh
+npx sequelize-cli db:create
 
-That's great! You've successfully established a connection between your Express application and the PostgreSQL database. See you in the next lesson.
+Sequelize CLI [Node: 14.17.0, CLI: 6.4.1, ORM: 6.21.4]
 
+Loaded configuration file "config/config.json".
+Using environment "development".
+Database **todo-db** created.
+```
+
+Our database got created. That's great!
+See you in the next lesson.
 

@@ -15,7 +15,7 @@ So, let's get started.
 
 First, we will define the `todoList` function.
 ```js
-function todoList() {
+const todoList = () =>
   all = []
 ```
 Here, we will keep the list of all todos inside the `all` array.
@@ -23,24 +23,24 @@ A Todo, would have three properties: title, dueDate, completed (of type boolean)
 
 Next, let's define the` add()` function.
 ```js
-function todoList() {
+const todoList = () => {
   all = []
-  function add(todoItem) {
-    all.push(todoItem)
+  const add = (todoTask) => {
+    all.push(todoTask)
     console.log(all)
   }
 ```
-The `add()` function takes a `todoItem` as argument, and pushes into the `all` array.
+The `add()` function takes a `todoTask` as argument, and pushes into the `all` array.
 
 Similarly, we will define the `markAsComplete()` function.
 ```js
-function todoList() {
+const todoList = () => {
   all = []
-  function add(todoItem) {
-    all.push(todoItem)
+  const add = (todoTask) => {
+    all.push(todoTask)
     console.log(all)
   }
-  function markAsComplete(index) {
+  const markAsComplete = (index) => {
     all[index].completed = true
     console.log(all)
   }
@@ -49,13 +49,13 @@ Here, the `markAsComplete()` function takes an argument called `index`. It updat
 
 To complete the `todoList` function, we will return the `all` array and `add`, `markAsComplete` functions.
 ```js
-function todoList() {
+const todoList = () => {
   all = []
-  function add(todoItem) {
-    all.push(todoItem)
+  const add = (todoTask) => {
+    all.push(todoTask)
     console.log(all)
   }
-  function markAsComplete(index) {
+  const markAsComplete = (index) => {
     all[index].completed = true
     console.log(all)
   }

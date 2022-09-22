@@ -1,8 +1,10 @@
-# Text
+# Script
 In this lesson, we will create an HTTP server using Express.js.
 
 Express.js is a fast and lightweight framework, used majorly for web application development. Express is built on top of Node.js. It is designed to develop websites, web apps, & API’s easily.
 With that being said, let's create our first ever Express application.
+
+From this lesson onwards, we will gradually build a todo-management application, where you will be able to add tasks with a due date, and once you finish the task, you will be able to mark it as completed. It's as simple as that. With  that being said, let's get started.
 
 ### Installing Express.js
 First, we will initialize node project using `npm init`.
@@ -56,7 +58,7 @@ app.get('/', function (request, response) {
   response.send('Hello World')
 })
 ```
-This part is very important. Here, using the app.get() method, Express creates a route handler to listen for GET requests from a client. The first argument in this function is the route path. In this case, we’re listening for GET requests on `localhost:3000/`. If we wanted to listen for a POST request, then we would use `app.post()`.
+This part is very important. Here, using the `app.get()` method, Express creates a route handler to listen for GET requests from a client. The first argument in this function is the route path. In this case, we’re listening for GET requests on `localhost:3000/`. If we wanted to listen for a POST request, then we would use `app.post()`.
 
 The second argument is a callback function that takes a `request` object and a `response` object. The *request* object contains information about the request that came from the client, for example: request headers, query parameters, request body, etc. The *response* object contains information that we want to send as a response back to the client.
 

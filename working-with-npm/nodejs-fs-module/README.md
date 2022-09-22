@@ -58,7 +58,7 @@ Here we can use the `writeFile` function to write a new file to the file system,
 fs.writeFile(
   "sample.txt",
   "Hello World. Welcome to Node.js File System module.",
-  function (err) {
+  (err) => {
     if (err) throw err;
     console.log("File created!");
   }
@@ -76,7 +76,7 @@ We will try to read the content of the file we created earlier using Node.js `fs
 We will now use the `readFile` function to read the above file from the file system. First, we will read the file and use the `toString()` function to convert the data received to a string to display the same in the console.
 
 ```js
-fs.readFile("sample.txt", function (err, data) {
+fs.readFile("sample.txt", (err, data) => {
   if (err) throw err;
   console.log(data.toString());
 });
@@ -91,7 +91,7 @@ We can use other built-in functions to append content to the file created, renam
 We can use `appendFile()` to add more content to the file already created.
 
 ```js
-fs.appendFile("sample.txt", " This is my updated content", function (err) {
+fs.appendFile("sample.txt", " This is my updated content", (err) => {
   if (err) throw err;
   console.log("File updated!");
 });
@@ -100,7 +100,7 @@ fs.appendFile("sample.txt", " This is my updated content", function (err) {
 We can use `rename()` to rename an existing file.
 
 ```js
-fs.rename("sample.txt", "test.txt", function (err) {
+fs.rename("sample.txt", "test.txt", (err) => {
   if (err) throw err;
   console.log("File name updated!");
 });
@@ -109,7 +109,7 @@ fs.rename("sample.txt", "test.txt", function (err) {
 We can use the `unlink()` to delete the files in the file system.
 
 ```js
-fs.unlink("test.txt", function (err) {
+fs.unlink("test.txt", (err) => {
   if (err) throw err;
   console.log("File test.txt deleted successfully!");
 });

@@ -20,6 +20,8 @@ Memory benefits where you don't have to load large amounts of data into memory b
 
 Time benefits where it takes limited time to begin processing data because you can start it as soon as you start receiving the data, instead of waiting for the entire data to be available.
 
+# Script
+
 ## Reading a File using `stream`
 
 We have already learned about using fs to read from a file in Node.js. Let us try using streams to do the same operation.
@@ -68,5 +70,7 @@ Rather than waiting for the file to be read entirely, the above function starts 
 The above code uses the `pipe()` function which is used to get the data from a source, in our case the text file and pipe (guide) it to the destination, in this case, the HTTP location `localhost:3000`.
 
 Most Node.js core modules provide stream handling capabilities, as this provides a lot of advantages. There are multiple types of `streams` available for different functions, and a combination of them can be used to solve different problems in your applications.
+
+# Text
 
 You can learn more about `streams` [here](https://nodejs.org/docs/latest-v16.x/api/stream.html)
