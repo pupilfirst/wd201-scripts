@@ -147,7 +147,7 @@ This work is licensed under a
 
 7. [Create a simple sign-in page which verifies the user's password]('./../user-authentication/signin-with-password-verification/README.md)
 8. [What exactly is a cookie and why should you care?](./user-authentication/why-cookies/README.md)
-9.  *[Implement sign-out by resetting the user session](https://github.com/pupilfirst/wd201-scripts/pull/134/files) (Not merged yet)*
+9. [Implement sign-out by resetting the user session](https://github.com/pupilfirst/wd201-scripts/pull/134/files)
 10. A logged-in user should see and modify only their own to-dos and nobody else's
 
 ### Flash messages and sequelize validations
