@@ -171,7 +171,7 @@ fetchUserDetails("john")
   .then((imageURL) => downloadImage(imageURL))
   .then((imageData) => render(imageData))
   .catch((err) => {
-    console.err(err);
+    console.error(err);
   })
   .finally(() => {
     console.log("Done!");
@@ -185,7 +185,7 @@ fetchUserDetails("john")
   .then(downloadImage)
   .then(render)
   .catch((err) => {
-    console.err(err);
+    console.error(err);
   })
   .finally(() => {
     console.log("Done!");
@@ -246,6 +246,16 @@ We have marked functions as `async` and we had to write a helper funcion `time` 
 Also since our functions are `async`, we had to write a `run` function so that we can wait on the `async` functions using the `await` keyword.
 
 The code looks like a synchronous one and is much easier to read. Any errors that happen will get thrown and will be caught using the `try..catch` block.
+
+## Text
+
+The `setTimeout()` method calls a function after a number of milliseconds. Syntax for `setTimeout` is:
+
+```js
+setTimeout(() => {
+  // callback function
+}, milliseconds);
+```
 
 ## Further Reading
 
