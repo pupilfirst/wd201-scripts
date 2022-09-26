@@ -112,9 +112,9 @@ This work is licensed under a
 ## L9.  HTML forms to save and accept user inputs
 
 ### HTML Forms
-1. [Adding a new to-do with the help of <form>](./html-forms/add-new-todo/README.md)
-2. [Updating a to-do with help of <form>](./html-forms/updating-todo/README.md)
-3. [Deleting a to-do with help of <form>](./html-forms/delete-todo/README.md)
+1. [Adding a new to-do with the help of form](./html-forms/add-new-todo/README.md)
+2. [Updating a to-do with help of form](./html-forms/updating-todo/README.md)
+3. [Deleting a to-do with help of form](./html-forms/delete-todo/README.md)
 
 ### CSRF token
 4. [What is Cross Site Request Forgery (CSRF) and why should we care?](./html-forms/why-csrf/README.md)
