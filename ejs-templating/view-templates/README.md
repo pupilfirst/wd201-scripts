@@ -25,10 +25,16 @@ Next, let us add a link to this CSS file inside the `views/index.ejs` file. Incl
 <link rel="stylesheet" href="/css/styles.css" />
 ```
 
-To load the files created in the **public** folder, add the below code to the `index.js` file.
+To load the files created in the **public** folder, add the below code to the `app.js` file.
 
 ```js
 app.use(express.static(path.join(__dirname, "public")));
+```
+
+Now, at this point we may get an error in console, like: `ReferenceError: path is not defined`. So solve this, we have to require the `path` module in the `app.js` file:
+
+```js
+const path = require('path');
 ```
 
 If we open `localhost:3000` now we can see that the styling we created is applied to the page.
@@ -62,12 +68,14 @@ In our case, let us create a Header for the Todo application with the text "This
 
 Let us create a new file called `header.ejs` in our application within the `views` folder.
 
-Next, let's remove the `h1` element from the index.ejs to this newly created file.
+Now, let's move the `h1` element from the `index.ejs` file, to this newly created file.
 
-To include the content from the `header.ejs` we use the following syntax.
+Next, to include the content from the `header.ejs`, add the following line inside the `<body>` of `index.ejs` file.
 
 ```js
-<%- include('header.ejs') %>
+  <body>
+    <%- include('header.ejs') %>
+  </body>
 ```
 
 The file path provided inside the _include_ command is rendered inside the location of the above tag. In our case, we use it where the `h1` tag was earlier, so that the content from `header.ejs` is rendered there.
