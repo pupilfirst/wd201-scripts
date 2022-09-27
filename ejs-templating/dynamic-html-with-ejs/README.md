@@ -87,7 +87,7 @@ Create a new folder called **views** and add an `index.ejs` file inside it with 
 
 To render this file, we need to add some code in our `express` app.
 
-First, we have to tell our express application, that we will be using EJS as template engine. We can specify the render engine, by adding the following code in the `index.js` file.
+First, we have to tell our express application, that we will be using EJS as template engine. We can specify the render engine, by adding the following code in the `app.js` file.
 
 ```js
 app.set("view engine", "ejs");
@@ -95,7 +95,7 @@ app.set("view engine", "ejs");
 
 And to render the `index.ejs`, we need to use the `render` method of the `response` object and pass the name of the ejs file without providing the `.ejs` extension.
 
-Express will automatically search for the file with the `.ejs` extension inside the default views directory.
+Express will automatically search for the file with the `.ejs` extension inside the default views directory. So, we will add a root route to render our `index.ejs` file.
 
 ```js
 app.get("/", (request, response) => {
