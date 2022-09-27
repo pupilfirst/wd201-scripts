@@ -117,22 +117,30 @@ const todoList = () => {
 
   const overdue = () => {
     return all.filter(
-      (item) => item.dueDate < new Date().toLocaleDateString("en-CA")
+      (item) =>
+        item.dueDate < new Date().toLocaleDateString("en-CA") && !item.completed
     );
   };
 
   const dueToday = () => {
     return all.filter(
-      (item) => item.dueDate === new Date().toLocaleDateString("en-CA")
+      (item) =>
+        item.dueDate === new Date().toLocaleDateString("en-CA") &&
+        !item.completed
     );
   };
 
   const dueLater = () => {
     return all.filter(
-      (item) => item.dueDate > new Date().toLocaleDateString("en-CA")
+      (item) =>
+        item.dueDate > new Date().toLocaleDateString("en-CA") && !item.completed
     );
   };
-  return { all, add, markAsComplete, overdue, dueToday, dueLater };
+
+  const completed = () => {
+    return all.filter((item) => item.completed);
+  };
+  return { all, add, markAsComplete, overdue, dueToday, dueLater, completed };
 };
 
 module.exports = todoList;
