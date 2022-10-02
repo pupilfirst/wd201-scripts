@@ -61,7 +61,7 @@ const fs = require("fs");
 Now, let's start reading the file from the local folder. We will use the `readFile` method we learned about earlier.
 
 ```js
-fs.readFile("home.html", function (err, home) {
+fs.readFile("home.html", (err, home) => {
   console.log(home.toString());
 });
 ```
@@ -69,12 +69,12 @@ fs.readFile("home.html", function (err, home) {
 The `readFile` function in the above command provides you with the content of the file `home.html`. Next, we will use the HTTP server to render the above content in a port of our choice, here the `localhost:3000`.
 
 ```js
-fs.readFile("home.html", function (err, home) {
+fs.readFile("home.html", (err, home) => {
   if (err) {
     throw err;
   }
   http
-    .createServer(function (request, response) {
+    .createServer((request, response) => {
       response.writeHeader(200, { "Content-Type": "text/html" });
       response.write(home);
       response.end();
@@ -102,14 +102,14 @@ const fs = require("fs");
 let homeContent = "";
 let projectContent = "";
 
-fs.readFile("home.html", function (err, home) {
+fs.readFile("home.html", (err, home) => {
   if (err) {
     throw err;
   }
   homeContent = home;
 });
 
-fs.readFile("project.html", function (err, project) {
+fs.readFile("project.html", (err, project) => {
   if (err) {
     throw err;
   }
@@ -121,7 +121,7 @@ Now we will add our routes to the HTTP server function. Add the below code after
 
 ```js
 http
-  .createServer(function (request, response) {
+  .createServer((request, response) => {
     let url = request.url;
     response.writeHeader(200, { "Content-Type": "text/html" });
     switch (url) {

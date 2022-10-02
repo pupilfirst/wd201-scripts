@@ -53,7 +53,7 @@ Do not change the “DATABASE_URL” parameter.
 
 8. Next we will add a Heroku config variable to signal that we are in the Production environment and not the local.
 ```
-heroku config:set NODE_ENV=production
+heroku config:set NODE_ENV=production --app <application-name>
 ```
 
 9. Let's push all these changes to Git and Heroku. Run the following commands.
@@ -66,7 +66,7 @@ git push heroku main // To push to Heroku
 
 10. At last, we’ll need to migrate our database to Heroku so our database shows up properly for the application. Let's run this command in the terminal.
 ```
-heroku run sequelize db:migrate --env production --app <application-name>
+heroku run npx sequelize-cli db:migrate --env production --app <application-name>
 ```
 Make sure to replace `<application-name>` with your application's name.
 

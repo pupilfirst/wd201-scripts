@@ -1,7 +1,7 @@
 # Text
 
 ## Problem Description
-To complete this milestone, you have to make two changes to the To-Do manager HTML page, as per the design given.
+To complete this milestone, you have to make two changes to the To-Do manager page, as per the design given. Update the `views/index.ejs` file to:
 
 1. Show the number of Todo's for every category (Overdue, Due Today, Due Later), just after the heading.
 2. Create a EJS partial named `todos.ejs` inside the `views` folder, and move the UI for listing Todos to that file.

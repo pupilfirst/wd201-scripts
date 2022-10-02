@@ -1,6 +1,6 @@
 ## Script
 
-In this lesson, we will add a `pre-commit` hook to run the tests and linting automatically before each commit. Linting is the process of checking for anti patterns in our code. We have configured `ESLint` in our development setup to do this for us.
+In this lesson, we will add a `pre-commit` hook to run the tests  automatically before each commit.
 
 We will run these tools automatically with the help of a package called `husky`.
 
@@ -51,7 +51,9 @@ We can see that the tests are automatically executed before the changes are comm
 
 > Action: Highlight the test result showing up in the terminal.
 
-Next, we will add automatic code linting checks. We do that with the help of a package called `lint-staged`.
+In this lesson, we will learn to run the tools like ESLint and prettier as pre commit hooks. In software development, it is a usual for a project to have a set of rules or conventions. It can be a rule on how the files should be formatted or prevent a bad coding pattern.
+
+We already have pre-commit hook set up with the help of husky. We will now use a package called `lint-staged` to run ESLint and Prettier in the pre-commit hook.
 
 > Action: Open https://www.npmjs.com/package/lint-staged in browser.
 
@@ -136,27 +138,7 @@ Next, we will edit the pre-commit hook configuration to run lint-staged as well.
 npx husky add .husky/pre-commit "npx lint-staged"
 ```
 
-Now let's test the whole set up. Let's edit `todo.test.js` file to test overdue items and stage it.
-
-> Action: Add following code
-
-```js
-test("Should return overdue items", () => {
-  expect(all.length).toEqual(1);
-  const today = new Date();
-  const oneDay = 60 * 60 * 24 * 1000;
-  add({
-    title: "An overdue test item",
-    completed: false,
-    dueDate: new Date(today.getTime() - 2 * oneDay).toLocaleDateString("en-CA"),
-  });
-  expect(all.length).toEqual(2);
-  overdueItems = overDue();
-  expect(overdueItems.length).toBe(1);
-});
-```
-
-Let's switch over to the terminal and stage the file.
+Now let's test the whole set up. Let's switch over to the terminal and stage the file.
 
 ```sh
 git add --all
@@ -165,7 +147,7 @@ git add --all
 Now, when we try to commit, husky should run our tests and `lint-staged` automatically. Let's try that.
 
 ```sh
-git commit -m "Add lint-staged"
+git commit -m "Add lint staged"
 ```
 
 As you can see, our tests, eslint rules, and prettier were run as intended. This helps us in making sure the code that is being committed adheres to a common standard that we have put across for the project.

@@ -55,7 +55,12 @@ app.post('/todos', async function (request, response) {
 })
 ```
  
-We can test it out with a simple `curl` request from our terminal:
+To test it out, first we have to make sure that the server is running:
+```
+node index.js
+```
+
+Then we will send a simple `curl` request from our terminal:
 ````
 curl -d '{"title":"Go the gym","dueDate":"2022-07-02"}' -H "Content-Type: application/json" -X POST http://localhost:3000/todos
 ````

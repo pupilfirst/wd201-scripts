@@ -26,7 +26,7 @@ Next, try with a `console.log`
 Hello World
 undefined
 ````
-Here, **Hello World** is the output we told the console to print, then we get `undefined` which is the return value of running `console.log()`. Here **Node** read this line, evaluated it, printed the result abd then went back to waiting for more lines of code.
+Here, **Hello World** is the output we told the console to print, then we got `undefined` which is the return value of running `console.log()`. Here **Node** reads this line, evaluates it, prints the result and then went back to waiting for more lines of code.
 
 ### Multiline code
 In some cases, you might need to evaluate a code block consisting multiple lines, for example a `function`:

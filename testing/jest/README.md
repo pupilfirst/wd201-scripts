@@ -20,7 +20,7 @@ npm install jest --save-dev
 
 Let us tell git not to track the `node_module` folder by adding it to `.gitignore` file. Let's create a file named `.gitignore` in the root of the project and add `node_modules/` to it.
 
->Action: create a file `.gitignore` with following content.
+> Action: create a file `.gitignore` with following content.
 
 ```
 node_modules/
@@ -149,6 +149,32 @@ let todoList = require("../todo");
 const { all, markAsComplete, add } = todoList();
 /* eslint-disable no-undef */
 describe("Todo List Test Suite", () => {
+  beforeAll(() => {
+    // Seed the test data
+    const today = new Date();
+    const oneDay = 60 * 60 * 24 * 1000;
+    [
+      {
+        title: "Buy milk",
+        completed: false,
+        dueDate: new Date(today.getTime() - 2 * oneDay).toLocaleDateString(
+          "en-CA"
+        ),
+      },
+      {
+        title: "Pay rent",
+        completed: false,
+        dueDate: new Date().toLocaleDateString("en-CA"),
+      },
+      {
+        title: "Submit assignment",
+        completed: false,
+        dueDate: new Date(today.getTime() + 2 * oneDay).toLocaleDateString(
+          "en-CA"
+        ),
+      },
+    ].forEach(add);
+  });
   test("Should add a new todo", () => {});
 });
 ```
@@ -185,7 +211,7 @@ npm test
 
 You can see that jest has picked up our new test and the test has passed.
 
-Let's add one more test. Let's test `markAsComplete` function. For that, let's add a new `test` block in our `todo.test.js` file.
+Let's add one more test. Let's test `markAsComplete` function. For that, let's add a new `test` block in our `__tests__/todo.js` file.
 
 > Action: Add the following code.
 
