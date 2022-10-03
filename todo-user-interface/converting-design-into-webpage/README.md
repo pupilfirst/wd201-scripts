@@ -1,7 +1,8 @@
 # Text
 Take a look at the following design:
 
-> Action: Add TODO manager design snapshot here.
+![To-do list design](./Todo%20list%20design.png)
+
 
 It can be very difficult to recreate a design by just looking at it as a picture. You have to be able to closely inspect it, to see things like colors, spacings, typography etc. In this level, we will learn about the key points that you have to keep in mind while converting a design like this one, into a webpage, using simple HTML and CSS. So, let's get started.
 
