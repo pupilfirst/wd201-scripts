@@ -2,72 +2,73 @@
 
 In this lesson, we will add capability to delete to-do item.
 
-First, let's edit the `todos.js` file in `router` folder to add this capability. To delete an entry in database, we use `delete` request. So let's add such a route.
+We will first add capability to remove an item to our model. Edit the `models/todo.js` to have a `remove` method.
 
 ```js
-app.delete('/todos/:id', async function (req, res, next) {
-  await db.Todo.removeTask(req.params.id);
-  res.json({ success: true })
+static async remove(id) {
+      return this.destroy({
+        where: {
+          id,
+        },
+      });
+    }
+```
+
+Next, let's edit the `app.js` file to add this capability. To delete an entry in database, we use `delete` request. So let's add such a route.
+
+```js
+app.delete("/todos/:id", async (request, response) => {
+  try {
+    await Todo.remove(request.params.id);
+    return response.json({ success: true });
+  } catch (error) {
+    return response.status(422).json(error);
+  }
 });
 ```
 
-Here, the `id` of the todo item which is to be deleted is passed in the url. We just need to invoke the `removeTask` method which we have already implemented earlier.
+Here, the `id` of the todo item which is to be deleted is passed in the url. We just need to invoke the `remove` method which we have already implemented earlier.
 
 To add this capability to the front end, let's open the `todos.ejs` file in the `views` folder. Now, we need to add capability to delete the to-do when clicked on the trash icon.
 
-We will wrap the `<a>` tags in its own `form`. Then invoke `deleteTodo` when clicked on it. Here we also pass the id to `deleteTodo` to identify which item was invoked.
+We will add `onClick` handler to invoke a `deleteTodo` function when clicked on it. Here we also pass the id to `deleteTodo` to identify which item was invoked.
 
 ```html
-<form>
-  <a class="hidden trash-icon" href="#!" onclick="deleteTodo(<%= dueToday[i].id %>)">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-      </svg>
-  </a>
-</form>
-```
-
-We will do the same for `dueLater` items also
-
-```html
-<form>
-  <a class="hidden trash-icon" href="#!" onclick="deleteTodo(<%= dueLater[i].id %>)">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-      </svg>
-  </a>
-</form>
-```
-
-Next, we have to update the `overdue` items.
-
-```html
-<form>
-  <a class="hidden trash-icon" href="#!" onclick="deleteTodo(<%= overdue[i].id %>)">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-      </svg>
-  </a>
-</form>
+<a
+  href="#"
+  class="hidden trash-icon ml-2"
+  onclick="deleteTodo(<%= data[i].id %>)"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="w-4 h-4"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+    />
+  </svg>
+</a>
 ```
 
 Now, we have to implement the actual JavaScript function `deleteTodo` which actually sends the delete request to the server.
 
 ```js
 function deleteTodo(id) {
-      fetch(`/todos/${id}`, {
-        method: 'delete',
-        headers: { 'Content-Type': 'application/json' },
-      }).then((res) => {
-        window.location.reload();
-      }).catch(err => console.error(err))
-    }
+  fetch(`/todos/${id}`, {
+    method: "delete",
+    headers: { "Content-Type": "application/json" },
+  })
+    .then((res) => {
+      window.location.reload();
+    })
+    .catch((err) => console.error(err));
+}
 ```
 
 Here, We have used the built in `fetch` to do the network request of type `delete`.
@@ -75,6 +76,7 @@ Here, We have used the built in `fetch` to do the network request of type `delet
 Now, let's run the express server.
 
 ```sh
-DEBUG=todo-manager:* npm start
+npm start
 ```
-Open the browser and visit `http://localhost:3000/todos` to view our to-do application. Now we should be able to click on thrash icon of the todo items and delete it.
+
+Open the browser and visit `http://localhost:3000/` to view our to-do application. Now we should be able to click on thrash icon of the todo items and delete it.

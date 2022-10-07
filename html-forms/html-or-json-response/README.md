@@ -25,20 +25,21 @@ Accept: application/json
 Let's modify the listing of Todos to return html when visited using browser and return a `JSON` response when it is invoked using Postman.
 
 ```js
-app.get("/todos", async function (req, res, next) {
-  const overdue = await db.Todo.overdue();
-  const dueToday = await db.Todo.dueToday();
-  const dueLater = await db.Todo.dueLater();
-  if (req.accepts("html")) {
-    res.render("index", {
+app.get("/", async (request, response) => {
+  const overdue = await Todo.overdue();
+  const dueToday = await Todo.dueToday();
+  const dueLater = await Todo.dueLater();
+  const completed = await Todo.completed();
+  if (request.accepts("html")) {
+    response.render("index", {
       title: "Todo application",
       overdue,
       dueToday,
       dueLater,
-      csrfToken: req.csrfToken(),
+      completed,
     });
   } else {
-    res.json({
+    response.json({
       overdue,
       dueToday,
       dueLater,
@@ -47,15 +48,15 @@ app.get("/todos", async function (req, res, next) {
 });
 ```
 
-Here, we check whether the client accepts `html` response using `req.accept()`. If the client can accept html response, we render the html page. If it doesn't then we send back a `JSON` reponse.
+Here, we check whether the client accepts `html` response using `request.accept()`. If the client can accept html response, we render the html page. If it doesn't then we send back a `JSON` reponse.
 
 Let's save the file and start the app.
 
 ```sh
-DEBUG=todo-manager:* npm start
+npm start
 ```
 
-If we visit `http://localhost:3000/todos`, we can see the todo list being rendered as HTML. Next, send a request from API client like _Postman_, but also add a HTTP header with key `Accept` and value `application/json` to the same url. You will get a json reponse similar to this:
+If we visit `http://localhost:3000/`, we can see the todo list being rendered as HTML. Next, send a request from API client like _Postman_, but also add a HTTP header with key `Accept` and value `application/json` to the same url. You will get a json reponse similar to this:
 
 ```json
 {

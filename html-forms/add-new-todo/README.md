@@ -7,35 +7,41 @@ Edit the `app.js` with following contents.
 First, we need to import the database models.
 
 ```js
-const db = require("../models/index");
+const { Todo } = require("../models");
 ```
 
 Next, we can add the endpoint to display todo list in the browser.
 
 ```js
-app.get("/todos", async function (req, res, next) {
-  const overdue = await db.Todo.overdue();
-  const dueToday = await db.Todo.dueToday();
-  const dueLater = await db.Todo.dueLater();
+app.get("/", async function (request, response) {
+  const overdue = await Todo.overdue();
+  const dueToday = await Todo.dueToday();
+  const dueLater = await Todo.dueLater();
   res.render("index", { overdue, dueToday, dueLater });
 });
 ```
 
-To create a new todo, web browser should send a `POST` request. The required parameters like `title` and `dueDate` are sent as body of the `POST` request. To create such a handler we need to declare it using `router.post`. Express.js would parse the body of the request and make them available at `req.body`. And we would be able to extract `title` and `dueDate` from `req.body`.
+To create a new todo, web browser should send a `POST` request. The required parameters like `title` and `dueDate` are sent as body of the `POST` request. To create such a handler we need to declare it using `app.post`. Express.js would parse the body of the request and make them available at `request.body`. And we would be able to extract `title` and `dueDate` from `request.body`.
 
 ```js
-app.post("/todos", async function (req, res, next) {
-  await db.Todo.addTask({
-    title: req.body.title,
-    dueDate: new Date(req.body.dueDate),
-  });
-  res.redirect("/todos");
+app.post("/todos", async (request, response) => {
+  console.log("Creating a todo", request.body);
+  try {
+    await Todo.addTodo({
+      title: request.body.title,
+      dueDate: request.body.dueDate,
+    });
+    return response.redirect("/");
+  } catch (error) {
+    console.log(error);
+    return response.status(422).json(error);
+  }
 });
 ```
 
 Now we have the backend functioning. We will now adapt this functionality to the frontend.
 
-Let's edit the `todos.ejs` file to make sure the new todo item form has an `action` and `method` attribute.
+Let's edit the `index.ejs` file to make sure the new todo item form has an `action` and `method` attribute.
 
 ```html
 <form action="/todos" method="POST">...</form>
@@ -48,27 +54,26 @@ Next, we need to make sure the todo text is sent to server using the key `title`
 ```html
 <form action="/todos" method="POST">
   <div class="flex gap-2 py-4">
-    <div class="flex-auto w-64">
+    <div class="flex-auto">
       <input
         type="text"
-        class="border border-gray-300 text-gray-900 text-sm rounded w-full p-2"
         placeholder="What's next?"
         name="title"
-        autofocus
+        class="border border-gray-300 rounded text-gray-900 w-full p-2 text-sm"
         required
       />
     </div>
-    <div class="flex-auto w-32">
+    <div class="flex-auto">
       <input
         type="date"
         name="dueDate"
-        class="border border-gray-300 text-gray-900 text-sm rounded w-full p-2 leading-4	"
+        class="border border-gray-300 rounded text-gray-900 w-full p-2 text-sm leading-4	"
       />
     </div>
     <div class="flex-none">
       <button
         type="submit"
-        class="text-white bg-green-600 hover:bg-green-700 font-medium rounded text-sm px-5 py-2 mr-2 mb-2"
+        class="bg-green-600	text-white px-5 py-1.5 rounded font-medium mr-2 mb-2"
       >
         Add
       </button>

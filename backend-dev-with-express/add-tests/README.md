@@ -1,12 +1,12 @@
 ## Text
 
-In this lesson, we will look into how to test the routes that we have created for our Todo web application. First, we need to install a npm package `supertest` to help us with the testing. We will install it as a development dependency.
+In this lesson, we will learn, how to test the web endpoints of our application. But before doing that, make sure you have configured the pre-commit hook to run tests and lint-staged using husky.
+
+To run the tests, we use jest. Along with jest, we will also install another npm package called `supertest`. We will use `supertest` to send request to our express.js routes.
 
 ```sh
-npm install -D supertest
+npm install -D jest supertest
 ```
-
-We will use `supertest` to send request to our express.js routes.
 
 Next, we will edit the test scripts in `package.json` to drop and create the database before running the tests. We will use the `db:drop` command available with `sequelize-cli` to destroy the test database. Then we create a clean slate by using the `db:create` command.
 
