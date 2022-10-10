@@ -1,12 +1,13 @@
 ## Text
 
-To complete this milestone target, you have to implement the To-do page so that it has these three features:
+To complete this milestone target, you have to implement the To-do page so that it has these four features:
 
 ## Required features
 
 1. Make it possible to add a new to-do
 2. Mark a to-do as complete or not
 3. Allow users to delete a to-do
+4. Move completed items to its own section. So there would be `over due`, `due today`, `due later` and `completed items` sections.
 
 ## You should also...
 
