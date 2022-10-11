@@ -179,7 +179,7 @@ node index.js
 
 We can get all the records using `findAll` method on the model. It would also attach some metadata to the result. To prevent that, we pass in an option `raw: true`. We can also specify SQL `ORDER BY` clause to sort the results. We specify to return the result in ascending order of the `id`.
 
-Add `getAllTodos` in `index.html`
+Add `getAllTodos` in `index.js`
 
 ```js
 const getAllTodos = async () => {
