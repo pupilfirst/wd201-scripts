@@ -4,6 +4,8 @@ In this section, we will learn about using EJS templating in the application. We
 
 We will learn about importing CSS and JS into the EJS files. We will also learn how we can better organize and structure these files for our development purposes.
 
+# Script
+
 ## Importing CSS and JS
 
 Let us start by creating a new folder which will serve as the base for all content we create in CSS and JS.
