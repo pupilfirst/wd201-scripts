@@ -52,7 +52,7 @@ module.exports = {
 };
 ```
 Now, as our migration is ready, we can simply run it. 
-But before that, I want to add some validations for the `email` column. I want it to set two constraint to it: `NOT NULL` and `UNIQUE`. For that, we will simply change:
+But before that, I want to add some validations for the `email` column. I want to add constraints to it: `NOT NULL` and `UNIQUE`. For that, we will simply change:
 ```js
 email: {
   type: Sequelize.STRING,
