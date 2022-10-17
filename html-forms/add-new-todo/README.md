@@ -1,27 +1,13 @@
 ## Text
 
-In this lesson, we will use our newly designed UI to create new to-do items. To do that, first we have to update our backend to handle such requests.
+In this lesson, we will use the UI to create new to-do items. Currently it doesn't work. If I try to add an item, nothing happens.
 
-Edit the `app.js` with following contents.
+To create a new todo, the browser should send a `POST` request. The required parameters like `title` and `dueDate` should be sent as the body of the `POST` request.
 
-First, we need to import the database models.
-
+The form is submitted as urlencoded
 ```js
-const { Todo } = require("../models");
+app.use(express.urlencoded({ extended: false }));
 ```
-
-Next, we can add the endpoint to display todo list in the browser.
-
-```js
-app.get("/", async function (request, response) {
-  const overdue = await Todo.overdue();
-  const dueToday = await Todo.dueToday();
-  const dueLater = await Todo.dueLater();
-  res.render("index", { overdue, dueToday, dueLater });
-});
-```
-
-To create a new todo, web browser should send a `POST` request. The required parameters like `title` and `dueDate` are sent as body of the `POST` request. To create such a handler we need to declare it using `app.post`. Express.js would parse the body of the request and make them available at `request.body`. And we would be able to extract `title` and `dueDate` from `request.body`.
 
 ```js
 app.post("/todos", async (request, response) => {
@@ -39,7 +25,12 @@ app.post("/todos", async (request, response) => {
 });
 ```
 
-Now we have the backend functioning. We will now adapt this functionality to the frontend.
+Let's redirect the response once a new item is created.
+
+```js
+return response.redirect("/");
+```
+We will now adapt this functionality to the frontend.
 
 Let's edit the `index.ejs` file to make sure the new todo item form has an `action` and `method` attribute.
 
@@ -49,7 +40,7 @@ Let's edit the `index.ejs` file to make sure the new todo item form has an `acti
 
 This makes sure that when the `Add` button is clicked, the form will be submitted as a `POST` request to `/todos` endpoint.
 
-Next, we need to make sure the todo text is sent to server using the key `title` and the due date using the key `dueDate`. We can do this by adding `name` attribute on respective input fields. So the final for looks like:
+Next, we need to make sure the todo text is sent to server using the key `title` and the due date using the key `dueDate`. We can do this by adding `name` attribute on respective input fields. Let's add that:
 
 ```html
 <form action="/todos" method="POST">

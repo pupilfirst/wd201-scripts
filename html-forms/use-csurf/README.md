@@ -5,7 +5,7 @@ In this lesson, we will learn to secure our application against Cross site scrip
 We prevent XSS attacks by making sure a unique token for a client session is being passed with every request (CSRF token). We use `csurf` package to add this capability to our express.js application. Let's first add it to our project.
 
 ```sh
-npm install csurf
+npm install csurf cookie-parser
 ```
 
 Next, we need to use this package in our express.js application. Edit the `app.js` file to add the following content.
@@ -14,10 +14,12 @@ Next, we need to use this package in our express.js application. Edit the `app.j
 var csrf = require("csurf");
 
 // ...
+var cookieParser = require("cookie-parser");
 
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(csrf({ cookie: true }));
+app.use(cookieParser("shh! some secret string"));
+app.use(csrf({ cookie: true }))
+// app.use(csrf("this_should_be_32_character_long", ["POST", "PUT", "DELETE"]));
 ```
 
 That's it! We are all set. Now, our application expects a CSRF token with every `POST`, `PUT` and `DELETE` requests.
@@ -103,39 +105,44 @@ Add a new `meta` tag in `head` of the `index.ejs` file.
 Next, before we fire a request using `fetch`, we will get the token and inject it into the request.
 
 ```js
-var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+var token = document
+  .querySelector('meta[name="csrf-token"]')
+  .getAttribute("content");
 
 function updateTodo(id) {
-
-  fetch(`/todos/${id}`, {
-    credentials: 'same-origin',
-    method: 'put',
+  fetch(`/todos/${id}/markAsCompleted`, {
+    method: "put",
     headers: {
-      'Content-Type': 'application/json',
-      'CSRF-Token': token
+      "Content-Type": "application/json",
     },
-  }).then((res) => {
-    window.location.reload();
-  }).catch(err => console.error(err))
+    body: JSON.stringify({
+      _csrf: token,
+    }),
+  })
+    .then((res) => {
+      window.location.reload();
+    })
+    .catch((err) => console.error(err));
 }
 
 function deleteTodo(id) {
   console.log(id);
 
   fetch(`/todos/${id}`, {
-    credentials: 'same-origin',
-    method: 'delete',
+    method: "delete",
     headers: {
-      'Content-Type': 'application/json',
-      'CSRF-Token': token
+      "Content-Type": "application/json",
     },
-  }).then((res) => {
-    window.location.reload();
-  }).catch(err => console.error(err))
+    body: JSON.stringify({
+      _csrf: token,
+    }),
+  })
+    .then((res) => {
+      window.location.reload();
+    })
+    .catch((err) => console.error(err));
 }
 ```
-
-We pass the token as a http header. We also ask the browser to send the cookies along with the requests using `credentials: 'same-origin'`.
 
 Now we should be able to get our back to working state. But our tests will be failing now. Try running our tests.
 
@@ -170,51 +177,52 @@ Now, we can rewrite the test for creating a new item
 
 ```js
 test("create a new todo", async () => {
-    agent = request.agent(server);
-    const res = await agent.get("/");
-    const csrfToken = extractCsrfToken(res);
-    const response = await agent.post("/todos").send({
-      _csrf: csrfToken,
-      title: "Buy milk",
-      dueDate: new Date().toISOString(),
-      completed: false,
-    });
-    expect(response.statusCode).toBe(302);
+  agent = request.agent(server);
+  const res = await agent.get("/");
+  const csrfToken = extractCsrfToken(res);
+  const response = await agent.post("/todos").send({
+    _csrf: csrfToken,
+    title: "Buy milk",
+    dueDate: new Date().toISOString(),
+    completed: false,
   });
+  expect(response.statusCode).toBe(302);
+});
 ```
 
 Similarly, we can modify the test for mark as complete
 
 ```js
 test("Mark a todo as complete", async () => {
-    agent = request.agent(server);
-    const res = await agent.get("/");
-    const csrfToken = extractCsrfToken(res);
-    await agent.post("/todos").send({
-      _csrf: csrfToken,
-      title: "Buy milk",
-      dueDate: new Date().toISOString(),
-      completed: false,
-    });
-
-    const groupedTodosResponse = await agent
-      .get("/")
-      .set("Accept", "application/json");
-    const parsedGroupedResponse = JSON.parse(groupedTodosResponse.text);
-
-    expect(parsedGroupedResponse.dueToday).toBeDefined();
-
-    const dueTodayCount = parsedGroupedResponse.dueToday.length;
-    const latestTodo = parsedGroupedResponse.dueToday[dueTodayCount - 1];
-
-    const markCompleteResponse = await agent
-      .put(`/todos/${latestTodo.id}`)
-      .send({
-        _csrf: csrfToken,
-      });
-    const parsedUpdateResponse = JSON.parse(markCompleteResponse.text);
-    expect(parsedUpdateResponse.completed).toBe(true);
+  agent = request.agent(server);
+  let res = await agent.get("/");
+  let csrfToken = extractCsrfToken(res);
+  await agent.post("/todos").send({
+    _csrf: csrfToken,
+    title: "Buy milk",
+    dueDate: new Date().toISOString(),
+    completed: false,
   });
+
+  const groupedTodosResponse = await agent
+    .get("/")
+    .set("Accept", "application/json");
+  const parsedGroupedResponse = JSON.parse(groupedTodosResponse.text);
+
+  expect(parsedGroupedResponse.dueToday).toBeDefined();
+
+  const dueTodayCount = parsedGroupedResponse.dueToday.length;
+  const latestTodo = parsedGroupedResponse.dueToday[dueTodayCount - 1];
+
+  res = await agent.get("/");
+  csrfToken = extractCsrfToken(res);
+
+  const markCompleteResponse = await agent.put(`/todos/${latestTodo.id}/markAsCompleted`).send({
+    _csrf: csrfToken,
+  });
+  const parsedUpdateResponse = JSON.parse(markCompleteResponse.text);
+  expect(parsedUpdateResponse.completed).toBe(true);
+});
 ```
 
 Save the file, and run the tests.
@@ -222,4 +230,28 @@ Save the file, and run the tests.
 ```
 npm test
 ```
+
 The tests should all be working now.
+
+If you take a look at the csurf pacakge, it is shown as deprecated, that means, it isn't developed anymore. Insted let's search npm for other libraries. And this `tiny-csrf` looks like a good fit.
+
+Let's use this package in our code.
+
+Install the package using the command:
+
+```
+npm install tiny-csrf
+```
+
+Switch to `app.js` file. Replace the `csurf` with `tiny-csrf`. And edit the usage.
+
+```js
+app.use(csrf("this_should_be_32_character_long", ["POST", "PUT", "DELETE"]));
+```
+The secret key should exactly be 32 characters long, else it will throw an error.
+
+Now, run the tests, and it should work just fine.
+
+```
+npm test
+```

@@ -1,6 +1,6 @@
 ## Text
 
-In this lesson, we will add capability to delete to-do item.
+In this lesson, we will learn how to delete a to-do item.
 
 We will first add capability to remove an item to our model. Edit the `models/todo.js` to have a `remove` method.
 
@@ -65,7 +65,9 @@ function deleteTodo(id) {
     headers: { "Content-Type": "application/json" },
   })
     .then((res) => {
-      window.location.reload();
+      if(res.ok) {
+        window.location.reload();
+      }
     })
     .catch((err) => console.error(err));
 }
