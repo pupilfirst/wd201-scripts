@@ -10,8 +10,6 @@ That's what a cookie is used for. Any web application that wants to track a user
 
 Let's learn a bit more in detail about them to understand how they work.
 
-# Script
-
 ## How Do Cookies and Session Work?
 
 In the last few lessons, you've learned to sign up a new user that creates an entry in the user's table and then sign in by authenticating with a password. The next thing that we need to do is to keep track of the session. Once a user is signed in, every request that our web server receives needs to know that this is a currently logged-in user.
@@ -26,11 +24,7 @@ Any time the logged-in user requests data from the server, it responds only if t
 
 If the Cookie is not a part of the data we sent across, the server understands that the cookie is not available or valid anymore and logs out the user in our application.
 
-> Action: Open the application and play around with the Cookie. Explain how to find the details of the same
-
 Updating or interfering with the cookie data in any sort will make sure that any new request being sent to the server fails for authentication and the user is logged out.
-
-> Action: Open the application and Edit or delete the Cookie. Explain how this works.
 
 For example, let's make a change to the cookie which is already created by changing a single character. Refreshing the page, the cookie that is being sent across to the server is not the same as the one it sent to us while logging in. The application signs us out and redirects us to the Sign-in page.
 
@@ -41,8 +35,6 @@ Another advantage of cookies is that, the browser stores this cookie data for an
 Ideally, there are two ways to log out a user from a session. One is by removing the cookies which are already stored from the browser session itself. Two is to send a request to the server to remove the session cookie, which is available. This means that any new request using the current session cookie will be invalidated, and the user will be logged out of the current session.
 
 The general drawback of the cookie is that if you share the specific cookie, which is basically an access cookie, with a third party, they can use this to steal data related to you from your application.
-
-> Action: Open the application and copy the created cookie. Open the application in a new browser, add the cookie and refresh the page to showcase how the person is logged in.
 
 `Express` and `passport` have built-in mechanisms wherein we can set a particular expiry time for a cookie. This makes sure that if you are not in session, or you are not accessing the data for an extended period of time, it can invalidate the cookie automatically.
 
