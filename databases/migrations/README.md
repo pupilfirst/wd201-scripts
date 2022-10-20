@@ -36,7 +36,6 @@ Let's make sure the configuration has correct parameters to connect to the datab
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
-  }
 }
 
 ```
