@@ -6,7 +6,6 @@ To complete this milestone, you have to make two changes to the To-Do manager pa
 1. Show the number of Todo's for every category (Overdue, Due Today, Due Later), just after the heading.
 2. Create a EJS partial named `todos.ejs` inside the `views` folder, and move the UI for listing Todos to that file.
 3. Render the `todos.ejs` partial after every category heading (Overdue, Due Today, Due Later). The goal is to control UI for listing Todos from a single file.
-4. Display the count of items in each section after the title (Overdue, Due Today, Due Later)
 
 ## Submission Requirements
 1. After the implementation, commit your changes and push the code to GitHub.
