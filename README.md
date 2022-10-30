@@ -144,8 +144,10 @@ This work is licensed under a
 9. [Implement sign-out by resetting the user session](https://github.com/pupilfirst/wd201-scripts/pull/134/files)
 10. [A logged-in user should see and modify only their own to-dos and nobody else's](./user-authentication/show-todos-for-logged-in-user/README.md)
 
+11. [Fix the failing tests](./user-authentication/Fix-tests/README.md)
+
 ### Flash messages and sequelize validations
 
-11. [Showing one-off messages to users with connect-flash](./user-authentication/showing-messages-to-user/README.md)
-12. [Ensure no blank to-dos are ever created, with Sequelize validations](./user-authentication/prevent-blank-todo-with-sequelize-validation/README.md)
-13. [Milestone](./user-authentication/milestone/README.md)
+12. [Showing one-off messages to users with connect-flash](./user-authentication/showing-messages-to-user/README.md)
+13. [Ensure no blank to-dos are ever created, with Sequelize validations](./user-authentication/prevent-blank-todo-with-sequelize-validation/README.md)
+14. [Milestone](./user-authentication/milestone/README.md)
