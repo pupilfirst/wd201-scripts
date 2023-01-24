@@ -19,6 +19,11 @@ This work is licensed under a
 
 ## L1. Introduction to Node.js
 
+### Welcome to the course
+
+1. [A detailed guide to getting help](./introduction-to-nodejs/a-detailed-guide-to-getting-help)
+2. [Recording and sharing your screen](./introduction-to-nodejs/recording-and-sharing-your-screen)
+
 ### Intro to Node.js
 
 1. [What is Node.js and how to install it](./introduction-to-nodejs/what-is-node-js-with-installation/README.md)
@@ -38,9 +43,7 @@ This work is licensed under a
 
 **Note**: Students in TA training can skip this section and proceed to Milestone.
 
-7. [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
-8. [Screen recording tool](./get-started-with-git-and-github/getting-help/screen-recording.md)
-9. [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
+1. [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
 
 ### Milestone
 
