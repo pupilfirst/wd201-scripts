@@ -1,4 +1,4 @@
-# Orientation: Getting help
+# A detailed guide to getting help
 
 Let's answer the question of what happens when you get stuck. Or from your perspective, the question would be: "What should I do when I get stuck with something"?
 
