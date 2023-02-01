@@ -39,17 +39,13 @@ This work is licensed under a
 
 6. [Code quality using ESLint](./introduction-to-nodejs/setting-up-eslint/README.md)
 
-### Orientation (old)
-
-**Note**: Students in TA training can skip this section and proceed to Milestone.
-
-1. [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
-
 ### Milestone
 
 9. [Milestone](./introduction-to-nodejs/milestone/README.md)
 
 ## L2. Working with NPM
+
+### Working with NPM
 
 1. [Why is there a need for a library ecosystem?](./working-with-npm/package-management-and-library-ecosystem/README.md)
 2. [What is NPM?](./working-with-npm/about-npm-and-uses/README.md)
@@ -60,7 +56,11 @@ This work is licensed under a
 7. [Working with npm install](./working-with-npm/npm-install-packages/README.md)
 8. [Accepting command line arguments](./working-with-npm/accepting-cli-commands/README.md)
 9. [Let's write a program!](./working-with-npm/write-first-node-program/README.md)
-10. [Milestone](./working-with-npm/milestone/README.md)
+
+### Level up
+
+1. [Orientation: Why plagiarism is a bad idea](./working-with-npm/orientation-why-plagiarism-is-a-bad-idea)
+2. [Milestone](./working-with-npm/milestone/README.md)
 
 ## L3. Node.js deep dive
 

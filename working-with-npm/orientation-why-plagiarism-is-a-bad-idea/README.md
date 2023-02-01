@@ -1,4 +1,4 @@
-# Orientation: Plagiarism
+# Orientation: Why plagiarism is a bad idea
 
 > Slideshow: https://docs.google.com/presentation/d/1PbWZ0Qrok8YNEndGgSy7E6f7auvPPVmZlivQccqSbBQ/edit?usp=sharing
 
