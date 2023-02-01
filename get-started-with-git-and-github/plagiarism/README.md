@@ -21,11 +21,3 @@ Now the second, and better reason, is that if you're _truly_ interested in learn
 ## Don't get stuck, though.
 
 If you're ever really stuck, or getting frustrated - ask for help - that's another one of the things that you'll need to learn. You'll need to learn _when_ to ask for help, _how_ to ask to help, and how to interpret the help that you get - we have a lesson in this course that covers that topic.
-
-## All solutions are public
-
-Now I've stressed that you shouldn't look for solutions, so it might seem odd that we (the course authors) are making solutions for all of the assignments public. This course includes a link to a Github repository that actually contains every single solution.
-
-Don't look at them - at least, not until you've received a maximum grade in a given assignment.
-
-Once you've received a maximum grade - once you feel that there's no way that you can write your code better - take a look at the solution and compare it to what other programmers have written. Reading other people's code _is_ something you should practise doing - but only to understand, not to copy, and definitely never to simply complete an assignment.
