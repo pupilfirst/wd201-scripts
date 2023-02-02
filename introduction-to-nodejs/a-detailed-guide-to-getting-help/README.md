@@ -76,7 +76,7 @@ Snippets of code associated with your problem (don't share full files). If your 
 ````
 Here's the snippet of code that I'm having trouble with:
 
-```ruby
+```js
 fetch('https://example.com/some/path/to/json')
 .then(function (response) {
   return response.json();
