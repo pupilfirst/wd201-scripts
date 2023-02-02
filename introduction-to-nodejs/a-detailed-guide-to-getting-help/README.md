@@ -104,7 +104,7 @@ Uncaught (in promise) SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not 
 
 If there's visual issues that you're discussing, share screenshots or videos. You can take screenshots and insert them directly into the Markdown editor, so that they're easy to see. You can attach files by clicking the button at the bottom of the markdown editor. If you select a file, it'll be uploaded and a link to the uploaded file will be inserted into the Markdown text.
 
-You can also record videos of your screen and talk us through the problem you're facing. There will be [a separate video](./video_recording.md) that details how best you can do this. With both of these options - screenshots and screen recordings - please try to avoid sharing any personal information; remember that Discord posts are visible to everyone who has access to the server.
+You can also record videos of your screen and talk us through the problem you're facing. There will be a separate video that details how best you can do this. With both of these options - screenshots and screen recordings - please try to avoid sharing any personal information; remember that Discord posts are visible to everyone who has access to the server.
 
 ---
 
