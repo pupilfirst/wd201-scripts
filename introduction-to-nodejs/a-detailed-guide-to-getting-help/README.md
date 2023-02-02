@@ -21,17 +21,17 @@ When creating a post in the forum, there's a method that you can use to make sur
 > Paste in the following headings, and then describe them.
 
 ```
-**Describe the issue**\
+1. Describe the issue
 
-**What I expected would happen**\
+2. What I expected would happen
 
-**The things I've done to try and fix the issue**\
+3. The things I've done to try and fix the issue
 
-**Code snippets (optional)**\
+4. Code snippets (optional)
 
-**Logs (optional)**\
+5. Logs (optional)
 
-**Screenshots (optional)**\
+6. Screenshots (optional)
 ```
 
 ### Describe the issue
@@ -126,4 +126,4 @@ If there are no previous questions or answers, provide lots of details about you
 
 > Paste in the template from earlier in the script.
 
-That'll help save time by avoid unnecessary back & forth messages. Finally, hit the _Post_ button, and a coach or a teaching assistant, or perhaps even a fellow student will reply shortly.
+That'll help save time by avoiding unnecessary back & forth messages. Finally, hit the _Post_ button, and a coach or a teaching assistant, or perhaps even a fellow student will reply shortly.
