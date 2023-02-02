@@ -2,7 +2,7 @@
 
 Let's answer the question of what happens when you get stuck. Or from your perspective, the question would be: "What should I do when I get stuck with something"?
 
-While you're going through this course, you'll probably encounter a few different kinds of places where you might feel stuck, or blocked, or confused. That's okay - it's normal to be stuck, or feel confused. When that happens, you need to ask questions.
+While you're going through this course, you'll probably encounter a few different kinds of places where you might feel stuck, or blocked, or confused. That's okay - it's normal to get confused by new things, occasionally. When that happens, you need to ask questions.
 
 The Pupilfirst School Discord server is the place to ask those questions. You should already be a member of this community. In the Discord server, the best place to ask doubts related to the course is the `#wd-forum` channel. The coaches and teaching assistants here at Pupilfirst regularly monitor Discord for new questions, and we try to make sure that we answer each and every one of your queries.
 
