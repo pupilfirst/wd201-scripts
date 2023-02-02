@@ -16,8 +16,7 @@ When you first type this into the wd-forum channel, it'll do a quick search to s
 
 In this case, there are no matching posts, so I'm going to click the _New Post_ button, which will let me add more details before creating a new post.
 
-When creating a post in the forum, there's a method that you can use to make sure that you're making a _good_ post. I'm going to quickly list the information we'd like you to share
-Before getting into examples, let me quickly list the information we'd like you to share:
+When creating a post in the forum, there's a method that you can use to make sure that you're making a _good_ post. I'm going to quickly list down some kinds of information we'd like you to share:
 
 > Paste in the following headings, and then describe them.
 
