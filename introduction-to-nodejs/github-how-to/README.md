@@ -1,6 +1,6 @@
 ## GitHub: How To
 
-In this video, I'm going to show you, how to use the `git` command line interface.
+In this video, I'm going to show you the very basics of how to use the `git` command line interface. Specifically, we're going to try to teach you _just enough_ to work through this course.
 
 Before continuing, let me quickly mention why this course requires you to use git. Git is the de facto standard for version control in the software industry. Regardless of language you use in your work, you'll almost certainly be using git as your version control system. So it's pretty much necessary for every developer out there.
 
@@ -24,19 +24,19 @@ If we try `git status` again, it tells us that there is a change that is ready t
 
 Before we make our first commit, I want to do one more thing. In the `wd201` directory, I'm going to create a file called `.gitignore`, and in this new file I'm going to write one line for now - `node_modules`. In the next couple of lessons, we're going to be writing names of certain packages we want to download in `package.json`. When NPM - the Node Package Manager - downloads these libraries, it keeps them inside a `node_modules` folder. We don't want git to track these third-party libraries. We only want git to track the history of files that _we_ create. Hence, we're telling git to ignore these `node_modules` folders.
 
-Now that we have these three files staged for a commit, we can make our first commit.
+We now have these three files staged for a commit. The word _staged_ in this context means that the changes to these files are now ready to be made into a commit. That brings up another question. What's a commit?
 
-You can think of a commit like you're saving the state of how this directory looks right now. After we make a commit, git will always be able to return to this particular state - the way all tracked files are right now, regardless of whatever future changes you make to them.
+You can think of a commit like you're saving the state of how this directory looks right now. It's not exactly that, but after we make a commit, git will always be able to return to this particular state - the way all tracked files are right now, regardless of whatever future changes you make to them.
 
-Because this is a permanent record, whenever we make a commit to save a change, we need to give a message. This message will get stored alongside the commit. For the first commit in a repository, it's common to simply say `Initial commit`.
+Because this commit goes into a sort-of permanent record, whenever we make a commit to save the state of some files, we need to give a message. This message will get stored alongside the commit. For the first commit in a repository, it's common to simply say `Initial commit`.
 
 > Run `git commit -m "Initial commit"`
 
 If I run `git log`, to see a log of all the commits in the repo, I can see that the commit is there, along with its message.
 
-Now that we have a git repo with with a commit, we can push this repository to GitHub so that others can see our work. We can do this using the `git push` command. Before we can do that, we'll need to a new _empty_ repository in GitHub with the same name.
+Now that we have a git repo with a commit, we can push this repository to GitHub so that others can see our work. We can do this using the `git push` command. Before we can do that, we'll need to create a new _empty_ repository in GitHub.
 
-So, I'll go ahead create a repo in my account with the same name as the directory we created - `wd201`.
+So, I'll go ahead create a repo in my account. To keep things simple and straight-forward, I'll keep the name of the repo the same as the directory we created earlier - `wd201`.
 
 Now we can push and pull code to and from the repository using two methods: HTTPS or SSH. In this demo, I'm going to use HTTPS, simply because it's faster to demonstrate. But it's also possible to use SSH. The main difference between these two methods is how you'll authenticate with GitHub. HTTPS will need you to create a personal access token, whereas SSH will require you to register your SSH keys with Github.
 
@@ -50,7 +50,7 @@ Treat the token that is created like a password. This will be shown only once, s
 
 Now I can switch back to the terminal, and type in my username. When it asks for the password, I'll simply paste the copied value. Note that it won't show up on-screen - it's a common practice for password inputs to not show anything on-screen so as to avoid anyone looking over your shoulder from seeing your passwords. So just paste in the token, and press _Enter_.
 
-Now if we go to the repository on GitHub, and reload the page, we can see that the `hello-world` folder containing `package.json` and `index.js`, and the `.gitignore` file in the root of the course repo are all now on Github. Now that we've connected these two repositories - the one on your system, and the one here in GitHub, it's much easier to push changes to the repository.
+Now if we go to the repository on GitHub, and reload the page, we can see that the `hello-world` folder containing `package.json` and `index.js`, and the `.gitignore` file in the root of the course repo are all now on GitHub. Now that we've connected these two repositories - the one on your system, and the one here in GitHub, it's much easier to push changes to the repository.
 
 > Run `code .` in the repo.
 
@@ -60,4 +60,14 @@ Indeed, if I check the repository on GitHub, the update has showed up there.
 
 That was a quick demo of how to create a git repo, and how push code to GitHub. In this course, you're going to find many tasks that ask you submit your code as GitHub URLs. For the most part, you're going to be using this same repository to keep _all_ of the code you write as a part of this course.
 
-That's it for now. See you in the next lesson!
+Take some time to practise using the git command line application. There's a lot to learn here, and what I've demonstrated now are just the basics. Make sure that whenever you work on your code, do so within this folder, and that you commit frequently and push those changes to your GitHub repository using the command-line.
+
+As I mentioned in the beginning of the video, I just covered the minimum you need to know to use git in this course. There's a lot more to learn...
+
+> Run command `git help`
+
+...but you need to start with the basics of committing, pushing, checking logs, etc. So do those often.
+
+If you're interested in learning more about what git can do right now, there will be link below this video to a resource that teaches you more about git.
+
+That's it for now. Move onto the next lesson!
