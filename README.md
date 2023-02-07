@@ -33,7 +33,7 @@ This work is licensed under a
 ### Intro to Git and GitHub
 
 4. [Using git to version control our code](./introduction-to-nodejs/intro-to-git/README.md)
-5. [Github: How To](./introduction-to-nodejs/github-how-to/README.md)
+5. [Git & Github: A quick demonstration](./introduction-to-nodejs/git-github-a-quick-demonstration/README.md)
 
 ### Code Quality
 
