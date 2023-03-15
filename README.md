@@ -163,7 +163,3 @@ This work is licensed under a
 12. [Showing one-off messages to users with connect-flash](./user-authentication/showing-messages-to-user/README.md)
 13. [Ensure no blank to-dos are ever created, with Sequelize validations](./user-authentication/prevent-blank-todo-with-sequelize-validation/README.md)
 14. [Milestone](./user-authentication/milestone/README.md)
-
-## L11. Capstone
-
-1. [A mock-up of the project](./capstone/a-mock-up-of-the-project)
