@@ -19,6 +19,11 @@ This work is licensed under a
 
 ## L1. Introduction to Node.js
 
+### Welcome to the course
+
+1. [A detailed guide to getting help](./introduction-to-nodejs/a-detailed-guide-to-getting-help)
+2. [Recording and sharing your screen](./introduction-to-nodejs/recording-and-sharing-your-screen)
+
 ### Intro to Node.js
 
 1. [What is Node.js and how to install it](./introduction-to-nodejs/what-is-node-js-with-installation/README.md)
@@ -28,25 +33,19 @@ This work is licensed under a
 ### Intro to Git and GitHub
 
 4. [Using git to version control our code](./introduction-to-nodejs/intro-to-git/README.md)
-5. [Github: How To](./introduction-to-nodejs/github-how-to/README.md)
+5. [Git & Github: A quick demonstration](./introduction-to-nodejs/git-github-a-quick-demonstration/README.md)
 
 ### Code Quality
 
 6. [Code quality using ESLint](./introduction-to-nodejs/setting-up-eslint/README.md)
-
-### Orientation (old)
-
-**Note**: Students in TA training can skip this section and proceed to Milestone.
-
-7. [Orientation: Getting help](./get-started-with-git-and-github/getting-help)
-8. [Screen recording tool](./get-started-with-git-and-github/getting-help/screen-recording.md)
-9. [Orientation: Plagiarism](./get-started-with-git-and-github/plagiarism)
 
 ### Milestone
 
 9. [Milestone](./introduction-to-nodejs/milestone/README.md)
 
 ## L2. Working with NPM
+
+### Working with NPM
 
 1. [Why is there a need for a library ecosystem?](./working-with-npm/package-management-and-library-ecosystem/README.md)
 2. [What is NPM?](./working-with-npm/about-npm-and-uses/README.md)
@@ -57,7 +56,11 @@ This work is licensed under a
 7. [Working with npm install](./working-with-npm/npm-install-packages/README.md)
 8. [Accepting command line arguments](./working-with-npm/accepting-cli-commands/README.md)
 9. [Let's write a program!](./working-with-npm/write-first-node-program/README.md)
-10. [Milestone](./working-with-npm/milestone/README.md)
+
+### Level up
+
+1. [Orientation: Why plagiarism is a bad idea](./working-with-npm/orientation-why-plagiarism-is-a-bad-idea)
+2. [Milestone](./working-with-npm/milestone/README.md)
 
 ## L3. Node.js deep dive
 
@@ -160,7 +163,3 @@ This work is licensed under a
 12. [Showing one-off messages to users with connect-flash](./user-authentication/showing-messages-to-user/README.md)
 13. [Ensure no blank to-dos are ever created, with Sequelize validations](./user-authentication/prevent-blank-todo-with-sequelize-validation/README.md)
 14. [Milestone](./user-authentication/milestone/README.md)
-
-## L11. Capstone
-
-1. [A mock-up of the project](./capstone/a-mock-up-of-the-project)
