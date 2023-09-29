@@ -36,17 +36,22 @@ When running this program from the command line, it should print to-dos from the
 My Todo-list
 
 Overdue
-24. [x] Submit assignment 2022-07-10
+24. [ ] Submit assignment 2022-07-10
 
 
 Due Today
-25. [x] Pay rent
+25. [ ] Pay rent
 28. [ ] Service vehicle
 
 
 Due Later
 26. [ ] File taxes 2022-07-14
 27. [ ] Call Acme Corp. 2022-07-14
+
+
+Completed Items
+20. [x] Buy Groceries
+22. [x] Clean apartment
 ```
 
 - The output format is the same as the To-do assignment in the previous level, except that this time you also have to print the `id` of the row as the first column. Make sure to remove any leading or trailing spaces while printing the todo item.
@@ -84,6 +89,10 @@ module.exports = (sequelize, DataTypes) => {
 
       console.log("Due Later");
       // FILL IN HERE
+      console.log("\n");
+
+      console.log("Completed Items");
+      // FILL IN HERE
     }
 
     static async overdue() {
@@ -95,6 +104,10 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     static async dueLater() {
+      // FILL IN HERE TO RETURN ITEMS DUE LATER
+    }
+
+    static async completed() {
       // FILL IN HERE TO RETURN ITEMS DUE LATER
     }
 

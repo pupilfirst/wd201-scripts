@@ -9,6 +9,7 @@ To complete this milestone target, you have to implement tests for your Todo app
 3. A test that checks retrieval of overdue items.
 4. A test that checks retrieval of due today items.
 5. A test that checks retrieval of due later items.
+6. A test that checks retrieval of completed items.
 
 ## You should also
 
