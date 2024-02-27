@@ -41,6 +41,10 @@ More details regarding the licensing history of this content can be found in [th
 
 6. [Code quality using ESLint](./introduction-to-nodejs/setting-up-eslint/README.md)
 
+### Putting it all together
+
+7. [Development environment](./introduction-to-nodejs/Putting-it-all-together/developement-process.md)
+
 ### Milestone
 
 9. [Milestone](./introduction-to-nodejs/milestone/README.md)
