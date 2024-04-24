@@ -31,7 +31,7 @@ Hello, everyone! Over our last few lessons, we've focussed setting up our develo
 
 - In `index.html`, let's construct the layout for our Todo application, including elements for input and listing todos.
 
-```
+```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -78,7 +78,7 @@ Hello, everyone! Over our last few lessons, we've focussed setting up our develo
 
     - In `app.js`, let's develop the JavaScript functions to add and display todos.
 
-      ````
+      ```javascript
       let todos = [];
 
             function addTodo() {
@@ -99,10 +99,9 @@ Hello, everyone! Over our last few lessons, we've focussed setting up our develo
                list.appendChild(listItem);
             });
             }
-            ```
+      ```
 
-      **Version Control with Git**
-      ````
+**Version Control with Git**
 
 1.  **Initial Commit**
     - Now that we have our initial files, it's time to make our first commit. Run `git add .` to stage our changes, then `git commit -m 'Initial setup of Todo Application.'` to commit them. This marks the beginning of our project’s history.
