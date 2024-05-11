@@ -115,6 +115,8 @@ Hello, everyone! Over our last few lessons, we've focussed setting up our develo
 2. **Applying Prettier**
    - After saving the file, Prettier automatically formats our code upon save. Ensure 'Format On Save' is enabled in VS Code settings to see this in action. Our code now looks much cleaner and adheres to standard formatting guidelines.
 
+Refer to this [target](https://www.pupilfirst.school/targets/18691) for Installing the Prettier VSCode extension.
+
 ### Enhancing Code Quality with ESLint
 
 1. **Setting Up ESLint**
@@ -176,6 +178,8 @@ Hello, everyone! Over our last few lessons, we've focussed setting up our develo
      ```
 
      By adhering to ESLint's suggestions and declaring `todos` properly with `let`, our code becomes more reliable and less prone to errors.
+     
+     Refer to this [target](https://www.pupilfirst.school/targets/18909) for detailed instructions on Code quality using ESLint.
 
    - With our code refined by Prettier and ESLint, it's time for the commit. Run `git add .` and then `git commit -m 'Refine code with Prettier and ESLint.'` Lastly, we push our project to GitHub with `git push origin main`, showcasing our clean, well-maintained project to the world.
 
@@ -230,6 +234,8 @@ git add app.js
 git commit -m 'Add remove todo feature'
 git push origin main
 ```
+
+Refer to this [target](https://www.pupilfirst.school/targets/18848) for detailed instructions on setting up Git & GitHub.
 
 These steps will save your changes to the git history and share them with other team members or sync them across different machines, ensuring that everyone's work is up-to-date.
 
