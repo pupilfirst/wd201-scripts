@@ -53,7 +53,7 @@ Hello, everyone! Over our last few lessons, we've focussed setting up our develo
       <div class="mb-4">
       <input
          type="text"
-         id="todoInput"
+         id="todo-input"
          placeholder="Add a new todo"
          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       />
@@ -66,7 +66,7 @@ Hello, everyone! Over our last few lessons, we've focussed setting up our develo
       </button>
       </div>
 
-      <ul id="todosList" class="list-disc space-y-2"></ul>
+      <ul id="todo-list" class="list-disc space-y-2"></ul>
    </div>
 
    <script src="app.js"></script>
@@ -110,7 +110,7 @@ Hello, everyone! Over our last few lessons, we've focussed setting up our develo
 
 1. **Introducing Formatting Issues**
 
-   - Let's intentionally introduce some formatting inconsistencies in our `index.js` file, like misaligned brackets and inconsistent spacing.
+   - Let's intentionally introduce some formatting inconsistencies in our `app.js` file, like misaligned brackets and inconsistent spacing.
 
 2. **Applying Prettier**
    - After saving the file, Prettier automatically formats our code upon save. Ensure 'Format On Save' is enabled in VS Code settings to see this in action. Our code now looks much cleaner and adheres to standard formatting guidelines.
